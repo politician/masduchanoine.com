@@ -1,0 +1,178 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const rates = [
+  {
+    name: "Suite Cannoise",
+    low: "255",
+    mid: "300",
+    high: "340",
+    guests: "2 personnes",
+  },
+  {
+    name: "Suite Niçoise",
+    low: "255",
+    mid: "300",
+    high: "340",
+    guests: "2 personnes",
+  },
+  {
+    name: "Suite Saint-Pauloise",
+    low: "270",
+    mid: "315",
+    high: "355",
+    guests: "2 personnes",
+  },
+  {
+    name: "Le Petit Mas",
+    low: "370",
+    mid: "420",
+    high: "480",
+    guests: "3 personnes",
+  },
+];
+---
+
+<Layout
+  title="Tarifs de nos chambres d'hôtes de charme | Mas du Chanoine"
+  description="Consultez les tarifs 2026 du Mas du Chanoine à Saint-Paul-de-Vence. Prix par chambre, petit-déjeuner inclus, parking gratuit, WiFi gratuit."
+  canonical="https://masduchanoine.com/tarifs/"
+  lang="fr"
+  hreflang={{ fr: '/tarifs/', en: '/en/rates/' }}
+>
+  <Header slot="header" lang="fr" currentPath="/tarifs/" />
+
+  <!-- Page Header -->
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">2026</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Tarifs et conditions de réservation
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        Petit-déjeuner, parking et WiFi inclus dans tous nos tarifs
+      </p>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section class="py-20 bg-cream" aria-labelledby="sec-rates">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="sec-rates" class="font-playfair text-3xl text-charcoal mb-10 text-center">Tarifs par nuit</h2>
+      <div class="overflow-x-auto rounded-2xl shadow-sm border border-olive/10">
+        <table class="w-full bg-white text-sm font-lato">
+          <thead>
+            <tr class="bg-olive text-white">
+              <th class="text-left px-6 py-4 font-semibold">Suite</th>
+              <th class="text-center px-6 py-4 font-semibold">Basse saison</th>
+              <th class="text-center px-6 py-4 font-semibold">Moyenne saison</th>
+              <th class="text-center px-6 py-4 font-semibold">Haute saison</th>
+              <th class="text-center px-6 py-4 font-semibold">Occupants</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rates.map((r, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-cream'}>
+                <td class="px-6 py-4 font-semibold text-charcoal font-playfair">{r.name}</td>
+                <td class="px-6 py-4 text-center text-charcoal-light">
+                  <span class="font-semibold text-charcoal">{r.low} €</span>
+                </td>
+                <td class="px-6 py-4 text-center text-charcoal-light">
+                  <span class="font-semibold text-charcoal">{r.mid} €</span>
+                </td>
+                <td class="px-6 py-4 text-center text-charcoal-light">
+                  <span class="font-semibold text-olive">{r.high} €</span>
+                </td>
+                <td class="px-6 py-4 text-center text-charcoal-light">{r.guests}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-charcoal-light font-lato mt-4 text-center">
+        * Taxe de séjour non incluse (en vigueur selon réglementation municipale)
+      </p>
+    </div>
+  </section>
+
+  <!-- Saisons -->
+  <section class="py-12 bg-white" aria-labelledby="sec-seasons">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="sec-seasons" class="font-playfair text-2xl text-charcoal mb-8 text-center">Périodes tarifaires</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { name: 'Basse saison', period: 'Novembre – Mars', color: 'bg-olive/10 border-olive/20' },
+          { name: 'Moyenne saison', period: 'Avril, Mai, Octobre', color: 'bg-terracotta/10 border-terracotta/20' },
+          { name: 'Haute saison', period: 'Juin – Septembre', color: 'bg-olive/20 border-olive/30' },
+        ].map(s => (
+          <div class={`${s.color} border rounded-xl p-6 text-center`}>
+            <p class="font-playfair text-lg font-semibold text-charcoal mb-2">{s.name}</p>
+            <p class="font-lato text-sm text-charcoal-light">{s.period}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Ce qui est inclus -->
+  <section class="py-16 bg-cream" aria-labelledby="sec-included">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 id="sec-included" class="font-playfair text-2xl text-charcoal mb-6">Inclus dans le tarif</h2>
+          <ul class="space-y-3 font-lato text-charcoal-light">
+            {[
+              '🥐 Petit-déjeuner continental fait maison',
+              '🅿️ Parking privé et sécurisé',
+              '📶 WiFi haut débit',
+              '🏊 Accès piscine chauffée (mai–octobre)',
+              '🌳 Accès jardin et terrasse',
+              '✨ Ménage quotidien',
+              '🛁 Produits d\'accueil Fragonard',
+            ].map(item => (
+              <li class="flex items-center gap-3">
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-playfair text-2xl text-charcoal mb-6">Conditions de réservation</h2>
+          <div class="space-y-4 font-lato text-sm text-charcoal-light">
+            <div class="bg-white rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Annulation gratuite</p>
+              <p>Remboursement intégral pour toute annulation plus de 60 jours avant l'arrivée (frais bancaires déduits).</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Séjour minimum</p>
+              <p>2 nuits en haute saison (juin–septembre). 1 nuit possible selon disponibilités en basse/moyenne saison.</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Arrivée / Départ</p>
+              <p>Arrivée à partir de 15h00 · Départ avant 11h00</p>
+            </div>
+            <div class="bg-white rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Paiement</p>
+              <p>Virement bancaire ou espèces. Acompte de 30% à la réservation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-olive text-white text-center">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-semibold mb-4">Réservez votre séjour</h2>
+      <p class="font-lato text-white/80 mb-8">Contactez-nous pour vérifier les disponibilités et confirmer votre réservation.</p>
+      <a href="/contactez-nous/" class="inline-block bg-white text-olive font-lato font-semibold px-8 py-4 rounded hover:bg-white/90 transition-colors">
+        Nous contacter
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="fr" />
+</Layout>

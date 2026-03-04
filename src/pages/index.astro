@@ -1,0 +1,301 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BedAndBreakfast",
+  "name": "Mas du Chanoine",
+  "description": "Chambre d'hôtes de charme à Saint-Paul-de-Vence, maison du XVIIe siècle avec 4 suites, piscine chauffée et jardin provençal.",
+  "url": "https://masduchanoine.com",
+  "telephone": "+33627271649",
+  "email": "pascale@masduchanoine.com",
+  "image": "https://masduchanoine.com/og-image.jpg",
+  "priceRange": "€€€",
+  "numberOfRooms": 4,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "831 chemin de la Bastide Rouge",
+    "addressLocality": "Saint-Paul-de-Vence",
+    "postalCode": "06570",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "43.696",
+    "longitude": "7.116"
+  },
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Piscine chauffée", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Climatisation", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "WiFi gratuit", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parking privé gratuit", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Petit-déjeuner inclus", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Jardin", "value": true }
+  ],
+  "checkinTime": "15:00",
+  "checkoutTime": "11:00"
+};
+
+const suites = [
+  {
+    name: "Suite Cannoise",
+    desc: "Rez-de-jardin avec accès direct au jardin, bassin et châtaignier centenaire. Parfums d'oranger et de jasmin au coucher du soleil.",
+    bed: "Lit King size ou 2 lits jumeaux",
+    icon: "🌸",
+  },
+  {
+    name: "Suite Niçoise",
+    desc: "Lumineuse et élégante, près du bassin et du boulodrome, entrée sous un citronnier. Mobilier en patine vert olive, murs jaune citron.",
+    bed: "Lit King size ou 2 lits jumeaux",
+    icon: "🍋",
+  },
+  {
+    name: "Suite Saint-Pauloise",
+    desc: "Bâtie au XVIIe siècle, accessible par un escalier en pierre. Vue imprenable sur le vieux village fortifié de Saint-Paul-de-Vence.",
+    bed: "Lit Queen size",
+    icon: "🏰",
+  },
+  {
+    name: "Le Petit Mas",
+    desc: "Suite familiale indépendante dans le jardin, idéale pour 3 adultes ou une famille. Deux chambres séparées avec accès privé.",
+    bed: "1 chambre King + 1 chambre Queen",
+    icon: "🌿",
+  },
+];
+---
+
+<Layout
+  title="Mas du Chanoine – Chambre d'hôtes de charme à Saint-Paul-de-Vence"
+  description="Découvrez le Mas du Chanoine, maison d'hôtes de charme à Saint-Paul de Vence sur la Côte d'Azur. 4 suites élégantes, piscine panoramique, petit-déjeuner maison."
+  canonical="https://masduchanoine.com/"
+  lang="fr"
+  hreflang={{ fr: '/', en: '/en/' }}
+  schemaOrg={schema}
+>
+  <Header slot="header" lang="fr" currentPath="/" />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden"
+    aria-label="Bienvenue au Mas du Chanoine"
+  >
+    <div class="absolute inset-0 bg-gradient-to-br from-charcoal via-olive-dark/80 to-charcoal/90" aria-hidden="true"></div>
+    <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+      <p class="font-lato text-white/70 tracking-widest uppercase text-xs sm:text-sm mb-4">
+        Saint-Paul-de-Vence · Côte d'Azur
+      </p>
+      <h1 class="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight mb-6">
+        Chambre d'hôtes<br /><em>de charme</em><br />sur la Côte d'Azur
+      </h1>
+      <p class="font-lato text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        Une maison provençale du XVIIe siècle, 4 suites élégantes, une piscine chauffée et un jardin fleuri à deux pas du village de Saint-Paul-de-Vence.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/chambres-dhotes/"
+          class="inline-block bg-olive hover:bg-olive-dark text-white font-lato font-semibold px-8 py-4 rounded transition-colors duration-200 tracking-wide focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        >
+          Voir nos chambres
+        </a>
+        <a
+          href="/contactez-nous/"
+          class="inline-block border-2 border-white/70 hover:border-white text-white font-lato font-semibold px-8 py-4 rounded transition-colors duration-200 tracking-wide focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        >
+          Nous contacter
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white/50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Notre Mas -->
+  <section class="py-20 md:py-28 bg-cream" aria-labelledby="sec-mas">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div>
+          <p class="font-lato text-olive text-xs uppercase tracking-widest mb-3">Bienvenue</p>
+          <h2 id="sec-mas" class="font-playfair text-3xl md:text-4xl lg:text-5xl text-charcoal mb-6">Notre Mas</h2>
+          <p class="font-lato text-charcoal-light leading-relaxed mb-4">
+            Niché dans les collines provençales entre Cannes et Nice, le Mas du Chanoine est une demeure authentique du XVIIe siècle entourée d'un jardin fleuri. Pascale et Yves vous accueillent dans un cadre d'exception pour un séjour inoubliable sur la Côte d'Azur.
+          </p>
+          <p class="font-lato text-charcoal-light leading-relaxed">
+            Ses 4 suites élégamment décorées, sa piscine chauffée et son atmosphère de maison de famille en font une étape idéale pour découvrir la région, à deux pas du célèbre village fortifié de Saint-Paul-de-Vence.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { icon: '🏡', title: 'Maison du XVIIe s.', sub: 'Authenticité provençale' },
+            { icon: '🛏️', title: '4 Suites', sub: 'Élégamment décorées' },
+            { icon: '🏊', title: 'Piscine chauffée', sub: '12×6m, mai–octobre' },
+            { icon: '🌺', title: 'Jardin fleuri', sub: 'Terrasse & boulodrome' },
+          ].map(f => (
+            <div class="bg-white rounded-xl p-6 shadow-sm border border-olive/10 text-center">
+              <div class="text-3xl mb-3" aria-hidden="true">{f.icon}</div>
+              <p class="font-playfair font-semibold text-charcoal text-sm mb-1">{f.title}</p>
+              <p class="font-lato text-charcoal-light text-xs">{f.sub}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nos Suites -->
+  <section class="py-20 md:py-28 bg-white" aria-labelledby="sec-suites">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <p class="font-lato text-olive text-xs uppercase tracking-widest mb-3">Hébergement</p>
+        <h2 id="sec-suites" class="font-playfair text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4">Nos Suites</h2>
+        <p class="font-lato text-charcoal-light">
+          Chaque suite possède sa propre personnalité, alliant confort moderne et charme provençal.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {suites.map(suite => (
+          <article class="bg-cream rounded-xl overflow-hidden shadow-sm border border-olive/10 hover:shadow-md transition-shadow duration-200 flex flex-col">
+            <div class="h-32 bg-gradient-to-br from-olive/20 to-terracotta/10 flex items-center justify-center text-5xl" aria-hidden="true">
+              {suite.icon}
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <h3 class="font-playfair text-lg font-semibold text-charcoal mb-2">{suite.name}</h3>
+              <p class="font-lato text-sm text-charcoal-light leading-relaxed flex-1 mb-3">{suite.desc}</p>
+              <p class="font-lato text-xs text-olive font-semibold">{suite.bed}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="text-center">
+        <a
+          href="/chambres-dhotes/"
+          class="inline-block bg-olive hover:bg-olive-dark text-white font-lato font-semibold px-8 py-4 rounded transition-colors duration-200 tracking-wide focus:outline-none focus-visible:ring-2 focus-visible:ring-olive"
+        >
+          Découvrir toutes nos suites
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Petit-déjeuner -->
+  <section class="py-20 md:py-28 bg-olive text-white" aria-labelledby="sec-breakfast">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">Inclus dans votre séjour</p>
+          <h2 id="sec-breakfast" class="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">Le Petit-Déjeuner</h2>
+          <p class="font-lato text-white/80 leading-relaxed mb-6">
+            Chaque matin, Pascale prépare un petit-déjeuner continental généreux, servi en salle en hiver et sur le patio ombragé en été.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Jus d\'orange fraîchement pressé',
+              'Fruits frais de saison',
+              'Viennoiseries et gâteaux maison',
+              'Confitures maison (fruits du jardin)',
+              'Yaourts et fromage blanc',
+              'Baguette fraîche',
+              'Café, thé, chocolat chaud',
+            ].map(item => (
+              <li class="flex items-center gap-3 font-lato text-white/80 text-sm">
+                <span class="text-terracotta font-bold shrink-0">✦</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 flex items-center justify-center text-9xl" aria-hidden="true">
+            🥐
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Piscine & Jardin -->
+  <section class="py-20 md:py-28 bg-cream" aria-labelledby="sec-pool">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-14">
+        <p class="font-lato text-olive text-xs uppercase tracking-widest mb-3">Espaces de détente</p>
+        <h2 id="sec-pool" class="font-playfair text-3xl md:text-4xl lg:text-5xl text-charcoal mb-4">La Piscine &amp; le Jardin</h2>
+        <p class="font-lato text-charcoal-light">Un écrin de verdure pour se ressourcer au cœur de la Provence.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            icon: '🏊',
+            title: 'Piscine chauffée',
+            desc: 'Profitez de notre piscine de 12×6 mètres, chauffée de mai à octobre. Vue sur le jardin provençal et les collines.'
+          },
+          {
+            icon: '🌳',
+            title: 'Jardin provençal',
+            desc: 'Un jardin fleuri entouré d\'oliviers, de lavandes et de rosiers. Terrasse ombragée pour les repas en plein air.'
+          },
+          {
+            icon: '🎯',
+            title: 'Équipements',
+            desc: 'Boulodrome, parking privé gratuit, conciergerie et service de réservation de restaurants à votre disposition.'
+          },
+        ].map(card => (
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-olive/10 text-center">
+            <div class="text-5xl mb-5" aria-hidden="true">{card.icon}</div>
+            <h3 class="font-playfair text-xl font-semibold text-charcoal mb-3">{card.title}</h3>
+            <p class="font-lato text-sm text-charcoal-light leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Situation -->
+  <section class="py-20 md:py-28 bg-white" aria-labelledby="sec-location">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="w-full h-64 md:h-80 bg-olive/10 rounded-xl flex items-center justify-center text-8xl" aria-hidden="true">
+            📍
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="font-lato text-olive text-xs uppercase tracking-widest mb-3">Accès & situation</p>
+          <h2 id="sec-location" class="font-playfair text-3xl md:text-4xl lg:text-5xl text-charcoal mb-6">Situation idéale</h2>
+          <p class="font-lato text-charcoal-light leading-relaxed mb-8">
+            Idéalement situé entre Cannes et Nice, le Mas du Chanoine est le point de départ parfait pour explorer la Côte d'Azur et l'arrière-pays provençal.
+          </p>
+          <ul class="space-y-3 mb-10">
+            {[
+              { label: 'Aéroport Nice-Côte d\'Azur', dist: '7 km' },
+              { label: 'Village de Saint-Paul-de-Vence', dist: '5 min' },
+              { label: 'Plages de Cagnes-sur-Mer', dist: '15 min' },
+              { label: 'Plages d\'Antibes', dist: '15 min' },
+              { label: 'Cannes', dist: '30 min' },
+              { label: 'Monaco', dist: '45 min' },
+            ].map(loc => (
+              <li class="flex items-center justify-between font-lato text-sm border-b border-olive/10 pb-3">
+                <span class="text-charcoal-light flex items-center gap-2">
+                  <span class="text-olive font-bold">→</span>
+                  {loc.label}
+                </span>
+                <span class="text-olive font-semibold shrink-0">{loc.dist}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="/contactez-nous/"
+            class="inline-block bg-terracotta hover:bg-terracotta-dark text-white font-lato font-semibold px-8 py-4 rounded transition-colors duration-200 tracking-wide focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta"
+          >
+            Réserver votre séjour
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="fr" />
+</Layout>

@@ -1,0 +1,101 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const suites = [
+  {
+    name: "Cannoise Suite",
+    desc: "Ideally located on the ground floor, the Cannoise Suite opens directly onto the garden with its fishpond and century-old chestnut tree. In the evenings, the scents of orange blossom and jasmine fill the terrace.",
+    bed: "King size bed or 2 twin beds",
+    icon: "🌸",
+    features: ["Direct garden access", "View of the fishpond", "Private terrace"],
+  },
+  {
+    name: "Niçoise Suite",
+    desc: "Bright and colourful, the Niçoise Suite is located near the fishpond and pétanque area. You enter under a blossoming lemon tree. Its olive-patina furniture creates a delicate contrast with lemon-yellow walls.",
+    bed: "King size bed or 2 twin beds",
+    icon: "🍋",
+    features: ["Garden view", "Provençal décor", "Very bright"],
+  },
+  {
+    name: "Saint-Pauloise Suite",
+    desc: "Accessed via stone steps, the Saint-Pauloise Suite offers breathtaking views of the fortified village of Saint-Paul-de-Vence. Built in the 17th century, it combines rustic charm with modern comfort.",
+    bed: "Queen size bed",
+    icon: "🏰",
+    features: ["Village view", "17th-century architecture", "Stone staircase"],
+  },
+  {
+    name: "Le Petit Mas",
+    desc: "An independent family suite in the garden, ideal for 3 adults or a family. Two separate bedrooms with private access and a shared living space. Full privacy and freedom guaranteed.",
+    bed: "1 King bedroom + 1 Queen bedroom",
+    icon: "🌿",
+    features: ["Independent building", "Ideal for families", "2 separate bedrooms"],
+  },
+];
+---
+
+<Layout
+  title="Guestrooms in St Paul de Vence | Mas du Chanoine"
+  description="Discover our 4 Provençal suites at Mas du Chanoine B&B in Saint-Paul-de-Vence. Air conditioning, heated pool, breakfast included."
+  canonical="https://masduchanoine.com/en/bed-breakfast/"
+  lang="en"
+  hreflang={{ fr: '/chambres-dhotes/', en: '/en/bed-breakfast/' }}
+>
+  <Header slot="header" lang="en" currentPath="/en/bed-breakfast/" />
+
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">Accommodation</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Our guestrooms
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        4 Provençal suites blending modern comfort with 17th-century authenticity
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-16">
+        {suites.map((suite, i) => (
+          <article class={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+            <div class={`h-64 md:h-80 rounded-2xl bg-gradient-to-br from-olive/20 to-terracotta/10 flex items-center justify-center text-9xl ${i % 2 === 1 ? 'lg:order-2' : ''}`} aria-hidden="true">
+              {suite.icon}
+            </div>
+            <div>
+              <h2 class="font-playfair text-2xl md:text-3xl font-semibold text-charcoal mb-4">{suite.name}</h2>
+              <p class="font-lato text-charcoal-light leading-relaxed mb-5">{suite.desc}</p>
+              <p class="font-lato text-olive font-semibold text-sm mb-5">
+                <span class="inline-block bg-olive/10 rounded-full px-4 py-1.5">🛏️ {suite.bed}</span>
+              </p>
+              <ul class="flex flex-wrap gap-2">
+                {suite.features.map(f => (
+                  <li class="text-xs font-lato bg-white border border-olive/20 text-charcoal-light rounded-full px-3 py-1">{f}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-olive text-white text-center">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-semibold mb-4">Ready to book?</h2>
+      <p class="font-lato text-white/80 mb-8">Contact Pascale and Yves to check availability.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/en/rates/" class="inline-block border-2 border-white text-white font-lato font-semibold px-8 py-3 rounded hover:bg-white hover:text-olive transition-colors">
+          View rates
+        </a>
+        <a href="/en/contact-us/" class="inline-block bg-white text-olive font-lato font-semibold px-8 py-3 rounded hover:bg-white/90 transition-colors">
+          Contact us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="en" />
+</Layout>

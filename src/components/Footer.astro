@@ -1,0 +1,113 @@
+---
+interface Props {
+  lang?: 'fr' | 'en';
+}
+const { lang = 'fr' } = Astro.props;
+---
+
+<footer class="bg-charcoal text-white mt-20">
+  <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+
+      <!-- Brand & Contact -->
+      <div>
+        <h2 class="font-playfair text-xl font-semibold text-white mb-1">Mas du Chanoine</h2>
+        <p class="text-sm text-white/60 font-lato mb-4">
+          {lang === 'fr' ? 'Chambre d\'hôtes de charme' : 'Charming bed & breakfast'}
+        </p>
+        <address class="not-italic text-sm text-white/70 space-y-1 mb-5 font-lato">
+          <p>831 chemin de la Bastide Rouge</p>
+          <p>06570 Saint-Paul-de-Vence</p>
+          <p>Côte d'Azur, France</p>
+        </address>
+        <div class="space-y-2">
+          <a
+            href="tel:+33627271649"
+            class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+            aria-label="Appeler le Mas du Chanoine"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            +33 6 27 27 16 49
+          </a>
+          <a
+            href="mailto:pascale@masduchanoine.com"
+            class="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors break-all"
+            aria-label="Envoyer un email au Mas du Chanoine"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            pascale@masduchanoine.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="font-lato text-xs uppercase tracking-widest text-white/50 mb-4">Navigation</h3>
+        <nav aria-label={lang === 'fr' ? 'Navigation pied de page' : 'Footer navigation'}>
+          <ul class="space-y-2">
+            {lang === 'fr' ? (
+              <>
+                <li><a href="/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Accueil</a></li>
+                <li><a href="/chambres-dhotes/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Nos Chambres</a></li>
+                <li><a href="/tarifs/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Tarifs</a></li>
+                <li><a href="/photos/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Photos</a></li>
+                <li><a href="/contactez-nous/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Nous Contacter</a></li>
+                <li><a href="/politique-de-confidentialite/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Politique de confidentialité</a></li>
+              </>
+            ) : (
+              <>
+                <li><a href="/en/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Home</a></li>
+                <li><a href="/en/bed-breakfast/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Guestrooms</a></li>
+                <li><a href="/en/rates/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Rates</a></li>
+                <li><a href="/en/contact-us/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Contact</a></li>
+                <li><a href="/politique-de-confidentialite/" class="text-sm text-white/70 hover:text-white transition-colors font-lato">Privacy Policy</a></li>
+              </>
+            )}
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Description & Language -->
+      <div>
+        <h3 class="font-lato text-xs uppercase tracking-widest text-white/50 mb-4">
+          {lang === 'fr' ? 'Le Mas' : 'The Mas'}
+        </h3>
+        <p class="text-sm text-white/70 font-lato leading-relaxed mb-6">
+          {lang === 'fr'
+            ? 'Maison de charme du XVIIe siècle nichée dans les collines provençales, à quelques minutes du village fortifié de Saint-Paul-de-Vence.'
+            : '17th-century charming house nestled in the Provençal hills, a few minutes from the fortified village of Saint-Paul-de-Vence.'}
+        </p>
+        <div>
+          <p class="text-xs text-white/40 font-lato uppercase tracking-widest mb-2">
+            {lang === 'fr' ? 'Version' : 'Language'}
+          </p>
+          <div class="flex gap-2">
+            <a
+              href="/"
+              class={`text-xs font-lato font-semibold tracking-widest uppercase px-3 py-1.5 rounded border transition-colors ${lang === 'fr' ? 'bg-olive border-olive text-white' : 'border-white/30 text-white/60 hover:border-white hover:text-white'}`}
+              aria-label="Version française"
+            >FR</a>
+            <a
+              href="/en/"
+              class={`text-xs font-lato font-semibold tracking-widest uppercase px-3 py-1.5 rounded border transition-colors ${lang === 'en' ? 'bg-olive border-olive text-white' : 'border-white/30 text-white/60 hover:border-white hover:text-white'}`}
+              aria-label="English version"
+            >EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-white/40 font-lato">
+        © {new Date().getFullYear()} Mas du Chanoine. {lang === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
+      </p>
+      <a href="/politique-de-confidentialite/" class="text-xs text-white/40 hover:text-white/70 font-lato transition-colors">
+        {lang === 'fr' ? 'Politique de confidentialité' : 'Privacy Policy'}
+      </a>
+    </div>
+  </div>
+</footer>

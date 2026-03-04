@@ -1,0 +1,189 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Contactez nos chambres d'hôtes de la Côte d'Azur | Mas du Chanoine"
+  description="Contactez le Mas du Chanoine pour réserver votre chambre d'hôtes à Saint-Paul-de-Vence. Téléphone, email et formulaire de contact disponibles."
+  canonical="https://masduchanoine.com/contactez-nous/"
+  lang="fr"
+  hreflang={{ fr: '/contactez-nous/', en: '/en/contact-us/' }}
+>
+  <Header slot="header" lang="fr" currentPath="/contactez-nous/" />
+
+  <!-- Page Header -->
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">Réservations & informations</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Nous contacter
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        Pascale et Yves se feront un plaisir de répondre à vos questions
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream" aria-labelledby="sec-contact">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Contact info -->
+        <div>
+          <h2 id="sec-contact" class="font-playfair text-3xl text-charcoal mb-8">Coordonnées</h2>
+
+          <div class="space-y-6 mb-10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">📍</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Adresse</p>
+                <address class="not-italic font-lato text-sm text-charcoal-light leading-relaxed">
+                  831 chemin de la Bastide Rouge<br />
+                  06570 Saint-Paul-de-Vence<br />
+                  Côte d'Azur, France
+                </address>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">📞</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Téléphone</p>
+                <a href="tel:+33627271649" class="font-lato text-sm text-olive hover:underline">+33 6 27 27 16 49</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">✉️</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Email</p>
+                <a href="mailto:pascale@masduchanoine.com" class="font-lato text-sm text-olive hover:underline break-all">pascale@masduchanoine.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">🕐</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Horaires d'accueil</p>
+                <p class="font-lato text-sm text-charcoal-light">Check-in : à partir de 15h00</p>
+                <p class="font-lato text-sm text-charcoal-light">Check-out : avant 11h00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comment venir -->
+          <div class="bg-white rounded-2xl p-6 border border-olive/10">
+            <h3 class="font-playfair text-xl text-charcoal mb-4">Comment venir</h3>
+            <ul class="space-y-3 font-lato text-sm text-charcoal-light">
+              <li class="flex items-center gap-3">
+                <span class="text-olive font-bold shrink-0">✈</span>
+                <span><strong>Avion :</strong> Aéroport Nice-Côte d'Azur (7 km). Navette ou taxi vers Saint-Paul-de-Vence.</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-olive font-bold shrink-0">🚗</span>
+                <span><strong>Voiture :</strong> A8 sortie Cagnes-sur-Mer, direction Saint-Paul-de-Vence puis suivre "Bastide Rouge".</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-olive font-bold shrink-0">🚌</span>
+                <span><strong>Bus :</strong> Ligne 400 Nice–Grasse, arrêt Saint-Paul-de-Vence, puis taxi ou véhicule de location.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div>
+          <h2 class="font-playfair text-3xl text-charcoal mb-8">Formulaire de contact</h2>
+          <form
+            action="mailto:pascale@masduchanoine.com"
+            method="get"
+            enctype="text/plain"
+            class="space-y-5 bg-white rounded-2xl p-8 shadow-sm border border-olive/10"
+            aria-label="Formulaire de contact Mas du Chanoine"
+          >
+            <div>
+              <label for="name" class="block font-lato text-sm font-semibold text-charcoal mb-2">Nom complet *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream"
+                placeholder="Votre nom"
+                autocomplete="name"
+              />
+            </div>
+            <div>
+              <label for="email" class="block font-lato text-sm font-semibold text-charcoal mb-2">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream"
+                placeholder="votre@email.com"
+                autocomplete="email"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="arrival" class="block font-lato text-sm font-semibold text-charcoal mb-2">Arrivée</label>
+                <input
+                  type="date"
+                  id="arrival"
+                  name="arrival"
+                  class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream"
+                />
+              </div>
+              <div>
+                <label for="departure" class="block font-lato text-sm font-semibold text-charcoal mb-2">Départ</label>
+                <input
+                  type="date"
+                  id="departure"
+                  name="departure"
+                  class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="guests" class="block font-lato text-sm font-semibold text-charcoal mb-2">Nombre de personnes</label>
+              <select
+                id="guests"
+                name="guests"
+                class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream"
+              >
+                <option value="">— Sélectionner —</option>
+                <option value="1">1 personne</option>
+                <option value="2">2 personnes</option>
+                <option value="3">3 personnes</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block font-lato text-sm font-semibold text-charcoal mb-2">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream resize-none"
+                placeholder="Questions, demandes particulières..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-olive hover:bg-olive-dark text-white font-lato font-semibold py-4 rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-olive"
+            >
+              Envoyer ma demande
+            </button>
+            <p class="text-xs text-charcoal-light font-lato text-center">
+              Vous pouvez aussi nous appeler ou envoyer un email directement.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="fr" />
+</Layout>

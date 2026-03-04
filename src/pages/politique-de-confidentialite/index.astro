@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Politique de confidentialité | Mas du Chanoine"
+  description="Politique de confidentialité et mentions légales du site masduchanoine.com – Mas du Chanoine, chambre d'hôtes à Saint-Paul-de-Vence."
+  canonical="https://masduchanoine.com/politique-de-confidentialite/"
+  lang="fr"
+>
+  <Header slot="header" lang="fr" currentPath="/politique-de-confidentialite/" />
+
+  <section class="bg-charcoal py-16 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4">
+      <h1 id="page-heading" class="font-playfair text-4xl text-white font-semibold">
+        Politique de confidentialité
+      </h1>
+    </div>
+  </section>
+
+  <section class="py-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 font-lato text-charcoal-light leading-relaxed space-y-8">
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Informations légales</h2>
+        <p>Le présent site <strong>masduchanoine.com</strong> est édité par :</p>
+        <ul class="mt-3 space-y-1 text-sm">
+          <li><strong>Raison sociale :</strong> Mas du Chanoine – Pascale et Yves</li>
+          <li><strong>Adresse :</strong> 831 chemin de la Bastide Rouge, 06570 Saint-Paul-de-Vence, France</li>
+          <li><strong>Téléphone :</strong> +33 6 27 27 16 49</li>
+          <li><strong>Email :</strong> pascale@masduchanoine.com</li>
+        </ul>
+        <p class="mt-3 text-sm">
+          <strong>Hébergement :</strong> GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA)
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Collecte des données personnelles</h2>
+        <p class="text-sm">
+          Le site masduchanoine.com ne collecte pas de données personnelles via des cookies de traçage ou des outils d'analyse tiers. Les seules données transmises sont celles que vous saisissez volontairement dans le formulaire de contact (nom, email, message), qui sont envoyées directement par email à nos hôtes.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Utilisation des données</h2>
+        <p class="text-sm">
+          Les informations recueillies via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes de réservation ou d'information. Elles ne sont pas transmises à des tiers.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Droits des utilisateurs</h2>
+        <p class="text-sm">
+          Conformément au Règlement Général sur la Protection des Données (RGPD – Règlement UE 2016/679) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données personnelles. Pour exercer ces droits, contactez-nous à : <a href="mailto:pascale@masduchanoine.com" class="text-olive hover:underline">pascale@masduchanoine.com</a>.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Cookies</h2>
+        <p class="text-sm">
+          Ce site est un site statique. Il n'utilise pas de cookies de traçage ni d'analyse comportementale. Des polices Google Fonts sont chargées depuis les serveurs de Google (Google LLC), ce qui peut impliquer le transfert de votre adresse IP vers Google. Nous utilisons l'attribut <code>display=swap</code> et les connexions préchargées pour minimiser l'impact.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Propriété intellectuelle</h2>
+        <p class="text-sm">
+          L'ensemble des contenus de ce site (textes, images, design) est la propriété exclusive de Mas du Chanoine. Toute reproduction ou utilisation sans autorisation écrite est interdite.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-playfair text-2xl text-charcoal mb-4">Mise à jour</h2>
+        <p class="text-sm">
+          Cette politique de confidentialité peut être mise à jour. La date de dernière modification est indiquée ci-dessous.
+        </p>
+        <p class="text-sm mt-2 text-charcoal/60">Dernière mise à jour : mars 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="fr" />
+</Layout>

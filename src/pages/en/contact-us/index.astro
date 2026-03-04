@@ -1,0 +1,141 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<Layout
+  title="Contact Mas du Chanoine Bed and Breakfast | Mas du Chanoine"
+  description="Contact Mas du Chanoine to book your stay in Saint-Paul-de-Vence. Phone, email and contact form available. Pascale and Yves look forward to welcoming you."
+  canonical="https://masduchanoine.com/en/contact-us/"
+  lang="en"
+  hreflang={{ fr: '/contactez-nous/', en: '/en/contact-us/' }}
+>
+  <Header slot="header" lang="en" currentPath="/en/contact-us/" />
+
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">Bookings & enquiries</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Contact us
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        Pascale and Yves are delighted to answer your questions
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Contact info -->
+        <div>
+          <h2 class="font-playfair text-3xl text-charcoal mb-8">Contact details</h2>
+          <div class="space-y-6 mb-10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">📍</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Address</p>
+                <address class="not-italic font-lato text-sm text-charcoal-light leading-relaxed">
+                  831 chemin de la Bastide Rouge<br />
+                  06570 Saint-Paul-de-Vence<br />
+                  Côte d'Azur, France
+                </address>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">📞</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Phone</p>
+                <a href="tel:+33627271649" class="font-lato text-sm text-olive hover:underline">+33 6 27 27 16 49</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">✉️</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Email</p>
+                <a href="mailto:pascale@masduchanoine.com" class="font-lato text-sm text-olive hover:underline break-all">pascale@masduchanoine.com</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-olive/10 flex items-center justify-center shrink-0 text-lg" aria-hidden="true">🕐</div>
+              <div>
+                <p class="font-playfair font-semibold text-charcoal mb-1">Check-in / Check-out</p>
+                <p class="font-lato text-sm text-charcoal-light">Check-in from 3:00 PM</p>
+                <p class="font-lato text-sm text-charcoal-light">Check-out before 11:00 AM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-olive/10">
+            <h3 class="font-playfair text-xl text-charcoal mb-4">How to get here</h3>
+            <ul class="space-y-3 font-lato text-sm text-charcoal-light">
+              <li class="flex items-start gap-3">
+                <span class="text-olive font-bold shrink-0 mt-0.5">✈</span>
+                <span><strong>By air:</strong> Nice Côte d'Azur Airport (7 km). Shuttle or taxi to Saint-Paul-de-Vence.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-olive font-bold shrink-0 mt-0.5">🚗</span>
+                <span><strong>By car:</strong> A8 motorway, exit Cagnes-sur-Mer, direction Saint-Paul-de-Vence then follow "Bastide Rouge".</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-olive font-bold shrink-0 mt-0.5">🚌</span>
+                <span><strong>By bus:</strong> Line 400 Nice–Grasse, stop at Saint-Paul-de-Vence, then taxi or hire car.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div>
+          <h2 class="font-playfair text-3xl text-charcoal mb-8">Send us a message</h2>
+          <form
+            action="mailto:pascale@masduchanoine.com"
+            method="get"
+            enctype="text/plain"
+            class="space-y-5 bg-white rounded-2xl p-8 shadow-sm border border-olive/10"
+            aria-label="Contact form Mas du Chanoine"
+          >
+            <div>
+              <label for="name" class="block font-lato text-sm font-semibold text-charcoal mb-2">Full name *</label>
+              <input type="text" id="name" name="name" required class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream" placeholder="Your name" autocomplete="name" />
+            </div>
+            <div>
+              <label for="email" class="block font-lato text-sm font-semibold text-charcoal mb-2">Email *</label>
+              <input type="email" id="email" name="email" required class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream" placeholder="your@email.com" autocomplete="email" />
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="arrival" class="block font-lato text-sm font-semibold text-charcoal mb-2">Arrival</label>
+                <input type="date" id="arrival" name="arrival" class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream" />
+              </div>
+              <div>
+                <label for="departure" class="block font-lato text-sm font-semibold text-charcoal mb-2">Departure</label>
+                <input type="date" id="departure" name="departure" class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream" />
+              </div>
+            </div>
+            <div>
+              <label for="guests" class="block font-lato text-sm font-semibold text-charcoal mb-2">Number of guests</label>
+              <select id="guests" name="guests" class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream">
+                <option value="">— Select —</option>
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block font-lato text-sm font-semibold text-charcoal mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full border border-olive/20 rounded-lg px-4 py-3 font-lato text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-olive bg-cream resize-none" placeholder="Questions, special requests..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-olive hover:bg-olive-dark text-white font-lato font-semibold py-4 rounded-lg transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-olive">
+              Send enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="en" />
+</Layout>

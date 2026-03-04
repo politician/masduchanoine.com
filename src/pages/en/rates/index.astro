@@ -1,0 +1,121 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+
+const rates = [
+  { name: "Cannoise Suite", low: "255", mid: "300", high: "340", guests: "2 guests" },
+  { name: "Niçoise Suite", low: "255", mid: "300", high: "340", guests: "2 guests" },
+  { name: "Saint-Pauloise Suite", low: "270", mid: "315", high: "355", guests: "2 guests" },
+  { name: "Le Petit Mas", low: "370", mid: "420", high: "480", guests: "3 guests" },
+];
+---
+
+<Layout
+  title="Guesthouse's rates terms and conditions | Mas du Chanoine"
+  description="Check 2026 rates at Mas du Chanoine in Saint-Paul-de-Vence. Prices per room, breakfast included, free parking, free WiFi."
+  canonical="https://masduchanoine.com/en/rates/"
+  lang="en"
+  hreflang={{ fr: '/tarifs/', en: '/en/rates/' }}
+>
+  <Header slot="header" lang="en" currentPath="/en/rates/" />
+
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">2026</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Rates and booking conditions
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        Breakfast, parking and WiFi included in all rates
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-cream">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-playfair text-3xl text-charcoal mb-10 text-center">Rates per night</h2>
+      <div class="overflow-x-auto rounded-2xl shadow-sm border border-olive/10">
+        <table class="w-full bg-white text-sm font-lato">
+          <thead>
+            <tr class="bg-olive text-white">
+              <th class="text-left px-6 py-4 font-semibold">Suite</th>
+              <th class="text-center px-6 py-4 font-semibold">Low season</th>
+              <th class="text-center px-6 py-4 font-semibold">Mid season</th>
+              <th class="text-center px-6 py-4 font-semibold">High season</th>
+              <th class="text-center px-6 py-4 font-semibold">Occupancy</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rates.map((r, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-cream'}>
+                <td class="px-6 py-4 font-semibold text-charcoal font-playfair">{r.name}</td>
+                <td class="px-6 py-4 text-center"><span class="font-semibold text-charcoal">{r.low} €</span></td>
+                <td class="px-6 py-4 text-center"><span class="font-semibold text-charcoal">{r.mid} €</span></td>
+                <td class="px-6 py-4 text-center"><span class="font-semibold text-olive">{r.high} €</span></td>
+                <td class="px-6 py-4 text-center text-charcoal-light">{r.guests}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-charcoal-light font-lato mt-4 text-center">* Local tourist tax not included</p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="font-playfair text-2xl text-charcoal mb-6">What's included</h2>
+          <ul class="space-y-3 font-lato text-charcoal-light text-sm">
+            {[
+              '🥐 Continental homemade breakfast',
+              '🅿️ Private secure parking',
+              '📶 High-speed WiFi',
+              '🏊 Heated pool access (May–October)',
+              '🌳 Garden & terrace access',
+              '✨ Daily housekeeping',
+              '🛁 Fragonard toiletries, robes & slippers',
+            ].map(item => (
+              <li class="flex items-center gap-3"><span>{item}</span></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 class="font-playfair text-2xl text-charcoal mb-6">Booking conditions</h2>
+          <div class="space-y-4 font-lato text-sm text-charcoal-light">
+            <div class="bg-cream rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Free cancellation</p>
+              <p>Full refund for cancellations more than 60 days before arrival (minus bank fees).</p>
+            </div>
+            <div class="bg-cream rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Minimum stay</p>
+              <p>2 nights in high season (June–September). 1 night possible off-season subject to availability.</p>
+            </div>
+            <div class="bg-cream rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Check-in / Check-out</p>
+              <p>Check-in from 3:00 PM · Check-out before 11:00 AM</p>
+            </div>
+            <div class="bg-cream rounded-xl p-5 border border-olive/10">
+              <p class="font-semibold text-charcoal mb-2">Payment</p>
+              <p>Bank transfer or cash. 30% deposit required at booking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-olive text-white text-center">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="font-playfair text-3xl font-semibold mb-4">Book your stay</h2>
+      <p class="font-lato text-white/80 mb-8">Contact us to check availability and confirm your booking.</p>
+      <a href="/en/contact-us/" class="inline-block bg-white text-olive font-lato font-semibold px-8 py-4 rounded hover:bg-white/90 transition-colors">
+        Contact us
+      </a>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="en" />
+</Layout>

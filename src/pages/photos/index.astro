@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const categories = [
+  { label: 'Extérieur & Piscine', count: 8 },
+  { label: 'Jardin Provençal', count: 6 },
+  { label: 'Chambres & Suites', count: 12 },
+  { label: 'Petit-déjeuner', count: 4 },
+  { label: 'Village Saint-Paul', count: 5 },
+];
+---
+
+<Layout
+  title="Les photos de nos chambres d'hôtes à St Paul de Vence | Mas du Chanoine"
+  description="Découvrez en photos le Mas du Chanoine, sa piscine panoramique, son jardin provençal et ses 4 suites élégantes à Saint-Paul-de-Vence."
+  canonical="https://masduchanoine.com/photos/"
+  lang="fr"
+>
+  <Header slot="header" lang="fr" currentPath="/photos/" />
+
+  <!-- Page Header -->
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">Galerie</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Galerie photos
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        Découvrez le Mas du Chanoine en images
+      </p>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section class="py-20 bg-cream" aria-label="Galerie photos du Mas du Chanoine">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Categories nav -->
+      <nav class="flex flex-wrap gap-3 justify-center mb-12" aria-label="Filtres galerie">
+        <button class="font-lato text-sm px-5 py-2 rounded-full bg-olive text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-olive">Tout voir</button>
+        {categories.map(cat => (
+          <button class="font-lato text-sm px-5 py-2 rounded-full border border-olive/30 text-charcoal-light hover:border-olive hover:text-olive transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olive">
+            {cat.label} <span class="text-xs text-olive">({cat.count})</span>
+          </button>
+        ))}
+      </nav>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+        {Array.from({ length: 12 }, (_, i) => ({
+          bg: ['from-olive/20 to-olive/40', 'from-terracotta/20 to-terracotta/30', 'from-charcoal/10 to-charcoal/20', 'from-olive/30 to-terracotta/20'][i % 4],
+          icon: ['🏊', '🌳', '🛏️', '🥐', '🌺', '🏡', '🍋', '🏰', '🌿', '🌸', '🎯', '📍'][i],
+          alt: [
+            'Piscine chauffée du Mas du Chanoine',
+            'Jardin provençal en fleurs',
+            'Suite Cannoise - chambre d\'hôtes',
+            'Petit-déjeuner maison servi sur le patio',
+            'Rosiers dans le jardin',
+            'Façade du Mas du Chanoine, XVIIe siècle',
+            'Suite Niçoise - décor citron et olive',
+            'Vue sur Saint-Paul-de-Vence depuis la Suite Saint-Pauloise',
+            'Le Petit Mas - suite familiale indépendante',
+            'Suite Cannoise - accès jardin',
+            'Boulodrome et espace détente',
+            'Vue panoramique sur les collines provençales',
+          ][i],
+        })).map(photo => (
+          <div
+            class={`aspect-square bg-gradient-to-br ${photo.bg} rounded-xl flex items-center justify-center text-5xl md:text-6xl hover:scale-[1.02] transition-transform duration-200 cursor-pointer`}
+            role="img"
+            aria-label={photo.alt}
+          >
+            <span aria-hidden="true">{photo.icon}</span>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-center mt-10 font-lato text-sm text-charcoal-light">
+        Les photos originales du Mas du Chanoine seront disponibles prochainement.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-white text-center">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="font-playfair text-3xl text-charcoal mb-4">Venez nous rendre visite</h2>
+      <p class="font-lato text-charcoal-light mb-8">Les photos ne font pas tout — rien ne vaut une vraie expérience au Mas du Chanoine.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/chambres-dhotes/" class="inline-block border-2 border-olive text-olive font-lato font-semibold px-8 py-3 rounded hover:bg-olive hover:text-white transition-colors">
+          Voir nos chambres
+        </a>
+        <a href="/contactez-nous/" class="inline-block bg-olive text-white font-lato font-semibold px-8 py-3 rounded hover:bg-olive-dark transition-colors">
+          Nous contacter
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="fr" />
+</Layout>

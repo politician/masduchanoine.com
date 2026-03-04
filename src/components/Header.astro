@@ -1,0 +1,140 @@
+---
+interface Props {
+  lang?: 'fr' | 'en';
+  currentPath?: string;
+}
+
+const { lang = 'fr', currentPath = '/' } = Astro.props;
+
+const navFr = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Nos Chambres', href: '/chambres-dhotes/' },
+  { label: 'Tarifs', href: '/tarifs/' },
+  { label: 'Photos', href: '/photos/' },
+  { label: 'Nous Contacter', href: '/contactez-nous/' },
+];
+
+const navEn = [
+  { label: 'Home', href: '/en/' },
+  { label: 'Guestrooms', href: '/en/bed-breakfast/' },
+  { label: 'Rates', href: '/en/rates/' },
+  { label: 'Contact', href: '/en/contact-us/' },
+];
+
+const nav = lang === 'fr' ? navFr : navEn;
+const langSwitcherLabel = lang === 'fr' ? 'EN' : 'FR';
+const langSwitcherHref = lang === 'fr' ? '/en/' : '/';
+---
+
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-olive/10 shadow-sm">
+  <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      <!-- Logo -->
+      <a
+        href={lang === 'fr' ? '/' : '/en/'}
+        class="flex flex-col leading-tight focus:outline-none focus-visible:ring-2 focus-visible:ring-olive rounded"
+        aria-label="Mas du Chanoine – Accueil"
+      >
+        <span class="font-playfair text-xl md:text-2xl font-semibold text-charcoal tracking-wide">
+          Mas du Chanoine
+        </span>
+        <span class="text-xs text-olive tracking-widest uppercase font-lato font-light">
+          Saint-Paul-de-Vence
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav
+        class="hidden md:flex items-center gap-6 lg:gap-8"
+        aria-label={lang === 'fr' ? 'Navigation principale' : 'Main navigation'}
+      >
+        {nav.map(item => (
+          <a
+            href={item.href}
+            class={`text-sm font-lato tracking-wide transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-olive rounded px-1
+              ${currentPath === item.href
+                ? 'text-olive font-semibold border-b-2 border-olive pb-0.5'
+                : 'text-charcoal-light hover:text-olive'
+              }`}
+          >
+            {item.label}
+          </a>
+        ))}
+
+        <a
+          href={langSwitcherHref}
+          class="ml-2 text-xs font-lato font-semibold tracking-widest uppercase border border-olive text-olive px-3 py-1.5 rounded hover:bg-olive hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-olive"
+          aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
+        >
+          {langSwitcherLabel}
+        </a>
+      </nav>
+
+      <!-- Mobile controls -->
+      <div class="flex items-center gap-3 md:hidden">
+        <a
+          href={langSwitcherHref}
+          class="text-xs font-lato font-semibold tracking-widest uppercase border border-olive text-olive px-2.5 py-1 rounded hover:bg-olive hover:text-white transition-colors duration-200"
+          aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
+        >
+          {langSwitcherLabel}
+        </a>
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="p-2 text-charcoal hover:text-olive transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-olive rounded"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label={lang === 'fr' ? 'Ouvrir le menu' : 'Open menu'}
+        >
+          <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-olive/10 bg-cream"
+    aria-label={lang === 'fr' ? 'Navigation mobile' : 'Mobile navigation'}
+  >
+    <nav class="max-w-site mx-auto px-4 py-4 flex flex-col gap-1">
+      {nav.map(item => (
+        <a
+          href={item.href}
+          class={`py-2.5 px-3 text-sm font-lato tracking-wide rounded transition-colors duration-200
+            ${currentPath === item.href
+              ? 'text-olive font-semibold bg-olive/5'
+              : 'text-charcoal-light hover:text-olive hover:bg-olive/5'
+            }`}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      iconOpen?.classList.toggle('hidden', !isOpen);
+      iconClose?.classList.toggle('hidden', isOpen);
+    });
+  }
+</script>

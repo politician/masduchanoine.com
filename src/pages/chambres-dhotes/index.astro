@@ -1,0 +1,145 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const suites = [
+  {
+    name: "Suite Cannoise",
+    desc: "Idéalement placée au rez-de-jardin, la Suite Cannoise s'ouvre directement sur le jardin avec son bassin et son châtaignier centenaire. Le soir, les parfums d'oranger et de jasmin envahissent la terrasse.",
+    bed: "Lit King size ou 2 lits jumeaux",
+    icon: "🌸",
+    features: ["Accès direct jardin", "Vue sur le bassin", "Terrasse privée"],
+  },
+  {
+    name: "Suite Niçoise",
+    desc: "Lumineuse et colorée, la Suite Niçoise est située près du bassin et du boulodrome. On y entre sous un citronnier en fleur. Son mobilier en patine vert olive crée un délicat contraste avec ses murs jaune citron.",
+    bed: "Lit King size ou 2 lits jumeaux",
+    icon: "🍋",
+    features: ["Vue boulodrome", "Décor provençal", "Très lumineuse"],
+  },
+  {
+    name: "Suite Saint-Pauloise",
+    desc: "Accessible par un escalier en pierre, la Suite Saint-Pauloise offre une vue imprenable sur le vieux village fortifié de Saint-Paul-de-Vence. Construite au XVIIe siècle, elle allie charme rustique et confort moderne.",
+    bed: "Lit Queen size",
+    icon: "🏰",
+    features: ["Vue village Saint-Paul", "Architecture XVIIe s.", "Escalier en pierre"],
+  },
+  {
+    name: "Le Petit Mas",
+    desc: "Suite familiale indépendante dans le jardin, idéale pour 3 adultes ou une famille. Deux chambres séparées avec accès privé et espace de vie commun. Intimité et liberté garanties.",
+    bed: "1 chambre King + 1 chambre Queen",
+    icon: "🌿",
+    features: ["Bâtiment indépendant", "Idéale familles", "2 chambres séparées"],
+  },
+];
+
+const amenities = [
+  { label: "Climatisation", icon: "❄️" },
+  { label: "WiFi haut débit", icon: "📶" },
+  { label: "TV écran plat", icon: "📺" },
+  { label: "Nespresso & bouilloire", icon: "☕" },
+  { label: "Minibar", icon: "🍾" },
+  { label: "Coffre-fort", icon: "🔒" },
+  { label: "Salle de bains raffinée", icon: "🛁" },
+  { label: "Produits Fragonard", icon: "🌸" },
+  { label: "Peignoirs & chaussons", icon: "🩴" },
+  { label: "Ménage quotidien", icon: "✨" },
+  { label: "Accès jardin & piscine", icon: "🏊" },
+  { label: "Non-fumeur", icon: "🚭" },
+];
+---
+
+<Layout
+  title="Nos chambres d'hôtes sur la Côte d'Azur | Mas du Chanoine"
+  description="Découvrez nos 4 suites provençales au Mas du Chanoine, chambre d'hôtes à Saint-Paul-de-Vence. Climatisation, piscine chauffée, petit-déjeuner inclus."
+  canonical="https://masduchanoine.com/chambres-dhotes/"
+  lang="fr"
+  hreflang={{ fr: '/chambres-dhotes/', en: '/en/bed-breakfast/' }}
+>
+  <Header slot="header" lang="fr" currentPath="/chambres-dhotes/" />
+
+  <!-- Page Header -->
+  <section class="bg-charcoal py-20 md:py-28 text-center" aria-labelledby="page-heading">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-lato text-white/60 text-xs uppercase tracking-widest mb-3">Hébergement</p>
+      <h1 id="page-heading" class="font-playfair text-4xl sm:text-5xl md:text-6xl text-white font-semibold mb-4">
+        Nos chambres d'hôtes
+      </h1>
+      <p class="font-lato text-white/70 text-lg max-w-2xl mx-auto">
+        4 suites provençales alliant confort moderne et authenticité du XVIIe siècle
+      </p>
+    </div>
+  </section>
+
+  <!-- Suites -->
+  <section class="py-20 bg-cream" aria-labelledby="sec-suites">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-16">
+        {suites.map((suite, i) => (
+          <article
+            class={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}
+            aria-labelledby={`suite-${i}`}
+          >
+            <div class={`h-64 md:h-80 rounded-2xl bg-gradient-to-br from-olive/20 to-terracotta/10 flex items-center justify-center text-9xl ${i % 2 === 1 ? 'lg:order-2' : ''}`} aria-hidden="true">
+              {suite.icon}
+            </div>
+            <div>
+              <h2 id={`suite-${i}`} class="font-playfair text-2xl md:text-3xl font-semibold text-charcoal mb-4">
+                {suite.name}
+              </h2>
+              <p class="font-lato text-charcoal-light leading-relaxed mb-5">{suite.desc}</p>
+              <p class="font-lato text-olive font-semibold text-sm mb-5">
+                <span class="inline-block bg-olive/10 rounded-full px-4 py-1.5">🛏️ {suite.bed}</span>
+              </p>
+              <ul class="flex flex-wrap gap-2">
+                {suite.features.map(f => (
+                  <li class="text-xs font-lato bg-white border border-olive/20 text-charcoal-light rounded-full px-3 py-1">
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Équipements communs -->
+  <section class="py-20 bg-white" aria-labelledby="sec-amenities">
+    <div class="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <p class="font-lato text-olive text-xs uppercase tracking-widest mb-3">Dans chaque suite</p>
+        <h2 id="sec-amenities" class="font-playfair text-3xl md:text-4xl text-charcoal mb-4">Équipements inclus</h2>
+        <p class="font-lato text-charcoal-light">Tout le confort pour un séjour parfait</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {amenities.map(a => (
+          <div class="bg-cream rounded-xl p-4 text-center border border-olive/10">
+            <div class="text-3xl mb-2" aria-hidden="true">{a.icon}</div>
+            <p class="font-lato text-xs text-charcoal-light">{a.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-olive text-white text-center" aria-labelledby="sec-cta">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 id="sec-cta" class="font-playfair text-3xl md:text-4xl font-semibold mb-4">Prêt à réserver ?</h2>
+      <p class="font-lato text-white/80 mb-8">Contactez Pascale et Yves pour vérifier les disponibilités.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/tarifs/" class="inline-block border-2 border-white text-white font-lato font-semibold px-8 py-3 rounded hover:bg-white hover:text-olive transition-colors">
+          Voir les tarifs
+        </a>
+        <a href="/contactez-nous/" class="inline-block bg-white text-olive font-lato font-semibold px-8 py-3 rounded hover:bg-white/90 transition-colors">
+          Nous contacter
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" lang="fr" />
+</Layout>
