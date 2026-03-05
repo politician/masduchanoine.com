@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="L'espace piscine — Mas du Chanoine"
+  description="Piscine chauffée de 12m x 6m en mosaïque d'Opio avec vue sur Saint-Paul de Vence. Transats, parasols et espace détente au Mas du Chanoine."
+>
+  <!-- Hero -->
+  <section class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-primary-950/30 to-primary-950/10 z-10"></div>
+    <img
+      src="/media/piscine/vue-montagne.jpg"
+      alt="La piscine du Mas du Chanoine avec vue sur les collines de Saint-Paul de Vence"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-20 text-white px-4 md:px-8 pb-12 max-w-4xl">
+      <p class="text-sm tracking-[0.3em] uppercase mb-3 text-primary-200 font-light">12m × 6m · Chauffée en saison</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">L'espace piscine</h1>
+    </div>
+  </section>
+
+  <!-- Section 1: Piscine & Détente -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Détente</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Piscine & Détente</h2>
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            La piscine de 12m*6m se trouve au sein d'un espace clos par une haie d'arbustes et de fleurs multicolores. Cet espace permet de conserver son intimité.
+          </p>
+          <p>
+            Que vous souhaitiez nager ou seulement vous reposer, vous apprécierez cet espace détente. Vous trouverez dans votre chambre les serviettes de piscine mises à votre disposition.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Transats & Parasols -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/piscine/transat-montagne.jpg"
+              alt="Transats au bord de la piscine avec vue sur les montagnes"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg mt-8">
+            <img
+              src="/media/piscine/mosaique-opio.jpg"
+              alt="Mosaïque de pâte de verre d'Opio dans la piscine du Mas du Chanoine"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Confort</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Transats & Parasols</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              Des transats, tables d'appoints et parasols sont disposés autour de la piscine. Vous pourrez choisir de vous installer à l'ombre du palmier sur la pelouse ou bien préférer la douceur des rayons du soleil.
+            </p>
+            <p>
+              Vous pourrez depuis votre transat observer les lignes délicates du pin parasol.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Mosaïque & Piscine chauffée -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Caractéristiques</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Mosaïque & Piscine chauffée</h2>
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            La piscine en mosaïque de pâte de verre d'OPIO est un véritable bassin de nage de 12m par 6m, dont la profondeur varie de 1,20m à 2,20m. Elle trouve son originalité dans sa couleur vert tendre.
+          </p>
+          <p>
+            L'eau est chauffée en saison (selon les températures extérieures, du 1er mai au 30 septembre). Orientée au Sud, elle bénéficie d'un ensoleillement toute la journée. Pour des raisons de sécurité, le portail est fermé la nuit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Vue village & Collines -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">En soirée</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Vue village & Collines</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              En soirée, le village de Saint-Paul de Vence, dans son écrin de collines et de montagnes, avec ses remparts et le clocher de l'église illuminés, vous offrira un merveilleux spectacle.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/piscine/eclairage-nuit.jpg"
+              alt="La piscine éclairée la nuit avec vue sur le village illuminé de Saint-Paul de Vence"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-50 rounded-sm -z-10 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Plongez dans la sérénité</h2>
+      <p class="text-primary-300 mb-8 text-lg">Réservez votre séjour et profitez de la piscine du Mas du Chanoine.</p>
+      <a
+        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary bg-white text-primary-900 hover:bg-primary-100"
+      >
+        Réserver maintenant
+      </a>
+    </div>
+  </section>
+</BaseLayout>

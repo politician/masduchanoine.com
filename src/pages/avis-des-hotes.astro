@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const testimonials = [
+  {
+    text: 'Nous avons passé des vacances fantastiques ici, de la première à la dernière minute. Merci pour toutes les informations que nous avons reçues sur la région et les bons restaurants. Vous étiez les meilleurs guides que nous pouvions imaginer. Tout a été soigné dans les moindres détails et particulièrement le bon petit déjeuner. Heureux de prendre chaque jour un plonge dans la piscine. Nous manquons de superlatifs pour vous remercier, quelle hospitalité !',
+    author: 'Christine et Patrick',
+    origin: 'Belgique',
+  },
+  {
+    text: 'Le temps a passé vite durant notre visite sur la Côte d\'Azur. Nous avons eu le sentiment d\'être chez nous, ce qui est chaleureux et amical ! C\'était très apprécié de recevoir les conseils des excursions et des restaurants, toujours bons, toujours avec une bonne histoire ! Et la chambre d\'hôtes…. Localité chouette et très belle avec des belles chambres.',
+    author: 'Marleen, Mario, Eline, Sofie',
+    origin: 'Belgique',
+  },
+  {
+    text: 'Nous avons rencontré un petit coin de paradis, tenu par des hôtes de charme. Sincèrement, ce lieu est magnifique, un havre de paix à proximité du superbe village de Saint-Paul de Vence. Félicitations à Pascale et Yves pour avoir réussi à créer une telle ambiance. Merci pour tout.',
+    author: 'Claude et Franck',
+    origin: 'Sarthe',
+  },
+  {
+    text: 'Une bâtisse de charme dans un jardin magnifique – oranges et citrons à portée de main – mais surtout des hôtes chaleureux, attentionnés, d\'une extrême gentillesse. Difficile de partir tant on se sent bien, mais on reviendra, en été, pour profiter de la piscine et… des confitures de Pascale. Voyage en amoureux.',
+    author: 'Jean Louis',
+    origin: 'France',
+  },
+];
+---
+
+<BaseLayout
+  title="Avis des hôtes — Mas du Chanoine, Saint-Paul de Vence"
+  description="Découvrez les témoignages de nos hôtes au Mas du Chanoine, chambre d'hôtes de charme à Saint-Paul de Vence. Livre d'or et avis de nos visiteurs."
+>
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/media/mas-du-chanoine-jardin.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-primary-950/60"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">Témoignages</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold">Avis des hôtes</h1>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <p class="text-lg text-primary-600 leading-relaxed">
+          Merci à tous nos hôtes pour leurs mots chaleureux. Voici quelques témoignages de ceux qui ont séjourné au Mas du Chanoine.
+        </p>
+      </div>
+      <div class="space-y-8 max-w-3xl mx-auto">
+        {testimonials.map((t) => (
+          <blockquote class="bg-primary-50 rounded-sm p-8 md:p-10 border-l-4 border-accent-500">
+            <svg class="w-8 h-8 text-accent-200 mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+            <p class="text-primary-700 leading-relaxed italic mb-6">{t.text}</p>
+            <footer class="text-sm">
+              <cite class="not-italic font-semibold text-primary-900">{t.author}</cite>
+              <span class="text-primary-400"> — {t.origin}</span>
+            </footer>
+          </blockquote>
+        ))}
+      </div>
+
+      <div class="text-center mt-16">
+        <a
+          href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Réserver votre séjour
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

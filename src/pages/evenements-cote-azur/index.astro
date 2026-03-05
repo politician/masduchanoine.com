@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articles = [
+  {
+    title: 'Festivals de fleurs et fruits sur la Côte d\'Azur',
+    date: '27 janvier 2023',
+    slug: '/evenements-cote-azur/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles'],
+    excerpt: 'Comme chaque année en février, des fêtes fleuries célèbrent avec un peu d\'avance le retour du printemps et la saison des agrumes...',
+  },
+  {
+    title: 'Carnaval de Nice : Roi des trésors du Monde',
+    date: '20 janvier 2023',
+    slug: '/evenements-cote-azur/carnaval/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles'],
+    excerpt: 'Du 10 au 26 février 2023, la promenade des Anglais et le quartier Masséna accueillent les défilés du Carnaval de Nice...',
+  },
+  {
+    title: 'Pleine saison des agrumes',
+    date: '13 janvier 2023',
+    slug: '/evenements-cote-azur/pleine-saison-des-agrumes/',
+    categories: ['Côte d\'azur', 'Notre Maison d\'hôtes'],
+    excerpt: 'Le citron est un fruit emblématique de la Côte d\'Azur, notamment le célèbre citron de Menton...',
+  },
+  {
+    title: 'Festival de Cannes',
+    date: '18 juin 2021',
+    slug: '/evenements-cote-azur/festival-de-cannes/',
+    categories: ['Côte d\'azur'],
+    excerpt: 'Le festival international du film aura lieu du 6 au 17 juillet 2021...',
+  },
+  {
+    title: 'Suivez le Guide à St Paul de Vence',
+    date: '17 juin 2021',
+    slug: '/evenements-cote-azur/suivez-le-guide-a-st-paul-de-vence/',
+    categories: ['Côte d\'azur', 'Découverte'],
+    excerpt: 'Pour découvrir notre beau village en profondeur, rien de mieux que les visites guidées...',
+  },
+  {
+    title: 'Juin le mois des jardins à Menton',
+    date: '2 avril 2020',
+    slug: '/evenements-cote-azur/juin-le-mois-des-jardins-a-menton/',
+    categories: ['Côte d\'azur', 'Découverte'],
+    excerpt: 'La ville de Menton abrite plusieurs jardins remarquables...',
+  },
+  {
+    title: 'Salon des antiquaires d\'Antibes',
+    date: '20 mars 2020',
+    slug: '/evenements-cote-azur/salon-des-antiquaires-dantibes/',
+    categories: ['Côte d\'azur', 'Foires / Salons'],
+    excerpt: 'Le rendez-vous annuel des amateurs d\'art et d\'antiquités...',
+  },
+  {
+    title: 'Grand Prix de Formule 1 à Monaco',
+    date: '18 mars 2020',
+    slug: '/evenements-cote-azur/grand-prix-de-formule-1-a-monaco/',
+    categories: ['Côte d\'azur', 'Sport'],
+    excerpt: 'Depuis 1954, le dernier week-end du mois de mai a lieu le Grand Prix de Monaco...',
+  },
+  {
+    title: 'Ironman de France Nice',
+    date: '4 mars 2020',
+    slug: '/evenements-cote-azur/ironman-de-nice/',
+    categories: ['Côte d\'azur', 'Sport'],
+    excerpt: 'Nous avons reçu il y a deux ans un hôte qui participait à l\'Ironman de Nice...',
+  },
+  {
+    title: 'Fête des violettes à Tourrettes-sur-Loup',
+    date: '17 janvier 2020',
+    slug: '/evenements-cote-azur/fete-des-violettes-a-tourrettes-sur-loup/',
+    categories: ['Côte d\'azur', 'Découverte'],
+    excerpt: 'Fin février-début mars se déroule habituellement la Fête des Violettes...',
+  },
+];
+
+const activities = [
+  { label: 'Festivals & Spectacles', href: '#' },
+  { label: 'Découverte & Culture', href: '#' },
+  { label: 'Sport & Plein air', href: '#' },
+  { label: 'Foires & Salons', href: '#' },
+  { label: 'Notre Maison d\'hôtes', href: '#' },
+];
+---
+
+<BaseLayout
+  title="Événements sur la Côte d'Azur — Mas du Chanoine"
+  description="Découvrez les événements, festivals et activités sur la Côte d'Azur. Guide des sorties à proximité du Mas du Chanoine, Saint-Paul de Vence."
+>
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Blog & Actualités</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Événements sur la Côte d'Azur</h1>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Articles grid -->
+        <div class="lg:col-span-2">
+          <div class="grid md:grid-cols-2 gap-8">
+            {articles.map((article) => (
+              <article class="bg-white border border-primary-100 rounded-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="p-6">
+                  <time class="text-xs text-primary-400 tracking-wider uppercase">{article.date}</time>
+                  <h2 class="text-lg font-serif font-semibold text-primary-900 mt-2 mb-3 leading-snug">
+                    <a href={article.slug} class="hover:text-accent-600 transition-colors">{article.title}</a>
+                  </h2>
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    {article.categories.map((cat) => (
+                      <span class="text-[11px] tracking-wider uppercase px-2 py-0.5 bg-accent-50 text-accent-700 rounded-sm font-medium">
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                  <p class="text-sm text-primary-600 leading-relaxed mb-4">{article.excerpt}</p>
+                  <a href={article.slug} class="inline-flex items-center text-sm font-medium text-accent-600 hover:text-accent-700 transition-colors">
+                    Lire la suite <span class="ml-1">→</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div class="sticky top-24 space-y-8">
+            <div class="bg-primary-50 rounded-sm p-6">
+              <h3 class="text-lg font-serif font-semibold text-primary-900 mb-4">Activités & Thèmes</h3>
+              <ul class="space-y-3">
+                {activities.map((a) => (
+                  <li>
+                    <a href={a.href} class="flex items-center text-sm text-primary-600 hover:text-accent-600 transition-colors">
+                      <svg class="w-4 h-4 mr-2 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                      {a.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="bg-accent-50 rounded-sm p-6">
+              <h3 class="text-lg font-serif font-semibold text-primary-900 mb-3">Séjourner au Mas</h3>
+              <p class="text-sm text-primary-600 leading-relaxed mb-4">
+                Profitez de votre séjour pour explorer les événements de la Côte d'Azur depuis notre maison d'hôtes à Saint-Paul de Vence.
+              </p>
+              <a href="/chambres-dhotes/" class="btn-primary text-xs w-full text-center">Voir nos chambres</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

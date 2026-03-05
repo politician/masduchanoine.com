@@ -1,0 +1,214 @@
+---
+interface NavItem {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+}
+
+const navItems: NavItem[] = [
+  {
+    label: "Maison d'hôtes",
+    href: '/',
+    children: [
+      { label: "L'histoire du Mas", href: '/histoire/' },
+      { label: "L'esprit de la chambre d'hôtes", href: '/esprit-chambre-dhotes/' },
+      { label: 'Le jardin et ses aménagements', href: '/jardin-exterieurs/' },
+      { label: "L'espace piscine", href: '/espace-piscine/' },
+      { label: 'Le petit déjeuner', href: '/petit-dejeuner/' },
+    ],
+  },
+  {
+    label: 'Chambres',
+    href: '/chambres-dhotes/',
+    children: [
+      { label: 'La Cannoise', href: '/chambres-hotes/la-cannoise/' },
+      { label: 'La Niçoise', href: '/chambres-hotes/la-nicoise/' },
+      { label: 'La Saint Pauloise', href: '/chambres-hotes/la-saint-pauloise/' },
+      { label: 'Le Petit Mas', href: '/chambres-hotes/petit-mas/' },
+    ],
+  },
+  { label: 'Tarifs', href: '/tarifs/' },
+  { label: 'Photos', href: '/photos/' },
+  { label: 'Activités', href: '/activites-cote-azur/' },
+  { label: 'Événements', href: '/evenements-cote-azur/' },
+  { label: 'Contact', href: '/contactez-nous/' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-primary-100 transition-all duration-300" id="main-header">
+  <nav class="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
+    <a href="/" class="flex items-center gap-3 group" aria-label="Mas du Chanoine - Accueil">
+      <span class="text-xl md:text-2xl font-serif font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
+        Mas du Chanoine
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden lg:flex items-center gap-6">
+      {navItems.map((item) => (
+        item.children ? (
+          <div class="relative group">
+            <button
+              class:list={[
+                'text-sm font-medium tracking-wide uppercase transition-colors duration-200 flex items-center gap-1 py-2',
+                currentPath.startsWith(item.href) && item.href !== '/'
+                  ? 'text-accent-600'
+                  : 'text-primary-700 hover:text-accent-600',
+              ]}
+            >
+              {item.label}
+              <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="bg-white rounded-sm shadow-lg border border-primary-100 py-2 min-w-[260px]">
+                {item.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class:list={[
+                      'block px-5 py-2.5 text-sm transition-colors',
+                      currentPath === child.href
+                        ? 'text-accent-600 bg-accent-50'
+                        : 'text-primary-700 hover:text-accent-600 hover:bg-primary-50',
+                    ]}
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a
+            href={item.href}
+            class:list={[
+              'text-sm font-medium tracking-wide uppercase transition-colors duration-200',
+              currentPath === item.href || currentPath.startsWith(item.href + '/')
+                ? 'text-accent-600'
+                : 'text-primary-700 hover:text-accent-600',
+            ]}
+          >
+            {item.label}
+          </a>
+        )
+      ))}
+      <a
+        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary text-xs"
+      >
+        Réserver
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="lg:hidden p-2 text-primary-900 hover:text-accent-600 transition-colors"
+      id="mobile-menu-btn"
+      aria-label="Menu"
+      aria-expanded="false"
+    >
+      <svg class="w-6 h-6" id="menu-icon-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg class="w-6 h-6 hidden" id="menu-icon-close" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="lg:hidden hidden bg-white border-t border-primary-100 max-h-[80vh] overflow-y-auto" id="mobile-menu">
+    <div class="px-4 py-6 space-y-1">
+      {navItems.map((item) => (
+        item.children ? (
+          <div class="mobile-dropdown">
+            <button
+              class:list={[
+                'w-full flex items-center justify-between text-sm font-medium tracking-wide uppercase transition-colors py-3 mobile-dropdown-btn',
+                'text-primary-700',
+              ]}
+              type="button"
+            >
+              {item.label}
+              <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="hidden pl-4 pb-2 space-y-1 mobile-dropdown-content">
+              {item.children.map((child) => (
+                <a
+                  href={child.href}
+                  class:list={[
+                    'block text-sm transition-colors py-2 text-primary-600 hover:text-accent-600',
+                    currentPath === child.href && 'text-accent-600 font-medium',
+                  ]}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={item.href}
+            class:list={[
+              'block text-sm font-medium tracking-wide uppercase transition-colors py-3',
+              currentPath === item.href
+                ? 'text-accent-600'
+                : 'text-primary-700 hover:text-accent-600',
+            ]}
+          >
+            {item.label}
+          </a>
+        )
+      ))}
+      <a
+        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary w-full text-center text-xs mt-4 block"
+      >
+        Réserver
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('hidden') === false;
+    iconOpen?.classList.toggle('hidden', isOpen);
+    iconClose?.classList.toggle('hidden', !isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Mobile dropdown toggles
+  document.querySelectorAll('.mobile-dropdown-btn').forEach((dropdownBtn) => {
+    dropdownBtn.addEventListener('click', () => {
+      const content = dropdownBtn.nextElementSibling as HTMLElement;
+      const arrow = dropdownBtn.querySelector('svg');
+      content?.classList.toggle('hidden');
+      arrow?.classList.toggle('rotate-180');
+    });
+  });
+
+  // Shrink header on scroll
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+      header?.classList.add('shadow-sm');
+    } else {
+      header?.classList.remove('shadow-sm');
+    }
+  });
+</script>

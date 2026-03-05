@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap");
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-primary-900 antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-accent-600 text-white font-medium rounded-sm
+           hover:bg-accent-700 transition-colors duration-200 text-sm tracking-wider uppercase;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-primary-900 text-primary-900 font-medium rounded-sm
+           hover:bg-primary-900 hover:text-white transition-colors duration-200 text-sm tracking-wider uppercase;
+  }
+  .section-pad {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+  .prose-content {
+    @apply leading-relaxed text-primary-800;
+  }
+  .prose-content p {
+    @apply mb-4;
+  }
+  .prose-content h2 {
+    @apply text-2xl md:text-3xl font-serif font-semibold mb-6 mt-10 text-primary-900;
+  }
+  .prose-content h3 {
+    @apply text-xl md:text-2xl font-serif font-semibold mb-4 mt-8 text-primary-900;
+  }
+  .prose-content ul {
+    @apply list-disc pl-6 mb-4 space-y-1;
+  }
+  .prose-content a {
+    @apply text-accent-600 hover:text-accent-700 underline;
+  }
+}

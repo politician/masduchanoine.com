@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const amenities = [
+  'Lit King Size',
+  'Café Nespresso',
+  'Douche italienne',
+  'Lit Queen size',
+  'Thé et tisanes',
+  'WC indépendant',
+  'Wi-Fi gratuit',
+  'Mini Bar',
+  'Sèche-cheveux',
+  'TV écran plat',
+  'Eau minérale',
+  'Peignoirs',
+  'Air conditionné',
+  'Autres boissons en option',
+  'Chaussons',
+  'Coffre-fort',
+  'Salon de jardin',
+  "Produits d'accueil",
+  'Fauteuil dans chambre Queen',
+  'Parking gratuit',
+  'Serviettes de piscine',
+  'Bureau dans chambre King',
+];
+
+const gallery = [
+  { src: '/media/chambres/chambre-petit-mas.jpg', alt: 'Le Petit Mas — vue extérieure' },
+  { src: '/media/chambres/petit-mas-chambre-queen.jpg', alt: 'Le Petit Mas — chambre Queen' },
+  { src: '/media/chambres/petit-mas-vue-exterieure.jpg', alt: 'Le Petit Mas — façade et jardin' },
+  { src: '/media/chambres/petit-mas-chambre-king.jpg', alt: 'Le Petit Mas — chambre King' },
+  { src: '/media/chambres/petit-mas-douche.jpg', alt: 'Le Petit Mas — salle de douche' },
+  { src: '/media/chambres/jardin-1.jpg', alt: 'Le jardin du Mas du Chanoine' },
+];
+---
+
+<BaseLayout
+  title="Le Petit Mas — Suite familiale 2 chambres | Mas du Chanoine"
+  description="Le Petit Mas, suite familiale indépendante de 35m² avec 2 chambres. Idéale pour 3 personnes, vue sur le bassin. Chambre d'hôtes à Saint-Paul de Vence."
+>
+  <!-- Hero -->
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/media/chambres/chambre-petit-mas.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-primary-950/60"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">Indépendant & Familial</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold">LE PETIT MAS</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <nav class="max-w-6xl mx-auto px-4 md:px-8 py-4 text-sm text-primary-400" aria-label="Breadcrumb">
+    <ol class="flex items-center gap-2">
+      <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
+      <li>›</li>
+      <li><a href="/chambres-dhotes/" class="hover:text-accent-600 transition-colors">Chambres</a></li>
+      <li>›</li>
+      <li class="text-primary-700">Le Petit Mas</li>
+    </ol>
+  </nav>
+
+  <!-- Content -->
+  <section class="section-pad pt-8">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-3 prose-content text-base md:text-lg">
+          <p>
+            Situé dans un bâtiment indépendant, à côté du bassin aux poissons, le Petit Mas est une suite familiale idéale pour accueillir les personnes voyageant à trois&nbsp;: 3 adultes ou bien deux adultes accompagnés d'un enfant de plus de 12 ans. La présence de deux chambres séparées permet de garantir l'intimité de chacun.
+          </p>
+          <p>
+            Vous disposez sur 35&nbsp;m²&nbsp;: d'une chambre avec un lit King size (180×200), climatisation, téléviseur écran plat, Wi-Fi, nécessaire pour le thé et le café, mini-bar, coffre-fort, et un bureau&nbsp;; d'une chambre avec un lit Queen size (160×200) et un fauteuil&nbsp;; d'une salle de douche à l'italienne&nbsp;; de toilettes indépendants.
+          </p>
+          <p>
+            Les deux chambres sont équipées d'étagères et de grands placards coulissants pour votre confort. Devant le Petit Mas, vous pourrez profiter d'un salon de jardin.
+          </p>
+        </div>
+        <aside class="lg:col-span-2">
+          <div class="bg-primary-50 rounded-sm p-6 md:p-8 sticky top-24">
+            <h2 class="text-lg font-serif font-semibold text-primary-900 mb-2">Caractéristiques</h2>
+            <p class="text-sm text-primary-600 mb-6">Surface : 35 m² ― 2 Chambres ― Rez de jardin</p>
+            <div class="grid grid-cols-2 gap-3">
+              {amenities.map((a) => (
+                <div class="flex items-center gap-2 text-sm text-primary-700">
+                  <svg class="w-4 h-4 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {a}
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary w-full text-center mt-8 text-xs"
+            >
+              Réserver cette chambre
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-8 text-center">Galerie photos</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {gallery.map((img) => (
+          <div class="aspect-[4/3] rounded-sm overflow-hidden">
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other rooms -->
+  <section class="section-pad">
+    <div class="container-narrow text-center">
+      <h2 class="text-2xl font-serif font-semibold text-primary-900 mb-6">Découvrir nos autres chambres</h2>
+      <a href="/chambres-dhotes/" class="btn-outline">Voir toutes les chambres</a>
+    </div>
+  </section>
+</BaseLayout>

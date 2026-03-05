@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const amenities = [
+  'Lit King Size',
+  'Café Nespresso',
+  'Douche italienne',
+  'Air conditionné',
+  'Thé et tisanes',
+  'WC indépendant',
+  'Wi-Fi gratuit',
+  'Mini Bar',
+  'Sèche-cheveux',
+  'TV écran plat',
+  'Eau minérale',
+  'Peignoirs',
+  'Chaînes internationales',
+  'Autres boissons en option',
+  'Chaussons',
+  'Coffre-fort',
+  'Salon de jardin',
+  "Produits d'accueil",
+  'Coin salon',
+  'Parking gratuit',
+  'Serviettes de piscine',
+  'Bureau',
+];
+
+const gallery = [
+  { src: '/media/chambres/chambre-cannoise.jpg', alt: 'La Cannoise — chambre principale' },
+  { src: '/media/chambres/cannoise-palme-festival.jpg', alt: 'La Cannoise — décoration Festival de Cannes' },
+  { src: '/media/chambres/cannoise-salon-jardin.jpg', alt: 'La Cannoise — salon de jardin' },
+  { src: '/media/chambres/cannoise-bureau-salon.jpg', alt: 'La Cannoise — bureau et coin salon' },
+  { src: '/media/chambres/cannoise-douche.jpg', alt: 'La Cannoise — salle de douche et vasque' },
+];
+---
+
+<BaseLayout
+  title="La Cannoise — Chambre d'hôtes provençale chic | Mas du Chanoine"
+  description="La Cannoise, suite junior de 36m² au style provençal chic. Accès jardin, vue sur le bassin, lit King Size, douche italienne. Chambre d'hôtes à Saint-Paul de Vence."
+>
+  <!-- Hero -->
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/media/chambres/chambre-cannoise.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-primary-950/60"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">Provençale Chic & Moderne</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold">LA CANNOISE</h1>
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <nav class="max-w-6xl mx-auto px-4 md:px-8 py-4 text-sm text-primary-400" aria-label="Breadcrumb">
+    <ol class="flex items-center gap-2">
+      <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
+      <li>›</li>
+      <li><a href="/chambres-dhotes/" class="hover:text-accent-600 transition-colors">Chambres</a></li>
+      <li>›</li>
+      <li class="text-primary-700">La Cannoise</li>
+    </ol>
+  </nav>
+
+  <!-- Content -->
+  <section class="section-pad pt-8">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-3 prose-content text-base md:text-lg">
+          <p>
+            Baignée de soleil et très lumineuse, cette chambre d'hôtes dispose d'un accès direct depuis le jardin dans lequel vous trouverez votre table et des chaises pour apprécier le calme des lieux à l'ombre du marronnier. Dans un transat, vous pourrez admirer les poissons rouges du bassin couvert de nénuphars.
+          </p>
+          <p>
+            Cette suite junior vous ravira par son mélange de styles et de couleurs&nbsp;: la décoration évoque les artistes de la Côte d'Azur et le Festival de Cannes.
+          </p>
+          <p>
+            D'une superficie de 36&nbsp;m², elle est organisée avec une chambre avec un grand lit de 180×200, un coin salon, un bureau, une salle de douche et des toilettes indépendants. Le charme de l'ancien a été conservé avec les tomettes d'origine au sol et les poutres apparentes. Pour plus de confort et de chaleur, le sol de l'espace chambre et salon est en parquet de chêne.
+          </p>
+        </div>
+        <aside class="lg:col-span-2">
+          <div class="bg-primary-50 rounded-sm p-6 md:p-8 sticky top-24">
+            <h2 class="text-lg font-serif font-semibold text-primary-900 mb-2">Caractéristiques</h2>
+            <p class="text-sm text-primary-600 mb-6">Surface : 36 m² ― 1 Chambre avec coin salon ― Rez de jardin</p>
+            <div class="grid grid-cols-2 gap-3">
+              {amenities.map((a) => (
+                <div class="flex items-center gap-2 text-sm text-primary-700">
+                  <svg class="w-4 h-4 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {a}
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary w-full text-center mt-8 text-xs"
+            >
+              Réserver cette chambre
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-8 text-center">Galerie photos</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {gallery.map((img) => (
+          <div class="aspect-[4/3] rounded-sm overflow-hidden">
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other rooms -->
+  <section class="section-pad">
+    <div class="container-narrow text-center">
+      <h2 class="text-2xl font-serif font-semibold text-primary-900 mb-6">Découvrir nos autres chambres</h2>
+      <a href="/chambres-dhotes/" class="btn-outline">Voir toutes les chambres</a>
+    </div>
+  </section>
+</BaseLayout>

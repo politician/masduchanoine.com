@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const annuaires = [
+  { name: 'Cote d\'Azur autrement', url: 'https://www.cote-azur-autrement.com/' },
+  { name: 'Charmio', url: 'http://www.charmio.fr/' },
+];
+
+const maisonsAmies = [
+  { name: 'Chambres d\'azur au Tignet', url: 'https://www.chambres-azur.com/' },
+  { name: 'Il Monticello à Grasse', url: 'http://www.il-monticello.fr/' },
+  { name: 'La Parare à Chateauneuf Villevieille', url: 'https://www.laparare.com/' },
+  { name: 'La Bastide du Bosquet à Antibes', url: 'https://www.lebosquet06.com/' },
+  { name: 'Le Mas de Mougins à Mougins', url: 'http://www.lemasdemougins.com/' },
+  { name: 'Mas Samarcande Vallauris', url: 'http://www.mas-samarcande.com/' },
+  { name: 'Orion cabanes perchées à St Paul de Vence', url: 'https://www.orionbb.com/' },
+  { name: 'Port d\'Attache à Vallauris', url: 'https://www.portdattache.com/' },
+  { name: 'Villa Cedria à La Colle sur Loup', url: 'https://www.villacedria.com/' },
+  { name: 'La Bastide Valmasque à Biot', url: 'https://www.villachandra.com/' },
+  { name: 'Villa Kilauea à Nice', url: 'https://www.villakilauea.com/' },
+  { name: 'Villa Menuse à Opio', url: 'https://www.villamenuse.com/' },
+];
+---
+
+<BaseLayout
+  title="Partenaires — Mas du Chanoine"
+  description="Nos partenaires et liens utiles. Chambres d'hôtes amies et ressources pour votre séjour sur la Côte d'Azur."
+>
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Réseau & Amis</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Partenaires & Liens</h1>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Annuaires -->
+        <div class="mb-14">
+          <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-6">Annuaires et recommandations</h2>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {annuaires.map((partner) => (
+              <a
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 p-4 bg-primary-50 rounded-sm border border-primary-100 hover:border-accent-400 hover:shadow-md transition-all duration-200"
+              >
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                </div>
+                <span class="text-primary-800 font-medium text-sm">{partner.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Maisons d'hôtes amies -->
+        <div>
+          <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-2">Les maisons d'hôtes amies</h2>
+          <p class="text-primary-500 text-sm mb-6">Association Côte d'Azur Autrement</p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            {maisonsAmies.map((partner) => (
+              <a
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 p-4 bg-primary-50 rounded-sm border border-primary-100 hover:border-accent-400 hover:shadow-md transition-all duration-200"
+              >
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                </div>
+                <span class="text-primary-800 font-medium text-sm">{partner.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

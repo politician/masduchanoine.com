@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const activities = [
+  { image: '/media/activites/saint-paul.jpg', title: 'Saint Paul de Vence', subtitle: 'Village d\'artistes', link: '/activites/visiter-stpauldevence' },
+  { image: '/media/activites/nice.jpg', title: 'Nice', subtitle: 'Capitale de la Côte d\'Azur', link: '/activites/visiter-nice' },
+  { image: '/media/activites/antibes.jpg', title: 'Antibes et Cap d\'Antibes', subtitle: 'Vieille ville et plages', link: '/activites/antibes-et-cap-dantibes/' },
+  { image: '/media/activites/cannes.jpg', title: 'Cannes et les îles de Lérins', subtitle: 'Deux atmosphères', link: '/activites/visiter-cannes-et-iles-de-lerins/' },
+  { image: '/media/activites/monaco.jpg', title: 'Monaco', subtitle: 'Monte-Carlo', link: '/activites/visiter-monaco/' },
+  { image: '/media/activites/villages.jpg', title: 'Les villages perchés', subtitle: 'Gourdon, Tourrettes sur Loup et Eze', link: '/activites/visiter-les-villages-perches/' },
+  { image: '/media/activites/golf.jpg', title: 'Golf', subtitle: 'Dix parcours', link: '/activites/golf' },
+  { image: '/media/activites/cuisine.jpg', title: 'Cours de cuisine', subtitle: 'Deux formules', link: '/activites/cours-de-cuisine-du-sud/' },
+  { image: '/media/activites/shiatsu.jpg', title: 'Shiatsu', subtitle: 'Sur réservation', link: '/activites/shiatsu' },
+];
+---
+
+<BaseLayout
+  title="Activités sur la Côte d'Azur — Mas du Chanoine"
+  description="Découvrez les activités et visites à faire depuis le Mas du Chanoine : Saint-Paul de Vence, Nice, Cannes, Monaco, villages perchés, golf et plus."
+>
+  <!-- Hero -->
+  <section class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-primary-950/30 to-primary-950/10 z-10"></div>
+    <img
+      src="/media/piscine-espace-fleuri.jpg"
+      alt="Vue depuis le Mas du Chanoine sur la Côte d'Azur"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-20 text-white px-4 md:px-8 pb-12 max-w-4xl">
+      <p class="text-sm tracking-[0.3em] uppercase mb-3 text-primary-200 font-light">À découvrir</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">Activités sur la Côte d'Azur</h1>
+      <p class="text-lg text-primary-200 mt-4 max-w-2xl">
+        Depuis le Mas du Chanoine, partez à la découverte des plus beaux sites de la Côte d'Azur.
+      </p>
+    </div>
+  </section>
+
+  <!-- Activity Cards Grid -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {activities.map((activity) => (
+          <a
+            href={activity.link}
+            class="group relative block rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+          >
+            <div class="aspect-[3/2] overflow-hidden">
+              <img
+                src={activity.image}
+                alt={`${activity.title} — ${activity.subtitle}`}
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-950/80 via-primary-950/20 to-transparent"></div>
+            <!-- Text -->
+            <div class="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+              <p class="text-xs tracking-[0.15em] uppercase text-primary-300 mb-1 font-light">{activity.subtitle}</p>
+              <h2 class="text-xl md:text-2xl font-serif font-semibold leading-tight group-hover:text-accent-200 transition-colors duration-300">
+                {activity.title}
+              </h2>
+              <span class="inline-block mt-2 text-sm text-primary-300 group-hover:text-white group-hover:translate-x-1 transition-all duration-300">
+                Découvrir →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Explorez la Côte d'Azur depuis le Mas</h2>
+      <p class="text-primary-300 mb-8 text-lg">Réservez votre séjour et laissez-nous vous guider.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary bg-white text-primary-900 hover:bg-primary-100"
+        >
+          Réserver maintenant
+        </a>
+        <a href="/chambres-dhotes/" class="btn-outline border-white text-white hover:bg-white hover:text-primary-900">
+          Nos chambres
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

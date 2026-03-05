@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const photos = [
+  { src: '/media/photos/mas-pin.jpg', alt: 'La piscine sous le pin parasol au Mas du Chanoine' },
+  { src: '/media/photos/jardin-marronnier.jpg', alt: 'Dans le jardin sous le marronnier' },
+  { src: '/media/chambres/nicoise-coin-salon-bureau.jpg', alt: 'Chambre Niçoise : coin salon et bureau' },
+  { src: '/media/photos/bassin-nenuphars.jpg', alt: 'Le bassin aux nénuphars et poissons rouges' },
+  { src: '/media/photos/vitrail-fontmarty.jpg', alt: 'Vitrail de Fontmarty au Mas du Chanoine' },
+  { src: '/media/piscine/vue-montagne.jpg', alt: 'Piscine avec vue sur Saint-Paul de Vence' },
+  { src: '/media/chambres/nicoise-salon-jardin.jpg', alt: 'Chambre Niçoise : salon de jardin' },
+  { src: '/media/chambres/nicoise-douche-vasque.jpg', alt: 'Chambre Niçoise : douche et vasque' },
+  { src: '/media/chambres/cannoise-palme-festival.jpg', alt: 'Chambre Cannoise : palme du festival et tableau Matisse' },
+  { src: '/media/photos/patio-fleurs.jpg', alt: 'Le patio avec fleurs pour le petit-déjeuner' },
+  { src: '/media/photos/saint-pauloise-baignoire.jpg', alt: 'Chambre Saint-Pauloise : la baignoire' },
+  { src: '/media/photos/vin-orange.jpg', alt: 'Vin d\'orange fait maison' },
+  { src: '/media/photos/bougainvillee.jpg', alt: 'Bougainvillée et table de petit-déjeuner' },
+  { src: '/media/photos/saint-pauloise-1400.jpg', alt: 'Chambre Saint-Pauloise' },
+  { src: '/media/photos/palme-festival.jpg', alt: 'La palme du festival de Cannes' },
+];
+---
+
+<BaseLayout
+  title="Galerie Photos — Mas du Chanoine"
+  description="Galerie photos du Mas du Chanoine : chambres d'hôtes, jardin, piscine, patio et petit déjeuner à Saint-Paul de Vence."
+>
+  <!-- Header -->
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Le Mas en images</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Galerie Photos</h1>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {photos.map((photo, i) => (
+          <button
+            class="gallery-item block w-full rounded-sm overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer break-inside-avoid group"
+            data-src={photo.src}
+            data-alt={photo.alt}
+            aria-label={`Voir en grand : ${photo.alt}`}
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-primary-950/0 group-hover:bg-primary-950/20 transition-colors duration-300 flex items-end">
+                <p class="text-white text-sm px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-light">
+                  {photo.alt}
+                </p>
+              </div>
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Dialog -->
+  <dialog id="lightbox" class="backdrop:bg-primary-950/90 bg-transparent p-0 max-w-[90vw] max-h-[90vh] m-auto">
+    <div class="relative">
+      <button
+        id="lightbox-close"
+        class="absolute -top-12 right-0 text-white hover:text-primary-300 transition-colors z-50"
+        aria-label="Fermer"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded-sm" />
+      <p id="lightbox-caption" class="text-white text-center text-sm mt-3 font-light"></p>
+    </div>
+  </dialog>
+
+  <!-- CTA -->
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Cela vous donne envie de passer des vacances sur la Côte d'Azur ?</h2>
+      <p class="text-primary-300 mb-8 text-lg">Réservez dès maintenant votre séjour au Mas du Chanoine.</p>
+      <a
+        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary bg-white text-primary-900 hover:bg-primary-100"
+      >
+        Réserver maintenant
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const dialog = document.getElementById('lightbox') as HTMLDialogElement;
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const lightboxCaption = document.getElementById('lightbox-caption') as HTMLParagraphElement;
+  const closeBtn = document.getElementById('lightbox-close') as HTMLButtonElement;
+
+  document.querySelectorAll('.gallery-item').forEach((item) => {
+    item.addEventListener('click', () => {
+      const src = item.getAttribute('data-src') || '';
+      const alt = item.getAttribute('data-alt') || '';
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightboxCaption.textContent = alt;
+      dialog.showModal();
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    dialog.close();
+  });
+
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && dialog.open) {
+      dialog.close();
+    }
+  });
+</script>

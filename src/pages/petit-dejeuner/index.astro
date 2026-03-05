@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Le petit déjeuner — Mas du Chanoine"
+  description="Petit déjeuner continental avec produits locaux et confitures maison au Mas du Chanoine, servi dans le patio ou la salle à manger."
+>
+  <!-- Hero: 2 images side by side -->
+  <section class="relative overflow-hidden">
+    <div class="grid grid-cols-2 h-[50vh] min-h-[400px]">
+      <div class="relative overflow-hidden">
+        <img
+          src="/media/breakfast/patio-bougainvillee.jpg"
+          alt="Le patio du Mas du Chanoine avec bougainvillée pour le petit déjeuner"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+      <div class="relative overflow-hidden">
+        <img
+          src="/media/breakfast/petit-dejeuner.jpg"
+          alt="Petit déjeuner continental servi au Mas du Chanoine"
+          class="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+      </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-transparent to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 z-20 text-white px-4 md:px-8 pb-12 max-w-4xl">
+      <p class="text-sm tracking-[0.3em] uppercase mb-3 text-primary-200 font-light">Fait maison</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">Le petit déjeuner</h1>
+    </div>
+  </section>
+
+  <!-- Section 1: Patio & Salle à manger -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Chaque matin</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Patio & Salle à manger</h2>
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            Le petit déjeuner, qui vous est offert avec chaque nuitée, vous sera servi dans le patio en été et devant la grande cheminée de la salle à manger en hiver.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Pain & Pâtisseries -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/breakfast/jardin-roses.jpg"
+              alt="Vue du jardin fleuri de roses pendant le petit déjeuner"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg mt-8">
+            <img
+              src="/media/breakfast/chanoine.jpg"
+              alt="Table du petit déjeuner au Mas du Chanoine"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Produits locaux</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Pain & Pâtisseries variées</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              De composition continentale, le petit déjeuner privilégie les produits locaux et faits maison. La baguette de tradition française et les viennoiseries seront accompagnées de confitures, faites par Pascale, la plupart avec les fruits du jardin.
+            </p>
+            <p>
+              En plus d'un yaourt, chaque matin vous découvrirez une salade de fruits de saison et une pâtisserie différente tout au long de votre séjour (crêpes, brioche perdue parfumée à la fleur d'oranger, cake avec les citrons du jardin, …).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Boissons chaudes & Oranges pressées -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Boissons</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Boissons chaudes & Oranges pressées</h2>
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            Pour les boissons, nous vous proposons une sélection de thés de la maison Mariage Frères, du café et un jus d'oranges pressées.
+          </p>
+          <p>
+            Selon vos habitudes ou si vous souffrez d'allergies, n'hésitez pas à nous faire part de vos demandes particulières dès votre réservation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Un petit déjeuner gourmand vous attend</h2>
+      <p class="text-primary-300 mb-8 text-lg">Réservez votre séjour au Mas du Chanoine, petit déjeuner inclus.</p>
+      <a
+        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary bg-white text-primary-900 hover:bg-primary-100"
+      >
+        Réserver maintenant
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="L'esprit de la chambre d'hôtes — Mas du Chanoine"
+  description="L'esprit du Mas du Chanoine : convivialité, accueil personnalisé, décoration provençale et découverte de la Côte d'Azur."
+>
+  <!-- Hero -->
+  <section class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-primary-950/30 to-primary-950/10 z-10"></div>
+    <img
+      src="/media/esprit/chambres-hotes.jpg"
+      alt="L'esprit chaleureux et provençal du Mas du Chanoine"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-20 text-white px-4 md:px-8 pb-12 max-w-4xl">
+      <p class="text-sm tracking-[0.3em] uppercase mb-3 text-primary-200 font-light">Notre philosophie</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">L'esprit de la chambre d'hôtes</h1>
+    </div>
+  </section>
+
+  <!-- Section 1: Chambres d'hôtes & Suite familiale -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Bienvenue</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Chambres d'hôtes & Suite familiale</h2>
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            Bienvenue sur la Côte d'Azur, au Mas du Chanoine, où nous vous accueillerons avec plaisir dans notre bastide de caractère pour vos escapades d'un week-end ou vos plus longs séjours. Nous vous proposons trois chambres d'hôtes à l'élégance raffinée et une suite familiale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Convivialité & Découverte -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="relative">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/esprit/vitrail-erni.jpg"
+              alt="Vitrail de Hans Erni dans le salon du Mas du Chanoine"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-accent-50 rounded-sm -z-10 hidden md:block"></div>
+        </div>
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">À votre service</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Convivialité & Découverte de la Provence</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              Nous sommes à votre service pour rendre votre séjour sur la Côte d'Azur aussi parfait qu'inoubliable. Dès votre arrivée au Mas du Chanoine, vous serez conquis par la convivialité de notre accueil : après vous avoir fait découvrir votre chambre et les différents lieux de la propriété, nous ferons connaissance autour d'un verre de bienvenue et nous vous proposerons, selon vos envies, une palette de choses à faire, de lieux à visiter ou de restaurants à réserver.
+            </p>
+            <p>
+              Pendant votre séjour, nous serons à votre disposition pour l'organisation de vos journées et effectuer les réservations nécessaires. Une question, un ennui, nous serons là pour y répondre et vous assister.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Bibliothèque -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Salon & Lecture</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Bibliothèque & documentation Côte d'Azur</h2>
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            Nous avons voulu cette maison d'hôtes comme une maison ouverte aux hôtes. Vous pourrez à tout moment venir admirer le vitrail dans le salon de piano, consulter la documentation sur la Côte d'Azur et les nombreux livres de la bibliothèque sur la Provence (ses paysages, ses artistes, ses musées…).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Provence & Artistes -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Art & Décoration</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Provence & Artistes</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              L'ensemble du Mas est décoré selon la tradition provençale et vous y trouverez des meubles peints, deux cheminées en calcaire de Vence, deux vitraux des artistes Hans Erni (artiste suisse réputé ayant vécu à Saint-Paul de Vence) et Jacques Fonmarty (maître verrier d'art à Saint-Paul de Vence).
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/esprit/vitrail-fonmarty.jpg"
+              alt="Vitrail de Jacques Fonmarty, maître verrier d'art à Saint-Paul de Vence"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-50 rounded-sm -z-10 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Vivez l'esprit du Mas</h2>
+      <p class="text-primary-300 mb-8 text-lg">Réservez votre séjour et découvrez la Côte d'Azur autrement.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary bg-white text-primary-900 hover:bg-primary-100"
+        >
+          Réserver maintenant
+        </a>
+        <a href="/chambres-dhotes/" class="btn-outline border-white text-white hover:bg-white hover:text-primary-900">
+          Découvrir nos chambres
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

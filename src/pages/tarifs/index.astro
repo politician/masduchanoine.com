@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const seasons = {
+  chambres: [
+    { label: 'Basse saison', dates: '01/01 au 30/04, 01/10 au 31/12', price: '255€ - 285€' },
+    { label: 'Moyenne saison', dates: '01/05 au 14/06, 15/09 au 30/09', price: '300€ - 330€' },
+    { label: 'Haute saison', dates: '15/06 au 14/09', price: '340€ - 370€' },
+  ],
+  petitMas: [
+    { label: 'Basse saison', dates: '01/01 au 30/04, 01/10 au 31/12', price: '355€' },
+    { label: 'Moyenne saison', dates: '01/05 au 14/06, 15/09 au 30/09', price: '420€' },
+    { label: 'Haute saison', dates: '15/06 au 14/09', price: '480€' },
+  ],
+};
+
+const articles = [
+  {
+    title: 'Article 1 – Durée du séjour',
+    text: 'Le client signataire du contrat conclu pour une durée déterminée ne pourra en aucune circonstance se prévaloir d\'un quelconque droit au maintien dans les lieux.',
+  },
+  {
+    title: 'Article 2 – Conclusion du contrat',
+    text: 'Toute réservation ne deviendra effective qu\'après l\'encaissement d\'un acompte de 50% du montant total du séjour, avec un minimum d\'une nuit. Le paiement de cet acompte vaut acceptation des présentes conditions générales de vente et des tarifs.',
+  },
+  {
+    title: 'Article 3 – Annulation par le client',
+    text: 'En raison de la petite taille de notre maison d\'hôtes, toute annulation nous affecte de manière significative. En cas d\'annulation plus de 60 jours avant la date d\'arrivée, nous vous restituerons l\'acompte encaissé minoré des frais bancaires. En cas d\'annulation ou de diminution de la durée de votre séjour entre 60 et 30 jours avant la date d\'arrivée, l\'acompte encaissé restera acquis intégralement. En cas d\'annulation ou de diminution de la durée de votre séjour moins de 30 jours avant la date d\'arrivée, la totalité du séjour sera due et facturée. Lors d\'un séjour, en cas de départ anticipé la totalité du séjour sera due et facturée. Afin de vous prémunir contre le risque d\'annulation, nous vous recommandons de souscrire une assurance annulation auprès de votre assureur, de votre prestataire de carte de crédit, ou de Mondial Assistance.',
+  },
+  {
+    title: 'Article 4 – Arrivée et départ',
+    text: 'Pour votre arrivée au Mas du Chanoine, nous vous proposons de vous accueillir entre 17 heures et 19 heures. En cas d\'arrivée tardive ou reportée, vous devez nous en informer dès que possible et avant 17 heures. Absents du Mas pendant la journée, il nous est impossible de vous accueillir avant 17 heures. Le jour de votre départ, nous vous remercions de libérer la chambre avant 11 heures.',
+  },
+  {
+    title: 'Article 5 – Règlements',
+    text: 'Les acomptes sont à régler par carte bancaire (VISA, Mastercard). Le solde du séjour est à régler sur place à votre arrivée, en espèces ou par carte bancaire (VISA, Mastercard).',
+  },
+  {
+    title: 'Article 6 – Taxes',
+    text: 'Nos prix inclus une TVA de 10%. La taxe de séjour est un impôt local que le client doit acquitter auprès du propriétaire qui la reverse ensuite au Trésor Public. Le tarif pour l\'année 2024 est de 1.07€ par nuit par personne de 18 ans et plus.',
+  },
+  {
+    title: 'Article 7 – Utilisation des lieux',
+    text: 'Pour profiter de votre séjour au Mas du Chanoine, il est impératif de disposer d\'un véhicule. Nous informons notre aimable clientèle que les chambres, les pièces d\'accueil et le patio pendant le service du petit déjeuner sont non-fumeur (y compris e-cigarette). Utilisation des lieux : le client devra respecter le caractère paisible des lieux et en faire un usage conforme à leur destination. Il s\'engage à rendre la chambre dans le même état qu\'à son arrivée. En cas de dégâts, le client s\'engage à rembourser les frais occasionnés. L\'accès à l\'espace piscine est interdit aux enfants mineurs non accompagnés. Les parents doivent par ailleurs surveiller leurs enfants qui restent sous leur entière responsabilité.',
+  },
+  {
+    title: 'Article 8 – Animaux',
+    text: 'La cohabitation d\'animaux variés sur la propriété (chat, poissons, grenouilles, tortues) ne nous permet pas d\'accueillir d\'animal supplémentaire.',
+  },
+  {
+    title: 'Article 9 – Capacité',
+    text: 'Le contrat est établi pour un nombre précis de personnes. Si le nombre de clients dépasse ce nombre, le propriétaire est en mesure de refuser les clients supplémentaires. Ce refus ne peut en aucun cas être considéré comme une modification ou une rupture du contrat à l\'initiative du propriétaire, et le prix correspondant au coût de l\'hébergement reste acquis au propriétaire.',
+  },
+  {
+    title: 'Article 10 – Assurance',
+    text: 'Le client est responsable de tous les dommages survenant de son fait. Le client atteste être couvert par une assurance de responsabilité civile couvrant sa propre responsabilité et celle des personnes l\'accompagnant.',
+  },
+  {
+    title: 'Article 11 – Litiges',
+    text: 'Il est recommandé de se rapprocher du Médiateur du Tourisme qui interviendra pour favoriser le règlement à l\'amiable des litiges. Le Tribunal de Grasse est seul compétent pour les litiges qui naîtraient de l\'exécution ou de l\'interruption du présent contrat.',
+  },
+];
+---
+
+<BaseLayout
+  title="Tarifs des chambres d'hôtes — Mas du Chanoine"
+  description="Tarifs 2026 des chambres d'hôtes et suite familiale du Mas du Chanoine à Saint-Paul de Vence. Meilleur tarif garanti en réservant directement."
+>
+  <!-- Header -->
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Saison 2026</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Tarifs</h1>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="prose-content text-base md:text-lg">
+          <p>
+            Le tarif de chaque chambre varie selon la saison. Le meilleur tarif est garanti en réservant directement auprès du Mas du Chanoine, soit par mail (<a href="mailto:pascale@masduchanoine.com">pascale@masduchanoine.com</a>), par téléphone (<a href="tel:+33627271649">06 27 27 16 49</a>) ou bien en utilisant le moteur de réservation en ligne (bouton Réserver).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Cards -->
+  <section class="section-pad bg-primary-50 pt-0">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+        <!-- Card A: Chambres d'hôtes -->
+        <div class="bg-white rounded-sm shadow-lg overflow-hidden border border-primary-100">
+          <div class="bg-primary-900 text-white p-6 md:p-8 text-center">
+            <h2 class="text-2xl font-serif font-semibold mb-1">Cannoise, Niçoise, Saint-Pauloise</h2>
+            <p class="text-primary-300 text-sm">Chambres d'hôtes · 2 personnes</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="space-y-4 mb-6">
+              {seasons.chambres.map((s) => (
+                <div class="flex items-center justify-between py-3 border-b border-primary-100 last:border-0">
+                  <div>
+                    <p class="font-semibold text-primary-900">{s.label}</p>
+                    <p class="text-xs text-primary-500">{s.dates}</p>
+                  </div>
+                  <p class="text-xl font-serif font-semibold text-accent-600">{s.price}</p>
+                </div>
+              ))}
+            </div>
+            <div class="bg-primary-50 rounded-sm p-4 text-xs text-primary-600 leading-relaxed">
+              <p>
+                Le prix « chambres d'hôtes » comprend la location de la chambre pour 2 personnes par nuit, ainsi que le petit déjeuner continental offert, le parking et le WiFi. En cas d'occupation par une seule personne, ce prix sera minoré de 10€. Les chambres ne permettent pas d'accueillir de personne supplémentaire. Le prix le plus bas correspond à la chambre « La Saint-Pauloise » et le prix supérieur correspond aux 2 chambres du rez-de-jardin « La Cannoise » ou « La Niçoise ». Les tarifs comprennent la TVA. La taxe de séjour prélevée par la commune est à ajouter: le tarif est de 1.07€ par nuit par personne de 18 ans et plus.
+              </p>
+            </div>
+            <div class="mt-6 text-center">
+              <a
+                href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                Réserver
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card B: Le Petit Mas -->
+        <div class="bg-white rounded-sm shadow-lg overflow-hidden border border-primary-100">
+          <div class="bg-accent-600 text-white p-6 md:p-8 text-center">
+            <h2 class="text-2xl font-serif font-semibold mb-1">Le Petit Mas</h2>
+            <p class="text-white/80 text-sm">Suite 2 chambres · 3 personnes</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="space-y-4 mb-6">
+              {seasons.petitMas.map((s) => (
+                <div class="flex items-center justify-between py-3 border-b border-primary-100 last:border-0">
+                  <div>
+                    <p class="font-semibold text-primary-900">{s.label}</p>
+                    <p class="text-xs text-primary-500">{s.dates}</p>
+                  </div>
+                  <p class="text-xl font-serif font-semibold text-accent-600">{s.price}</p>
+                </div>
+              ))}
+            </div>
+            <div class="bg-primary-50 rounded-sm p-4 text-xs text-primary-600 leading-relaxed">
+              <p>
+                Le prix « suite 2 chambres » comprend la location du Petit-Mas pour 3 personnes ainsi que le petit déjeuner continental offert, le parking et le WiFi. En cas d'occupation par 2 personnes, ce prix sera minoré de 10€. Les tarifs comprennent la TVA. La taxe de séjour prélevée par la commune est à ajouter: le tarif est de 1.07€ par nuit par personne de 18 ans et plus.
+              </p>
+            </div>
+            <div class="mt-6 text-center">
+              <a
+                href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary"
+              >
+                Réserver
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conditions Générales de Vente -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <details class="group bg-white border border-primary-200 rounded-sm overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 md:p-8 hover:bg-primary-50 transition-colors">
+            <h2 class="text-xl md:text-2xl font-serif font-semibold text-primary-900">Conditions générales de vente</h2>
+            <svg class="w-5 h-5 text-primary-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 md:px-8 pb-6 md:pb-8 space-y-6">
+            {articles.map((article) => (
+              <div>
+                <h3 class="font-semibold text-primary-900 mb-2 text-sm">{article.title}</h3>
+                <p class="text-sm text-primary-600 leading-relaxed">{article.text}</p>
+              </div>
+            ))}
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

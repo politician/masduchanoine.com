@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Carnaval de Nice : Roi des trésors du Monde — Mas du Chanoine" description="Le Carnaval de Nice 2023, Roi des trésors du Monde. Défilés sur la Promenade des Anglais du 10 au 26 février 2023.">
+  <article>
+    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
+      <div class="absolute inset-0 bg-primary-100"></div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2">
+            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
+            <li>›</li>
+            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
+            <li>›</li>
+            <li class="text-primary-700">Carnaval de Nice</li>
+          </ol>
+        </nav>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
+          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Festivals / Spectacles</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Carnaval de Nice : Roi des trésors du Monde</h1>
+        <time class="text-sm text-primary-500" datetime="2023-01-20">20 janvier 2023</time>
+      </div>
+    </section>
+    <section class="section-pad pt-8 pb-16">
+      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
+        <p>Du 10 au 26 février 2023, la promenade des Anglais et le quartier Masséna accueillent les défilés (corsos) du Carnaval de Nice, créé en 1873 qui fête cette année ses 150 ans.</p>
+        <p>Vous pouvez assister à des batailles de fleurs lancées depuis les chars sur la promenade des Anglais, ou bien au corso carnavalesque des grandes têtes et des chars allégoriques illuminés.</p>
+      </div>
+    </section>
+    <section class="section-pad pt-0">
+      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
+        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
+        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

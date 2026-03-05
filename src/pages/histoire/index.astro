@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="L'histoire du Mas du Chanoine — Chambres d'hôtes Saint-Paul de Vence"
+  description="Découvrez l'histoire du Mas du Chanoine, bastide du XVIIe siècle à Saint-Paul de Vence. Ancien relais de poste, terre viticole puis résidence de charme."
+>
+  <!-- Hero -->
+  <section class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-primary-950/30 to-primary-950/10 z-10"></div>
+    <img
+      src="/media/histoire/mas-ancien.jpg"
+      alt="Le Mas du Chanoine, bastide historique du XVIIe siècle à Saint-Paul de Vence"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+    />
+    <div class="relative z-20 text-white px-4 md:px-8 pb-12 max-w-4xl">
+      <p class="text-sm tracking-[0.3em] uppercase mb-3 text-primary-200 font-light">Depuis le XVIIe siècle</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">L'histoire du Mas du Chanoine</h1>
+    </div>
+  </section>
+
+  <!-- Section 1: Origines & Relais de poste -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">XVIIe – XVIIIe siècle</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Origines & Relais de poste</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              Le Mas a été construit au XVIIème siècle pour la partie la plus ancienne du bâtiment. Au XVIIIème, cette demeure était un relais de poste où les diligences changeaient de chevaux sur le parcours allant de Nice à Grasse.
+            </p>
+            <p>
+              Elles empruntaient la montée des Hauts Caucours à Cagnes-sur-Mer, suivaient la route des crêtes en passant par Vence puis Tourrettes-sur-Loup, pour rejoindre Grasse, la cité du parfum.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-lg bg-primary-100">
+            <img
+              src="/media/histoire/mas-ancien.jpg"
+              alt="Le Mas du Chanoine à l'époque de son origine, ancien relais de poste"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-accent-50 rounded-sm -z-10 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Vignes & fleurs -->
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1 grid grid-cols-2 gap-4">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/histoire/roses.jpg"
+              alt="Roses dans le jardin du Mas du Chanoine, héritage de la culture florale"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg mt-8">
+            <img
+              src="/media/histoire/fleur.jpg"
+              alt="Fleurs cultivées au Mas du Chanoine, tradition des œillets et roses"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">XIXe – XXe siècle</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Vignes & fleurs</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              La propriété qui comprenait plusieurs hectares a été ensuite exploitée en terre viticole jusqu'en 1945. Le Chanoine Brunner en fit l'acquisition en 1919, et donna son nom à la propriété.
+            </p>
+            <p>
+              Elle fut ensuite cédée à un exploitant agricole qui y cultiva les roses et les œillets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Charme & Artistes -->
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">À partir de 1960</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Charme & Artistes</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>
+              A partir de 1960, elle devint une résidence de charme avec ses tomettes anciennes, ses murs épais, ses voûtes, ses poutres apparentes et ses vitraux signés d'artistes réputés.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
+            <img
+              src="/media/histoire/hans-erni.jpg"
+              alt="Vitrail de l'artiste Hans Erni au Mas du Chanoine"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-50 rounded-sm -z-10 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Séjournez dans un lieu chargé d'histoire</h2>
+      <p class="text-primary-300 mb-8 text-lg">Réservez votre chambre au Mas du Chanoine et vivez l'histoire de la Côte d'Azur.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary bg-white text-primary-900 hover:bg-primary-100"
+        >
+          Réserver maintenant
+        </a>
+        <a href="/chambres-dhotes/" class="btn-outline border-white text-white hover:bg-white hover:text-primary-900">
+          Découvrir nos chambres
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page introuvable — Mas du Chanoine"
+  description="La page que vous recherchez n'existe pas ou a été déplacée."
+>
+  <section class="min-h-[60vh] flex items-center justify-center section-pad">
+    <div class="text-center max-w-lg mx-auto">
+      <p class="text-8xl font-serif font-bold text-primary-300 mb-4">404</p>
+      <h1 class="text-3xl md:text-4xl font-serif text-primary-800 mb-4">
+        Page introuvable
+      </h1>
+      <p class="text-lg text-primary-600 mb-8">
+        La page que vous recherchez n'existe pas ou a été déplacée.
+        Nous vous invitons à retourner à l'accueil pour découvrir nos chambres d'hôtes.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="btn-primary">
+          Retour à l'accueil
+        </a>
+        <a href="/chambres-dhotes/" class="btn-outline">
+          Voir nos chambres
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

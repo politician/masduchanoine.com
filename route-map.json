@@ -1,0 +1,236 @@
+{
+  "mapping": [
+    {
+      "oldUrl": "/",
+      "newRoute": "/",
+      "status": "preserved",
+      "notes": "Homepage - URL identical"
+    },
+    {
+      "oldUrl": "/chambres-dhotes/",
+      "newRoute": "/chambres-dhotes/",
+      "status": "preserved",
+      "notes": "Rooms listing - URL identical"
+    },
+    {
+      "oldUrl": "/chambres-hotes/la-cannoise/",
+      "newRoute": "/chambres-hotes/la-cannoise/",
+      "status": "preserved",
+      "notes": "Room detail - URL identical"
+    },
+    {
+      "oldUrl": "/chambres-hotes/la-nicoise/",
+      "newRoute": "/chambres-hotes/la-nicoise/",
+      "status": "preserved",
+      "notes": "Room detail - URL identical"
+    },
+    {
+      "oldUrl": "/chambres-hotes/la-saint-pauloise/",
+      "newRoute": "/chambres-hotes/la-saint-pauloise/",
+      "status": "preserved",
+      "notes": "Room detail - URL identical"
+    },
+    {
+      "oldUrl": "/chambres-hotes/petit-mas/",
+      "newRoute": "/chambres-hotes/petit-mas/",
+      "status": "preserved",
+      "notes": "Room detail - URL identical"
+    },
+    {
+      "oldUrl": "/avis-des-hotes",
+      "newRoute": "/avis-des-hotes",
+      "status": "preserved",
+      "notes": "Guest reviews - URL identical"
+    },
+    {
+      "oldUrl": "/acces",
+      "newRoute": "/acces",
+      "status": "preserved",
+      "notes": "Access/map page - URL identical (was Google Maps embed)"
+    },
+    {
+      "oldUrl": "/evenements-cote-azur/",
+      "newRoute": "/evenements-cote-azur/",
+      "status": "preserved",
+      "notes": "Events listing - URL identical"
+    },
+    {
+      "oldUrl": "/politique-de-confidentialite/",
+      "newRoute": "/politique-de-confidentialite/",
+      "status": "preserved",
+      "notes": "Privacy policy - URL identical"
+    },
+    {
+      "oldUrl": "/partenaires-liens/",
+      "newRoute": "/partenaires-liens/",
+      "status": "preserved",
+      "notes": "Partners - URL identical"
+    },
+    {
+      "oldUrl": "/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/",
+      "newRoute": "/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/carnaval/",
+      "newRoute": "/carnaval/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/pleine-saison-des-agrumes/",
+      "newRoute": "/pleine-saison-des-agrumes/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/festival-de-cannes/",
+      "newRoute": "/festival-de-cannes/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/suivez-le-guide-a-st-paul-de-vence/",
+      "newRoute": "/suivez-le-guide-a-st-paul-de-vence/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/juin-le-mois-des-jardins-a-menton/",
+      "newRoute": "/juin-le-mois-des-jardins-a-menton/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/salon-des-antiquaires-dantibes/",
+      "newRoute": "/salon-des-antiquaires-dantibes/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/grand-prix-de-formule-1-a-monaco/",
+      "newRoute": "/grand-prix-de-formule-1-a-monaco/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/ironman-de-nice/",
+      "newRoute": "/ironman-de-nice/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/fete-des-violettes-a-tourrettes-sur-loup/",
+      "newRoute": "/fete-des-violettes-a-tourrettes-sur-loup/",
+      "status": "preserved",
+      "notes": "Blog article - URL identical"
+    },
+    {
+      "oldUrl": "/activites/visiter-stpauldevence",
+      "newRoute": "/activites/visiter-stpauldevence",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/visiter-nice",
+      "newRoute": "/activites/visiter-nice",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/visiter-monaco/",
+      "newRoute": "/activites/visiter-monaco/",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/visiter-cannes-et-les-iles-de-lerins/",
+      "newRoute": "/activites/visiter-cannes-et-les-iles-de-lerins/",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/antibes-et-cap-dantibes/",
+      "newRoute": "/activites/antibes-et-cap-dantibes/",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/visiter-les-villages-perches/",
+      "newRoute": "/activites/visiter-les-villages-perches/",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/golf",
+      "newRoute": "/activites/golf",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/cours-de-cuisine",
+      "newRoute": "/activites/cours-de-cuisine",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    },
+    {
+      "oldUrl": "/activites/shiatsu",
+      "newRoute": "/activites/shiatsu",
+      "status": "preserved",
+      "notes": "Activity page - URL identical"
+    }
+  ],
+  "notMigrated": [
+    {
+      "oldUrl": "/category/cote-dazur/",
+      "reason": "WordPress category archive - not needed in static site, articles accessible via /evenements-cote-azur/"
+    },
+    {
+      "oldUrl": "/category/festival-spectacles/",
+      "reason": "WordPress category archive - low SEO value"
+    },
+    {
+      "oldUrl": "/category/decouverte/",
+      "reason": "WordPress category archive - low SEO value"
+    },
+    {
+      "oldUrl": "/category/foires-salons/",
+      "reason": "WordPress category archive - low SEO value"
+    },
+    {
+      "oldUrl": "/category/sport/",
+      "reason": "WordPress category archive - low SEO value"
+    },
+    {
+      "oldUrl": "/category/notre-maison-dhotes/",
+      "reason": "WordPress category archive - low SEO value"
+    },
+    {
+      "oldUrl": "/evenements-cote-azur/page/2/",
+      "reason": "WordPress pagination - all articles shown on single page"
+    },
+    {
+      "oldUrl": "/evenements-cote-azur/page/3/",
+      "reason": "WordPress pagination - all articles shown on single page"
+    },
+    {
+      "oldUrl": "/2023/01/27/",
+      "reason": "WordPress date archive - no SEO value"
+    },
+    {
+      "oldUrl": "/2023/01/20/",
+      "reason": "WordPress date archive - no SEO value"
+    },
+    {
+      "oldUrl": "/foire-aux-santons-de-mouans-sartoux/",
+      "reason": "Blog article mentioned in sidebar but not in main listing; can be added later if needed"
+    }
+  ],
+  "newPages": [
+    {
+      "newRoute": "/contact",
+      "reason": "New dedicated contact page - improves UX and conversion"
+    }
+  ]
+}
