@@ -1,0 +1,58 @@
+# Astro build output
+/dist/
+
+# Node.js
+/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.*
+
+# Editor
+.vscode/
+.idea/
+
+# Misc
+*.local
+
+# Python
+*.pyc
+__pycache__/
+
+# Test coverage
+coverage/
+
+# Other
+*.swp
+*.swo
+
+# Ignore temporary migration scripts
+migrate_rooms.py
+migrate_activities.py
+migrate_events.py
+generate_missing_pages.py
+
+# Ignore build cache
+.cache/
+
+# Ignore Astro preview server
+/.astro/
+
+# Ignore output from Astro integrations
+/.vercel/
+/.netlify/
+
+# Ignore GitHub Actions artifacts
+*.log
+
+# Ignore local backups
+*.bak
