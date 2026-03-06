@@ -1,0 +1,20 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="Antibes e Cap d'Antibes — Attività Costa d'Azzurra"
+  description="Antibes e Cap d'Antibes: attività vicino al nostro B&B sulla Costa Azzurra."
+  lang="it"
+  activityName="Antibes e Cap d'Antibes"
+  breadcrumb={[
+    { label: "Home", href: "/it/" },
+    { label: "Attività", href: "/it/attivita/" },
+    { label: "Antibes e Cap d\'Antibes" }
+  ]}
+  image={{ src: "/media/activites/antibes.jpg", alt: "Antibes e Cap d\'Antibes" }}
+  backLabel="← Tutte le attività"
+  backUrl="/it/attivita/"
+  bookingLabel="Prenota"
+  alternates={{ fr: "/activites/antibes-et-cap-dantibes/", en: "/en/activites/antibes-and-cap-dantibes/", it: "/it/activites/antibes-e-cap-dantibes/" }}
+/>

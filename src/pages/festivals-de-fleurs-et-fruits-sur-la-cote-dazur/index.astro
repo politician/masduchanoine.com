@@ -1,40 +1,27 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Festivals de fleurs et fruits sur la Côte d'Azur — Mas du Chanoine" description="Festivals de fleurs et fruits sur la Côte d'Azur : Fête du Citron à Menton, Carnaval de Nice et fêtes fleuries de février.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Festivals de fleurs et fruits</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Festivals / Spectacles</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Festivals de fleurs et fruits sur la Côte d'Azur</h1>
-        <time class="text-sm text-primary-500" datetime="2023-01-27">27 janvier 2023</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Comme chaque année en février, des fêtes fleuries célèbrent avec un peu d'avance le retour du printemps et la saison des agrumes d'un bout à l'autre du département.</p>
-        <p>Pour varier les animations d'une année sur l'autre, le thème de la Fête du Citron à Menton, celui du Carnaval de Nice, et de la Fête du Mimosa à Mandelieu changent chaque année, offrant des spectacles toujours renouvelés.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Festivals de printemps de la Cote d'azur | Mas du chanoine"
+  description="Pour varier spectacles et festivités, le thème de la Fête du Citron à Menton, celui du Carnaval de Nice, et de la Fête du Mimosa à Mandelieu change tous les ans"
+  eventName="Festivals de fleurs et fruits sur la Côte d'Azur"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Festivals de fleurs et fruits" }
+  ]}
+  tags={["Côte d'azur", "Festivals / Spectacles"]}
+  date="27 janvier 2023"
+  datetime="2023-01-27"
+  image={{ src: "/media/evenements/festivals-fleurs.jpg", alt: "Menton, fête du Citron" }}
+  alternates={{ fr: "/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/", en: "/en/flowers-and-fruits-festivals-introduce-spring/" }}
+>
+  <p>Comme chaque année en février, des fêtes fleuries célèbrent avec un peu d'avance le retour du printemps et la saison des agrumes d'un bout à l'autre du département.</p>
+          <p>Pour varier les animations d'une année sur l'autre, le thème de la Fête du Citron à Menton, celui du Carnaval de Nice, et de la Fête du Mimosa à Mandelieu change tous les ans.</p>
+          <p>Cette année à Menton du 11 au 26 février 2023, le thème est Rock & Opéra. L'occasion de voir défiler des chars recouverts d'agrumes …</p>
+          <p>En soirée ou dans l'après midi, jardins de lumières, corsos des fruits d'or ou corsos nocturnes alternent spectacles musicaux, parades et défilés de chars.</p>
+          <p>Le carnaval de Nice du 10 au 26 février 2023 se déplace sur la promenade du Paillon, sur le thème du Roi des Trésor du Monde. Les chars présenteront toute la créativité que déploient les carnavaliers. Les spectateurs verront les parades, et peuvent se déguiser pour participer gratuitement à la fête ! Batailles de fleurs, confettis et serpentins sont aussi de rigueur.</p>
+          <p>Du 8 au 12 février 2023 à Mandelieu, se déroule la fête du mimosa sur le thème de La Grande Course autour du Monde, avec en plus des corsos, des randonnées organisées dans les plantations, la visite guidée de la pépinière, un lâcher de lanternes lumineuses, un spectacle pyrotechnique et l'élection de la reine du mimosa.</p>
+          <p class="text-sm text-primary-500 italic">Crédit photo&nbsp;: CRT Riviera Côte d'Azur – Photographe&nbsp;: Georges VERAN</p>
+</EventLayout>

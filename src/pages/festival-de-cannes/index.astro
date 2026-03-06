@@ -1,39 +1,23 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Festival de Cannes — Mas du Chanoine" description="Le Festival international du film de Cannes. Séjournez au Mas du Chanoine pour profiter du glamour de la Croisette.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Festival de Cannes</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Festival de Cannes</h1>
-        <time class="text-sm text-primary-500" datetime="2021-06-18">18 juin 2021</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Le festival international du film aura lieu du 6 au 17 juillet 2021. Jodie Foster sera l'invitée spéciale de la Cérémonie d'ouverture et nommée Palme d'or d'honneur du 74e Festival.</p>
-        <p>Nous sommes impatients de montrer à nouveau au monde le décor de rêve des plages de Cannes, de la Côte d'Azur avec le ciel bleu, les palmiers et la mer Méditerranée.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Festival de Cannes | Mas du chanoine"
+  description="Le festival international du film aura lieu du 6 au 17 juillet 2021. Jodie Foster sera l'invitée spéciale de la Cérémonie d'ouverture et nommée Palme d'or d'honneur du 74e Festival."
+  eventName="Festival de Cannes"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Festival de Cannes" }
+  ]}
+  tags={["Côte d'azur"]}
+  date="18 juin 2021"
+  datetime="2021-06-18"
+  image={{ src: "/media/evenements/festival-cannes.jpg", alt: "Festival de Cannes - Palme d'Or" }}
+  alternates={{ fr: "/festival-de-cannes/", en: "/en/film-festival-in-cannes/" }}
+>
+  <p>Le festival international du film aura lieu du 6 au 17 juillet 2021.</p>
+          <p>Jodie Foster sera l'invitée spéciale de la Cérémonie d'ouverture et nommée Palme d'or d'honneur du 74e Festival.</p>
+          <p>Nous sommes impatients de montrer à nouveau au monde le décor de rêve des plages de Cannes, de la Côte d’azur avec le ciel bleu, les palmiers et la mer Méditerranée, et l’effervescence et la gaieté parfois factice de ces visiteurs éphémères.</p>
+</EventLayout>

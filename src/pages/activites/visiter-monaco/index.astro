@@ -1,55 +1,23 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ActivityLayout from '../../../layouts/ActivityLayout.astro';
 ---
 
-<BaseLayout title="Visiter Monaco — Mas du Chanoine" description="Découvrez Monaco et Monte-Carlo. Palais princier, Jardin exotique, Casino, Musée océanographique. À 40 min du Mas du Chanoine.">
-  <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-    <div class="absolute inset-0 bg-primary-100"></div>
-    <div class="relative z-10 max-w-3xl mx-auto">
-      <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-        <ol class="flex items-center gap-2">
-          <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-          <li>›</li>
-          <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Activités</a></li>
-          <li>›</li>
-          <li class="text-primary-700">Visiter Monaco</li>
-        </ol>
-      </nav>
-      <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Visiter Monaco</h1>
-    </div>
-  </section>
-
-  <section class="section-pad pt-8">
-    <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-      <p>La <strong>Principauté de Monaco</strong>, deuxième plus petit État du monde, concentre sur à peine deux kilomètres carrés un mélange unique de glamour, d'histoire et de culture méditerranéenne. À seulement 40 minutes en voiture du Mas du Chanoine, Monaco est une excursion inoubliable depuis Saint-Paul de Vence.</p>
-
-      <h2>Le Rocher et le Palais princier</h2>
-      <p>Le <strong>Rocher de Monaco</strong> domine la Méditerranée et abrite le <strong>Palais princier</strong>, résidence officielle de la famille Grimaldi depuis 1297. Assistez à la relève de la garde chaque jour à 11h55, puis explorez les ruelles de Monaco-Ville, ses boutiques de souvenirs et la Cathédrale où reposent les princes de Monaco, dont la Princesse Grace.</p>
-
-      <h2>Le Musée océanographique</h2>
-      <p>Fondé en 1910 par le Prince Albert Ier, le <strong>Musée océanographique de Monaco</strong> est perché sur une falaise à 85 mètres au-dessus de la mer. Ses aquariums présentent plus de 6 000 espèces marines, du lagon aux requins en passant par les coraux tropicaux. La terrasse offre une vue spectaculaire sur la côte.</p>
-
-      <h2>Monte-Carlo et le Casino</h2>
-      <p>Le quartier de <strong>Monte-Carlo</strong> incarne le luxe et l'élégance. Le célèbre <strong>Casino de Monte-Carlo</strong>, chef-d'œuvre de Charles Garnier inauguré en 1863, est entouré de jardins soignés, d'hôtels prestigieux et de boutiques de haute couture. Même sans jouer, la visite des salons historiques vaut le détour.</p>
-
-      <h2>Le Jardin exotique</h2>
-      <p>Accroché à la falaise au-dessus de Fontvieille, le <strong>Jardin exotique de Monaco</strong> rassemble plus de 1 000 variétés de plantes succulentes et de cactus venus du monde entier. Le panorama sur la Riviera y est exceptionnel. En contrebas, la grotte de l'Observatoire, ornée de stalactites et de stalagmites, se visite avec un guide.</p>
-
-      <h2>Le Grand Prix de Formule 1</h2>
-      <p>Chaque année en mai, les rues de Monaco se transforment en circuit de Formule 1. Le <strong>Grand Prix de Monaco</strong> est l'une des courses les plus prestigieuses au monde. Même hors période de course, vous pouvez parcourir le tracé mythique à pied et imaginer les bolides dans les virages de la Rascasse et du tunnel.</p>
-
-      <h2>Le Port Hercule et Fontvieille</h2>
-      <p>Le <strong>Port Hercule</strong> accueille les plus beaux yachts du monde et s'anime de restaurants et de bars. Le quartier de <strong>Fontvieille</strong>, gagné sur la mer, abrite le jardin des Roses dédié à la Princesse Grace, ainsi que plusieurs musées originaux : collection de voitures anciennes du Prince, musée des Timbres et des Monnaies.</p>
-
-      <h2>Depuis le Mas du Chanoine</h2>
-      <p>Monaco est à environ 40 minutes du Mas du Chanoine par l'autoroute A8 ou par les routes panoramiques de la Moyenne Corniche. Combinez votre visite avec un arrêt au village d'Èze pour profiter d'une journée complète sur la Riviera, avant de retrouver la sérénité de votre chambre d'hôtes à Saint-Paul de Vence.</p>
-    </div>
-  </section>
-
-  <section class="section-pad pt-0">
-    <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-      <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Voir toutes les activités</a>
-      <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-    </div>
-  </section>
-</BaseLayout>
+<ActivityLayout
+  title="La principauté de Monaco entre Nice et Menton | Mas du chanoine"
+  description="La Principauté de Monaco est un pays indépendant, le plus petit du monde après le Vatican. Enserrée dans le territoire français entre Nice et Menton, Monaco s'étire sur quelques kilomètres le long de la Mer Méditerranée."
+  activityName="Monaco"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Activités", href: "/activites-cote-azur/" },
+    { label: "Monaco" }
+  ]}
+  image={{ src: "/media/activites/monaco.jpg", alt: "Monaco photo CRT Cote azur" }}
+  alternates={{ fr: "/activites/visiter-monaco/", en: "/en/activites/monaco/", it: "/it/activites/monaco-2/" }}
+>
+  <p>La Principauté de Monaco est un pays indépendant, le plus petit du monde après le Vatican. Enserrée dans le territoire français entre Nice et Menton, Monaco s'étire sur quelques kilomètres le long de la Mer Méditerranée.</p>
+  <p>Malgré sa petite taille, Monaco offre d'innombrables attraits touristiques, dont son Grand Prix de Formule 1 se déroulant dans les rues de la ville, qui a largement contribué à sa réputation mondiale.</p>
+  <p>A pied, en petit train ou en voiture, découvrez dans la vieille ville le Palais Princier et sa Place, et ne manquez pas la relève de la Garde princière tous les jours à midi moins cinq précise&nbsp;! A quelques ruelles étroites de là, visitez la Cathédrale de Monaco, en pierres blanches de la Turbie, une commune située à quelques kilomètres.</p>
+  <p>Edifié il y a plus d'un siècle par le Prince Albert 1er, le Musée Océanographique est à la fois un musée dédié au monde marin et un aquarium. Situé à flanc de falaise, surplombant la mer près d'une centaine de mètres au-dessus, vous aurez une vue époustouflante depuis la terrasse du bâtiment. De nombreuses salles, des bassins, des aquariums et des espaces ludiques permettent à toute la famille de passer un agréable moment de découverte et de détente.</p>
+  <p>Plusieurs musées de Monaco méritent le détour, tels que le musée des Timbres, la Villa Paloma et la Villa Sauber, ainsi que le musée Naval.</p>
+  <p>Si vous êtes amateur de vieilles voitures, ne ratez pas la magnifique collection d'une centaine de voitures anciennes de Son Altesse Sérénissime Le Prince de Monaco.</p>
+</ActivityLayout>

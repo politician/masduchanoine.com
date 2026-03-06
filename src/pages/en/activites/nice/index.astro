@@ -1,0 +1,31 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="Nice — Activities near Mas du Chanoine"
+  description="Nice: discover this activity near our guesthouse on the French Riviera."
+  lang="en"
+  activityName="Nice"
+  breadcrumb={[
+    { label: "Home", href: "/en/" },
+    { label: "Activities", href: "/en/activities-french-riviera/" },
+    { label: "Nice" }
+  ]}
+  image={{ src: "/media/activites/nice.jpg", alt: "Nice" }}
+  backLabel="← All activities"
+  backUrl="/en/activities-french-riviera/"
+  bookingLabel="Book Now"
+  alternates={{ fr: "/activites/visiter-nice/", en: "/en/activites/nice/", it: "/it/activites/nizza/" }}
+>
+  <p>Nice, capital of the French Riviera awaits you a quarter of an hour from the Mas du Chanoine. This cosmopolitan city will allow you to stroll, to go shopping, to visit museums.</p>
+  <p>You can stroll on the very famous Promenade des Anglais and rest on its pretty sandy and pebble beaches, or organize your day according to a theme:</p>
+  <ul>
+    <li>Visit of Old Nice in the morning and the very famous Cours Saleya market</li>
+    <li>In the alleys of Old Nice, Lascaris Palace, churches, local crafts…</li>
+    <li>General presentation of the city aboard the small tourist train</li>
+    <li>More than ten museums: Matisse, Chagall, Asian Arts, Modern and Contemporary Art…</li>
+    <li>Stroll through parks and gardens such as the Promenade du Paillon</li>
+  </ul>
+  <p>and many more according to your desires.</p>
+</ActivityLayout>

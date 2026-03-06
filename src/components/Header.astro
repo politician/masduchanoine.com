@@ -1,44 +1,24 @@
 ---
-interface NavItem {
-  label: string;
-  href: string;
-  children?: { label: string; href: string }[];
+import type { Lang } from '../i18n/translations';
+import { navItems as allNavItems, getHomePath, getBookingUrl, labelMap, getLangFromPath } from '../i18n/translations';
+
+export interface Props {
+  lang?: Lang;
 }
 
-const navItems: NavItem[] = [
-  {
-    label: "Maison d'hôtes",
-    href: '/',
-    children: [
-      { label: "L'histoire du Mas", href: '/histoire/' },
-      { label: "L'esprit de la chambre d'hôtes", href: '/esprit-chambre-dhotes/' },
-      { label: 'Le jardin et ses aménagements', href: '/jardin-exterieurs/' },
-      { label: "L'espace piscine", href: '/espace-piscine/' },
-      { label: 'Le petit déjeuner', href: '/petit-dejeuner/' },
-    ],
-  },
-  {
-    label: 'Chambres',
-    href: '/chambres-dhotes/',
-    children: [
-      { label: 'La Cannoise', href: '/chambres-hotes/la-cannoise/' },
-      { label: 'La Niçoise', href: '/chambres-hotes/la-nicoise/' },
-      { label: 'La Saint Pauloise', href: '/chambres-hotes/la-saint-pauloise/' },
-      { label: 'Le Petit Mas', href: '/chambres-hotes/petit-mas/' },
-    ],
-  },
-  { label: 'Tarifs', href: '/tarifs/' },
-  { label: 'Photos', href: '/photos/' },
-  { label: 'Activités', href: '/activites-cote-azur/' },
-  { label: 'Événements', href: '/evenements-cote-azur/' },
-  { label: 'Contact', href: '/contactez-nous/' },
-];
+const lang: Lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
+const navItems = allNavItems[lang];
 const currentPath = Astro.url.pathname;
+const homePath = getHomePath(lang);
+const bookingUrl = getBookingUrl(lang);
+const bookLabel = lang === 'it' ? 'Prenota' : lang === 'en' ? 'Book Now' : 'Réserver';
+
+const langSwitchItems = (['fr', 'en', 'it'] as const).filter(l => l !== lang);
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-primary-100 transition-all duration-300" id="main-header">
   <nav class="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
-    <a href="/" class="flex items-center gap-3 group" aria-label="Mas du Chanoine - Accueil">
+    <a href={homePath} class="flex items-center gap-3 group" aria-label="Mas du Chanoine - Accueil">
       <span class="text-xl md:text-2xl font-serif font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
         Mas du Chanoine
       </span>
@@ -94,13 +74,25 @@ const currentPath = Astro.url.pathname;
           </a>
         )
       ))}
+      <!-- Language Switcher -->
+      <div class="flex items-center gap-2 mr-2">
+        {langSwitchItems.map((l) => (
+          <a
+            href={l === 'fr' ? '/' : `/${l}/`}
+            class="text-xs font-medium uppercase text-primary-500 hover:text-accent-600 transition-colors"
+            title={labelMap[l]}
+          >
+            {l.toUpperCase()}
+          </a>
+        ))}
+      </div>
       <a
-        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        href={bookingUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="btn-primary text-xs"
       >
-        Réserver
+        {bookLabel}
       </a>
     </div>
 
@@ -166,13 +158,25 @@ const currentPath = Astro.url.pathname;
           </a>
         )
       ))}
+      <!-- Mobile Language Switcher -->
+      <div class="flex items-center gap-3 mt-4 mb-2">
+        {langSwitchItems.map((l) => (
+          <a
+            href={l === 'fr' ? '/' : `/${l}/`}
+            class="text-xs font-medium uppercase text-primary-500 hover:text-accent-600 transition-colors"
+            title={labelMap[l]}
+          >
+            {labelMap[l]}
+          </a>
+        ))}
+      </div>
       <a
-        href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
+        href={bookingUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="btn-primary w-full text-center text-xs mt-4 block"
+        class="btn-primary w-full text-center text-xs mt-2 block"
       >
-        Réserver
+        {bookLabel}
       </a>
     </div>
   </div>

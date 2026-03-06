@@ -1,0 +1,49 @@
+---
+import RoomLayout from '../../../../layouts/RoomLayout.astro';
+
+const amenities = [
+  'Letto king size', 'Nespresso', "Doccia all'italiana", 'Aria condizionata',
+  'Tè e tisane', 'WC autonomo', 'Wifi gratuito', 'Mini Bar',
+  'Asciugacapelli', 'TV a schermo piatto', 'Acqua minerale', 'Accappatoi',
+  'Canali internazionali', 'Bevande in supplemento', 'Pantofole', 'Cassaforte',
+  'Mobili da giardino', 'Kit di cortesia', 'Area salotto', 'Parcheggio gratuito',
+  'Asciugamani piscina', 'Scrivania',
+];
+
+const gallery = [
+  { src: '/media/chambres/chambre-cannoise.jpg', alt: 'La Cannoise — camera principale' },
+  { src: '/media/chambres/cannoise-palme-festival.jpg', alt: 'La Cannoise — decorazione Festival di Cannes' },
+  { src: '/media/chambres/cannoise-salon-jardin.jpg', alt: 'La Cannoise — arredamento da giardino' },
+  { src: '/media/chambres/cannoise-bureau-salon.jpg', alt: 'La Cannoise — scrivania e area salotto' },
+  { src: '/media/chambres/cannoise-douche.jpg', alt: 'La Cannoise — bagno con doccia' },
+];
+---
+
+<RoomLayout
+  title="La Cannoise | Mas du Chanoine"
+  description="Camera inondata di sole, con vista sulla vasca, stile provenzale chic e glamour di Cannes"
+  lang="it"
+  alternates={{ fr: '/chambres-hotes/la-cannoise/', en: '/en/chambres-hotes/cannoise-guestroom/', it: '/it/chambres-hotes/cannoise-camera/' }}
+  roomName="LA CANNOISE"
+  subtitle="Provenzale Chic & Moderna"
+  tagline="Camera inondata di sole, con vista sulla vasca, stile provenzale chic e glamour di Cannes"
+  heroImage="/media/chambres/cannoise-palme-fil.jpg"
+  amenities={amenities}
+  amenitiesTitle="Servizi in camera"
+  amenitiesSummary="Superficie: 36 m² — 1 camera con area salotto — Piano terra"
+  gallery={gallery}
+  galleryTitle="Galleria fotografica"
+  bookingLabel="Prenota questa camera"
+  otherRoomsTitle="Scoprite le nostre altre camere"
+  otherRoomsLabel="Tutte le camere"
+  otherRoomsUrl="/it/bed-e-breakfast/"
+  breadcrumb={[
+    { label: 'Home', href: '/it/' },
+    { label: 'Camere', href: '/it/bed-e-breakfast/' },
+    { label: 'La Cannoise' },
+  ]}
+>
+  <p>Inondata di sole e molto luminosa, questa camera dispone di un accesso diretto dal giardino dove troverete il vostro tavolo e le sedie per apprezzare la calma dei luoghi all'ombra del castagno. Su una sdraio, potrete ammirare i pesci rossi della vasca coperta di ninfee.</p>
+  <p>Questa junior suite vi conquisterà con il suo mix di stili e colori: la decorazione evoca gli artisti della Costa Azzurra e il Festival di Cannes.</p>
+  <p>Con una superficie di 36 m², è organizzata con una camera con un letto king size di 180×200, un'area salotto, una scrivania, una doccia e WC indipendenti. Il fascino dell'antico è stato conservato con le mattonelle originali al suolo e i travi a vista. Per maggiore comfort, il pavimento della camera e del salotto è in parquet di rovere.</p>
+</RoomLayout>

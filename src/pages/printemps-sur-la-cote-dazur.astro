@@ -1,0 +1,34 @@
+---
+import EventLayout from '../layouts/EventLayout.astro';
+---
+
+<EventLayout
+  title="Printemps sur la Côte d'azur | Mas du chanoine"
+  description="Les événements du printemps sur la Côte d'azur : Printemps des Arts à Monte-Carlo, Tennis Rolex Masters, triathlon de Cannes, et bien d'autres."
+  eventName="Printemps sur la Côte d'azur"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Printemps sur la Côte d'azur" }
+  ]}
+  tags={["Côte d'azur", "Découverte", "Foires / Salons", "Sport"]}
+  date="13 mars 2019"
+  datetime="2019-03-13"
+  image={{ src: "/media/evenements/printemps.jpg", alt: "Printemps sur la Côte d'azur" }}
+  alternates={{ fr: "/printemps-sur-la-cote-dazur/", en: "/en/spring-on-the-french-riviera/" }}
+>
+  <p>Le printemps arrive sur la Côte d'azur et il apporte son lot de festivités et d'événements.</p>
+          <p>Quelques rendez-vous à ne pas manquer :</p>
+          <ul>
+            <li><strong>Le Printemps des Arts de Monte-Carlo</strong> – Festival de musique classique et contemporaine à Monaco (mars à avril)</li>
+            <li><strong>Le Tennis Rolex Masters</strong> – Tournoi ATP Masters 1000 au Monte-Carlo Country Club de Roquebrune-Cap-Martin (avril)</li>
+            <li><strong>Le triathlon de Cannes</strong> – Événement sportif international (avril)</li>
+            <li><strong>Le Boats Show</strong> – Salon nautique</li>
+            <li><strong>Le semi-marathon de Nice</strong> – Course à pied le long de la Promenade des Anglais</li>
+            <li><strong>Le festival de bridge</strong> – Compétitions et tournois</li>
+            <li><strong>La fête des mais</strong> – Traditions provençales</li>
+            <li><strong>L'expo-rose de Grasse</strong> – Exposition de roses dans la capitale mondiale du parfum (mai)</li>
+            <li><strong>La fête de la rose à La Colle sur Loup</strong> – Célébration de la rose dans le village voisin</li>
+          </ul>
+          <p>Le printemps est une saison idéale pour découvrir la Côte d'azur, avec des températures douces et une nature en fleurs.</p>
+</EventLayout>

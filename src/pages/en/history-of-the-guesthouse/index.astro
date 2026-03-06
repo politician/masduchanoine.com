@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="History of the House — Mas du Chanoine, Saint-Paul de Vence" description="Discover the history of Mas du Chanoine, a 17th century country house in Saint-Paul de Vence. Former coaching inn, vineyard and then a residence of charm." lang="en">
+  <section class="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-primary-950/30 to-primary-950/10 z-10"></div>
+    <img src="/media/histoire/mas-ancien.jpg" alt="Mas du Chanoine, historic 17th century house in Saint-Paul de Vence" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+    <div class="relative z-20 text-white px-4 md:px-8 pb-12 max-w-4xl">
+      <p class="text-sm tracking-[0.3em] uppercase mb-3 text-primary-200 font-light">Since the 17th century</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold leading-tight">History of the House</h1>
+    </div>
+  </section>
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">17th – 18th century</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Origins & Coaching Inn</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>The oldest part of this country house was built in the seventeenth century. In the eighteenth century, the house was a coaching inn where stagecoaches swapped horses on their way from Nice to Grasse.</p>
+            <p>They travelled over the hills of the Hauts Caucours in Cagnes-sur-Mer, followed the ridge road through Vence and Tourrettes-sur-Loup, to reach Grasse, the perfume city.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-lg bg-primary-100">
+            <img src="/media/histoire/mas-ancien.jpg" alt="The original coaching inn" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1 grid grid-cols-2 gap-4">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg"><img src="/media/histoire/roses.jpg" alt="Roses in the garden, heritage of floral culture" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="aspect-[3/4] rounded-sm overflow-hidden shadow-lg mt-8"><img src="/media/histoire/fleur.jpg" alt="Flowers cultivated, tradition of carnations and roses" class="w-full h-full object-cover" loading="lazy" /></div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">19th – 20th century</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Vineyard & Flowers</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>The property which included several acres was later operated as a vineyard until 1945. Canon Brunner acquired it in 1919 giving his name to the property.</p>
+            <p>It was later sold to a farmer who grew roses and carnations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">From 1960</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-6 text-primary-900 leading-tight">Charm & Artists</h2>
+          <div class="prose-content text-base md:text-lg">
+            <p>Since 1960, it has been transformed into a residence of charm with its old floor tiles, its thick walls, ceilings, exposed beams and stained-glass windows signed by renowned artists.</p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-lg"><img src="/media/histoire/hans-erni.jpg" alt="Stained glass by artist Hans Erni at Mas du Chanoine" class="w-full h-full object-cover" loading="lazy" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Stay in a place steeped in history</h2>
+      <p class="text-primary-300 mb-8 text-lg">Book your room at Mas du Chanoine and experience the history of the French Riviera.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=en" target="_blank" rel="noopener noreferrer" class="btn-primary bg-white text-primary-900 hover:bg-primary-100">Book now</a>
+        <a href="/en/bed-breakfast/" class="btn-outline border-white text-white hover:bg-white hover:text-primary-900">Discover our rooms</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

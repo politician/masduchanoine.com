@@ -2,6 +2,8 @@
 import Footer from '../components/Footer.astro';
 import Head from '../components/Head.astro';
 import Header from '../components/Header.astro';
+import type { Lang } from '../i18n/translations';
+import { getLangFromPath, langMap } from '../i18n/translations';
 import '../styles/global.css';
 
 export interface Props {
@@ -11,13 +13,18 @@ export interface Props {
   ogImage?: string;
   noindex?: boolean;
   structuredData?: object;
+  lang?: Lang;
+  /** hreflang alternates: { fr: '/path-fr/', en: '/en/path-en/', it: '/it/path-it/' } */
+  alternates?: Partial<Record<Lang, string>>;
 }
 
-const { title, description, canonical, ogImage, noindex, structuredData } = Astro.props;
+const { title, description, canonical, ogImage, noindex, structuredData, alternates } = Astro.props;
+const lang: Lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
+const htmlLang = langMap[lang];
 ---
 
 <!doctype html>
-<html lang="fr">
+<html lang={htmlLang}>
   <Head
     title={title}
     description={description}
@@ -25,12 +32,14 @@ const { title, description, canonical, ogImage, noindex, structuredData } = Astr
     ogImage={ogImage}
     noindex={noindex}
     structuredData={structuredData}
+    lang={lang}
+    alternates={alternates}
   />
   <body class="min-h-screen flex flex-col">
-    <Header />
+    <Header lang={lang} />
     <main class="flex-1 pt-16 md:pt-20">
       <slot />
     </main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>

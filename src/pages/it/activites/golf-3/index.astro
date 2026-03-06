@@ -1,0 +1,20 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="Golf — Attività Costa d'Azzurra"
+  description="Golf: attività vicino al nostro B&B sulla Costa Azzurra."
+  lang="it"
+  activityName="Golf"
+  breadcrumb={[
+    { label: "Home", href: "/it/" },
+    { label: "Attività", href: "/it/attivita/" },
+    { label: "Golf" }
+  ]}
+  image={{ src: "/media/activites/golf.jpg", alt: "Golf" }}
+  backLabel="← Tutte le attività"
+  backUrl="/it/attivita/"
+  bookingLabel="Prenota"
+  alternates={{ fr: "/activites/golf/", en: "/en/activites/golf-en/", it: "/it/activites/golf-3/" }}
+/>

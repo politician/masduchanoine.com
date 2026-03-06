@@ -1,40 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Ironman de France Nice — Mas du Chanoine" description="L'Ironman de France à Nice. Triathlon de distance Ironman dont l'épreuve cycliste passe à 5 km du Mas du Chanoine.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Ironman de France Nice</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Sport</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Ironman de France Nice</h1>
-        <time class="text-sm text-primary-500" datetime="2020-03-04">4 mars 2020</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Nous avons reçu il y a deux ans un hôte qui participait à l'Ironman de Nice, accompagné de sa femme. Nous avons alors découvert cet événement sportif dont l'épreuve cycliste (entre Vence et Tourrettes-sur-Loup) passe à environ 5 km de notre maison d'hôtes.</p>
-        <p>Nous vous le partageons aujourd'hui. L'épreuve est un triathlon dans lequel les athlètes enchaînent 3,8 km de natation, 180 km de vélo et 42,195 km de course à pied.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Ironman de France Nice | Mas du chanoine"
+  description="Participer ou suivre la compétition de l'Ironman depuis dans nos chambres d'hôtes de la cote d'azur, située près du parcours de ce célèbre triathlon de Nice"
+  eventName="Ironman de France Nice"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Ironman de France Nice" }
+  ]}
+  tags={["Côte d'azur", "Sport"]}
+  date="4 mars 2020"
+  datetime="2020-03-04"
+  image={{ src: "/media/evenements/ironman.jpg", alt: "Ironman de Nice" }}
+  alternates={{ fr: "/ironman-de-nice/", en: "/en/ironman-in-nice/" }}
+>
+  <p>Nous avons reçu il y a deux ans un hôte qui participait à l'Ironman de Nice, accompagné de sa femme. Nous avons alors découvert cet évènement sportif dont l'épreuve cycliste (entre Vence et Tourrettes-sur-Loup) passe à environ 5 kms de notre maison d'hôtes. Nous vous le partageons aujourd'hui.</p>
+          <p>L'épreuve est un triathlon dans lequel les athlètes enchaînent trois disciplines&nbsp;: natation, cyclisme et course à pied. Les épreuves sont longues et les athlètes font preuve de beaucoup d'endurance pour terminer l'ironman en moins de 16 heures.</p>
+          <p>La course réunit professionnels et amateurs, hommes et femmes, jeunes et vieux qui doivent nager sur 3,8 kms en deux boucles sur la plage du centenaire à Nice, faire 180 kms à vélo sur un circuit à 2000 m de dénivelé dans l'arrière-pays niçois, et courir un marathon de 42,195 kms sur le plat en 4 boucles sur la promenade des Anglais.</p>
+          <p>Les spectateurs peuvent soutenir et acclamer les athlètes tout au long de ces épreuves.</p>
+          <p>Cette année la date du 16ème Ironman de Nice qui devait avoir lieu le 14 juin sera reportée et devrait être fixée le 30 avril 2020.</p>
+          <p class="text-sm text-primary-500 italic">Crédit photos&nbsp;: Getty Images / IRONMAN</p>
+</EventLayout>

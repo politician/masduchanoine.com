@@ -1,0 +1,161 @@
+---
+/**
+ * Sidebar component for activity and event pages.
+ * Multilingual: shows localized activity links, event categories, and recent articles.
+ */
+import type { Lang } from '../i18n/translations';
+
+export interface Props {
+  /** Current language */
+  lang?: Lang;
+  /** Hide the activities section */
+  hideActivities?: boolean;
+  /** Hide the recent articles section */
+  hideRecent?: boolean;
+}
+
+const { lang = 'fr', hideActivities = false, hideRecent = false } = Astro.props;
+
+const activitiesData: Record<Lang, { label: string; href: string }[]> = {
+  fr: [
+    { label: 'Saint-Paul de Vence', href: '/activites/visiter-stpauldevence/' },
+    { label: 'Nice', href: '/activites/visiter-nice/' },
+    { label: 'Monaco', href: '/activites/visiter-monaco/' },
+    { label: 'Cannes et les Iles de Lérins', href: '/activites/visiter-cannes-et-iles-de-lerins/' },
+    { label: "Antibes et Cap d'Antibes", href: '/activites/antibes-et-cap-dantibes/' },
+    { label: 'Villages perchés', href: '/activites/visiter-les-villages-perches/' },
+    { label: 'Golf', href: '/activites/golf/' },
+    { label: 'Cours de cuisine', href: '/activites/cours-de-cuisine-du-sud/' },
+    { label: 'Shiatsu', href: '/activites/shiatsu/' },
+  ],
+  en: [
+    { label: 'St Paul de Vence', href: '/en/activites/st-paul-de-vence/' },
+    { label: 'Nice', href: '/en/activites/nice/' },
+    { label: 'Monaco', href: '/en/activites/monaco/' },
+    { label: 'Cannes & Lérins Islands', href: '/en/activites/cannes-and-lerins-islands/' },
+    { label: 'Antibes & Cap d\'Antibes', href: '/en/activites/antibes-and-cap-dantibes/' },
+    { label: 'Hilltop Villages', href: '/en/activites/hilltop-villages/' },
+    { label: 'Golf', href: '/en/activites/golf-en/' },
+    { label: 'Cooking Lessons', href: '/en/activites/cooking-lessons/' },
+    { label: 'Shiatsu', href: '/en/activites/shiatsu-en/' },
+  ],
+  it: [
+    { label: 'Saint Paul de Vence', href: '/it/activites/saint-paul-de-vence/' },
+    { label: 'Nizza', href: '/it/activites/nizza/' },
+    { label: 'Monaco', href: '/it/activites/monaco-2/' },
+    { label: 'Cannes e Isole Lérins', href: '/it/activites/cannes-e-isole-lerins/' },
+    { label: 'Antibes e Cap d\'Antibes', href: '/it/activites/antibes-e-cap-dantibes/' },
+    { label: 'Villaggi collinari', href: '/it/activites/i-villaggi-collinari/' },
+    { label: 'Golf', href: '/it/activites/golf-3/' },
+    { label: 'Corso di cucina', href: '/it/activites/corso-di-cucina/' },
+    { label: 'Shiatsu', href: '/it/activites/shiatsu-it/' },
+  ],
+};
+
+const recentArticlesData: Record<Lang, { title: string; href: string; date: string }[]> = {
+  fr: [
+    { title: "Festivals de fleurs et fruits sur la Côte d'Azur", href: '/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/', date: '27 janvier 2023' },
+    { title: 'Carnaval de Nice : Roi des trésors du Monde', href: '/carnaval/', date: '20 janvier 2023' },
+    { title: 'Pleine saison des agrumes', href: '/pleine-saison-des-agrumes/', date: '13 janvier 2023' },
+  ],
+  en: [
+    { title: 'Flowers and Fruits Festivals on the French Riviera', href: '/en/flowers-and-fruits-festivals-introduce-spring/', date: '27 January 2023' },
+    { title: 'Nice Carnival: King of Cinema', href: '/en/nice-carnival-king-of-cinema/', date: '20 January 2023' },
+    { title: 'High Season for Citrus', href: '/en/high-season-for-citrus/', date: '13 January 2023' },
+  ],
+  it: [
+    { title: "Festival di fiori e frutti sulla Costa Azzurra", href: '/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/', date: '27 gennaio 2023' },
+    { title: 'Carnevale di Nizza', href: '/carnaval/', date: '20 gennaio 2023' },
+    { title: 'Piena stagione degli agrumi', href: '/pleine-saison-des-agrumes/', date: '13 gennaio 2023' },
+  ],
+};
+
+const eventCategoriesData: Record<Lang, { label: string; href: string }[]> = {
+  fr: [
+    { label: 'Tous les événements', href: '/evenements-cote-azur/' },
+    { label: 'Festivals / Spectacles', href: '/evenements-cote-azur/' },
+    { label: 'Découverte', href: '/evenements-cote-azur/' },
+    { label: 'Foires / Salons', href: '/evenements-cote-azur/' },
+    { label: 'Musées', href: '/evenements-cote-azur/' },
+    { label: 'Sport', href: '/evenements-cote-azur/' },
+  ],
+  en: [
+    { label: 'All events', href: '/en/french-riviera-events/' },
+    { label: 'Festivals / Shows', href: '/en/french-riviera-events/' },
+    { label: 'Discovery', href: '/en/french-riviera-events/' },
+    { label: 'Fairs / Exhibitions', href: '/en/french-riviera-events/' },
+    { label: 'Museums', href: '/en/french-riviera-events/' },
+    { label: 'Sport', href: '/en/french-riviera-events/' },
+  ],
+  it: [
+    { label: 'Tutti gli eventi', href: '/evenements-cote-azur/' },
+    { label: 'Festival / Spettacoli', href: '/evenements-cote-azur/' },
+    { label: 'Scoperta', href: '/evenements-cote-azur/' },
+    { label: 'Fiere / Saloni', href: '/evenements-cote-azur/' },
+    { label: 'Musei', href: '/evenements-cote-azur/' },
+    { label: 'Sport', href: '/evenements-cote-azur/' },
+  ],
+};
+
+const sidebarLabels: Record<Lang, { events: string; activities: string; recent: string }> = {
+  fr: { events: "Événements de la Côte d'azur", activities: "D'autres idées de visites ou activités", recent: 'Articles récents' },
+  en: { events: 'French Riviera Events', activities: 'More activities & visits', recent: 'Recent articles' },
+  it: { events: 'Eventi della Costa Azzurra', activities: 'Altre idee di visite o attività', recent: 'Articoli recenti' },
+};
+
+const activities = activitiesData[lang];
+const recentArticles = recentArticlesData[lang];
+const eventCategories = eventCategoriesData[lang];
+const labels = sidebarLabels[lang];
+---
+
+<aside class="space-y-8">
+  <!-- Event categories -->
+  <div class="bg-primary-50 rounded-sm p-6">
+    <h3 class="text-lg font-serif font-semibold text-primary-900 mb-4">{labels.events}</h3>
+    <ul class="space-y-2">
+      {eventCategories.map((cat) => (
+        <li>
+          <a href={cat.href} class="flex items-center text-sm text-primary-600 hover:text-accent-600 transition-colors">
+            <svg class="w-4 h-4 mr-2 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            {cat.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Activity links -->
+  {!hideActivities && (
+    <div class="bg-primary-50 rounded-sm p-6">
+      <h3 class="text-lg font-serif font-semibold text-primary-900 mb-4">{labels.activities}</h3>
+      <ul class="space-y-2">
+        {activities.map((a) => (
+          <li>
+            <a href={a.href} class="flex items-center text-sm text-primary-600 hover:text-accent-600 transition-colors">
+              <svg class="w-4 h-4 mr-2 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              {a.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  <!-- Recent articles -->
+  {!hideRecent && (
+    <div class="bg-primary-50 rounded-sm p-6">
+      <h3 class="text-lg font-serif font-semibold text-primary-900 mb-4">{labels.recent}</h3>
+      <ul class="space-y-4">
+        {recentArticles.map((article) => (
+          <li>
+            <a href={article.href} class="group block">
+              <span class="text-sm font-medium text-primary-800 group-hover:text-accent-600 transition-colors leading-snug block">{article.title}</span>
+              <time class="text-xs text-primary-400 mt-1 block">{article.date}</time>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</aside>

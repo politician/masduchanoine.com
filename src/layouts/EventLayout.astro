@@ -1,0 +1,110 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+import type { Lang } from '../i18n/translations';
+import { getBookingUrl } from '../i18n/translations';
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  lang?: Lang;
+  alternates?: Partial<Record<Lang, string>>;
+  /** Event display name for h1 and breadcrumb */
+  eventName: string;
+  /** Breadcrumb items — last one has no href (current page) */
+  breadcrumb: { label: string; href?: string }[];
+  /** Tag badge text (e.g. "Côte d'azur", "French Riviera") */
+  tags?: string[];
+  /** Formatted display date (e.g. "18 juin 2021") */
+  date?: string;
+  /** ISO datetime for <time> element */
+  datetime?: string;
+  /** Optional event image */
+  image?: { src: string; alt: string };
+  /** "Back to events" link label */
+  backLabel?: string;
+  /** "Back to events" link URL */
+  backUrl?: string;
+  /** Booking button label */
+  bookingLabel?: string;
+}
+
+const {
+  title,
+  description,
+  lang,
+  alternates,
+  eventName,
+  breadcrumb,
+  tags,
+  date,
+  datetime,
+  image,
+  backLabel = '← Retour aux événements',
+  backUrl = '/evenements-cote-azur/',
+  bookingLabel = 'Réserver',
+} = Astro.props;
+
+const effectiveLang = lang || 'fr';
+const bookingUrl = getBookingUrl(effectiveLang);
+---
+
+<BaseLayout title={title} description={description} lang={lang} alternates={alternates}>
+  <article>
+    <!-- Hero with breadcrumb, tag & date -->
+    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
+      <div class="absolute inset-0 bg-primary-100"></div>
+      <div class="relative z-10 max-w-3xl mx-auto">
+        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2">
+            {breadcrumb.map((crumb, i) => (
+              <>
+                {i > 0 && <li>›</li>}
+                <li>
+                  {crumb.href
+                    ? <a href={crumb.href} class="hover:text-accent-600 transition-colors">{crumb.label}</a>
+                    : <span class="text-primary-700">{crumb.label}</span>
+                  }
+                </li>
+              </>
+            ))}
+          </ol>
+        </nav>
+        {tags && tags.length > 0 && (
+          <div class="flex flex-wrap gap-2 mb-4">
+            {tags.map(t => (
+              <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">{t}</span>
+            ))}
+          </div>
+        )}
+        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">{eventName}</h1>
+        {date && datetime && <time class="text-sm text-primary-500" datetime={datetime}>{date}</time>}
+      </div>
+    </section>
+
+    <!-- Content + Sidebar -->
+    <section class="section-pad pt-8 pb-16">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2 prose-content text-base md:text-lg">
+            {image && (
+              <img src={image.src} alt={image.alt} class="w-full rounded-sm mb-6" loading="lazy" />
+            )}
+            <slot />
+          </div>
+          <aside class="lg:col-span-1">
+            <Sidebar lang={effectiveLang} />
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom bar -->
+    <section class="section-pad pt-0">
+      <div class="max-w-5xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
+        <a href={backUrl} class="text-accent-600 hover:text-accent-700 text-sm font-medium">{backLabel}</a>
+        <a href={bookingUrl} target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">{bookingLabel}</a>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

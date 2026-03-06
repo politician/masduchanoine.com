@@ -1,40 +1,26 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Suivez le Guide à St Paul de Vence — Mas du Chanoine" description="Visites guidées de Saint-Paul de Vence proposées par l'Office de Tourisme. Découvrez le village médiéval, son patrimoine et ses anecdotes.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Suivez le Guide à St Paul de Vence</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Découverte</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Suivez le Guide à St Paul de Vence</h1>
-        <time class="text-sm text-primary-500" datetime="2021-06-17">17 juin 2021</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Pour découvrir notre beau village en profondeur, rien de mieux que les visites guidées proposées par l'office de Tourisme.</p>
-        <p>En 1 heure de temps, vous apprendrez des anecdotes, verrez le village sous un angle très différent de votre visite de la ville et de ses échoppes d'artistes. Plusieurs thèmes sont abordés : le Patrimoine, la vie des artistes, et bien d'autres découvertes.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Suivez le Guide à St Paul de Vence | Mas du chanoine"
+  description="Pour découvrir notre beau village en profondeur, rien de mieux que les visites guidées proposées par l'office de Tourisme de Saint-Paul de Vence."
+  eventName="Suivez le Guide à St Paul de Vence"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Suivez le Guide à St Paul de Vence" }
+  ]}
+  tags={["Côte d'azur", "Découverte"]}
+  date="17 juin 2021"
+  datetime="2021-06-17"
+  image={{ src: "/media/evenements/guide-stpaul.jpg", alt: "Saint Paul de Vence" }}
+  alternates={{ fr: "/suivez-le-guide-a-st-paul-de-vence/", en: "/en/follow-the-guide-in-st-paul-de-vence/" }}
+>
+  <p>Pour découvrir notre beau village en profondeur, rien de mieux que les visites guidées proposées par l'office de Tourisme.</p>
+          <p>En 1 heure de temps, vous apprendrez des anecdotes, verrez le village sous un angle très différent de votre visite de la ville et de ses échoppes d'artistes.</p>
+          <p>Plusieurs thèmes sont abordés&nbsp;: le Patrimoine, la Chapelle Folon, sur les Pas de Marc Chagall, la Fondation Maeght, la Leçon de Pétanque.</p>
+          <p>Visites en français et anglais selon les thèmes.</p>
+          <p>Pour un prix modique (7 euros par personne, 14 euros par personne en cas de guide privée minimum 2 personnes, prix d'entrée à la fondation Maeght non compris), vous aurez appris plein de belles choses sur la ville et son histoire.</p>
+          <p class="text-sm text-primary-500 italic">Crédit photo&nbsp;: Copyright Saint-Paul de Vence Tourist Information Office – Photo&nbsp;: Roland Michaud</p>
+</EventLayout>

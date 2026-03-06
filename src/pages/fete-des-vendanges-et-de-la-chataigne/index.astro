@@ -1,0 +1,25 @@
+---
+import EventLayout from '../../layouts/EventLayout.astro';
+---
+
+<EventLayout
+  title="Fête des vendanges et des châtaignes | Mas du chanoine"
+  description="Cette fête organisée par les vignerons de Saint Paul de Vence et de Tourrettes sur loup s'inscrit dans les rendez-vous gourmands de l'automne sur la Côte d'azur."
+  eventName="Fête des vendanges et des châtaignes"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Fête des vendanges et des châtaignes" }
+  ]}
+  tags={["Côte d'azur", "Foires / Salons"]}
+  date="20 septembre 2018"
+  datetime="2018-09-20"
+  image={{ src: "/media/evenements/vendanges.jpg", alt: "Fête des vendanges à Saint Paul de Vence" }}
+  alternates={{ fr: "/fete-des-vendanges-et-de-la-chataigne/", en: "/en/vineyard-and-chestnuts-fast/" }}
+>
+  <p>Cette fête organisée le 28 octobre 2018 par les vignerons de Saint Paul de Vence et de Tourrettes sur loup s'inscrit dans les rendez-vous gourmands de l'automne sur la Côte d'azur.</p>
+          <p>Sur la place du jeu de boules, des stands de dégustation des vins se mêlent à un marché de produits locaux. Vous y trouvez de la charcuterie, des fromages, des légumes, du foie gras, des pains, miels et confitures.</p>
+          <p>Vin et marrons chauds vous sont proposés toute la journée, et des tables sont installées pour des repas sur place, dans une ambiance bon enfant.</p>
+          <p>Participer à cette fête de terroir est une occasion de découvrir d'autres aspects de la culture locale.</p>
+          <p class="text-sm text-primary-500 italic">Crédit Photos&nbsp;: CRT Côte d'azur (M Véran)</p>
+</EventLayout>

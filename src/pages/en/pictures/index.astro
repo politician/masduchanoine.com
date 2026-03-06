@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const photos = [
+  { src: '/media/photos/mas-pin.jpg', alt: 'The pool under the parasol pine at Mas du Chanoine' },
+  { src: '/media/photos/jardin-marronnier.jpg', alt: 'In the garden under the chestnut tree' },
+  { src: '/media/chambres/nicoise-coin-salon-bureau.jpg', alt: 'Niçoise Room: living area and desk' },
+  { src: '/media/photos/bassin-nenuphars.jpg', alt: 'The water lily pond with goldfish' },
+  { src: '/media/photos/vitrail-fontmarty.jpg', alt: 'Stained glass by Fontmarty at Mas du Chanoine' },
+  { src: '/media/piscine/vue-montagne.jpg', alt: 'Pool with view of Saint-Paul de Vence' },
+  { src: '/media/chambres/nicoise-salon-jardin.jpg', alt: 'Niçoise Room: garden furniture' },
+  { src: '/media/chambres/nicoise-douche-vasque.jpg', alt: 'Niçoise Room: shower and basin' },
+  { src: '/media/chambres/cannoise-palme-festival.jpg', alt: 'Cannoise Room: festival palm and Matisse painting' },
+  { src: '/media/photos/patio-fleurs.jpg', alt: 'The patio with flowers for breakfast' },
+  { src: '/media/photos/saint-pauloise-baignoire.jpg', alt: 'Saint Pauloise Room: the bathtub' },
+  { src: '/media/photos/vin-orange.jpg', alt: 'Homemade orange wine' },
+  { src: '/media/photos/bougainvillee.jpg', alt: 'Bougainvillea and breakfast table' },
+  { src: '/media/photos/saint-pauloise-1400.jpg', alt: 'Saint Pauloise Room' },
+  { src: '/media/photos/palme-festival.jpg', alt: 'The Cannes Film Festival palm' },
+];
+---
+
+<BaseLayout title="Photo Gallery — Mas du Chanoine" description="Photo gallery of Mas du Chanoine: guest rooms, garden, pool, patio and breakfast in Saint-Paul de Vence." lang="en">
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">The Mas in pictures</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Photo Gallery</h1>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {photos.map((photo) => (
+          <div class="block w-full rounded-sm overflow-hidden shadow-md break-inside-avoid group">
+            <div class="relative overflow-hidden">
+              <img src={photo.src} alt={photo.alt} class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute inset-0 bg-primary-950/0 group-hover:bg-primary-950/20 transition-colors duration-300 flex items-end">
+                <p class="text-white text-sm px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-light">{photo.alt}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-primary-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif font-semibold mb-4">Fancy a holiday on the French Riviera?</h2>
+      <p class="text-primary-300 mb-8 text-lg">Book your stay at Mas du Chanoine now.</p>
+      <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=en" target="_blank" rel="noopener noreferrer" class="btn-primary bg-white text-primary-900 hover:bg-primary-100">Book now</a>
+    </div>
+  </section>
+</BaseLayout>

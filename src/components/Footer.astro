@@ -1,5 +1,16 @@
 ---
+import type { Lang } from '../i18n/translations';
+import { footerLabels, getHomePath, getLangFromPath, roomLinks } from '../i18n/translations';
+
+export interface Props {
+  lang?: Lang;
+}
+
+const lang: Lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
 const year = new Date().getFullYear();
+const t = footerLabels[lang];
+const rooms = roomLinks[lang];
+const homePath = getHomePath(lang);
 ---
 
 <footer class="bg-primary-950 text-primary-200">
@@ -10,7 +21,7 @@ const year = new Date().getFullYear();
       <div class="lg:col-span-1">
         <h3 class="text-xl font-serif font-semibold text-white mb-4">Mas du Chanoine</h3>
         <p class="text-sm leading-relaxed text-primary-300 mb-6">
-          Maison d'hôtes de charme à Saint-Paul de Vence, Côte d'Azur. Un mas du 17ème siècle au confort moderne.
+          {t.tagline}
         </p>
         <div class="flex gap-4">
           <a href="https://www.facebook.com/MasDuChanoine/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-primary-400 hover:text-white transition-colors">
@@ -27,7 +38,7 @@ const year = new Date().getFullYear();
 
       <!-- Contact -->
       <div>
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Contact</h4>
+        <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t.contactLabel}</h4>
         <address class="not-italic text-sm space-y-3 text-primary-300">
           <p>831 chemin de la Bastide Rouge<br>06570 Saint-Paul de Vence<br>Côte d'Azur, France</p>
           <p>
@@ -47,25 +58,24 @@ const year = new Date().getFullYear();
 
       <!-- Navigation -->
       <div>
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Navigation</h4>
+        <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t.navLabel}</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="/" class="text-primary-300 hover:text-white transition-colors">Accueil</a></li>
-          <li><a href="/chambres-dhotes/" class="text-primary-300 hover:text-white transition-colors">Nos chambres</a></li>
-          <li><a href="/avis-des-hotes" class="text-primary-300 hover:text-white transition-colors">Avis des hôtes</a></li>
-          <li><a href="/evenements-cote-azur/" class="text-primary-300 hover:text-white transition-colors">Événements</a></li>
-          <li><a href="/acces" class="text-primary-300 hover:text-white transition-colors">Accès</a></li>
-          <li><a href="/contact" class="text-primary-300 hover:text-white transition-colors">Contact</a></li>
+          <li><a href={homePath} class="text-primary-300 hover:text-white transition-colors">{t.homeLabel}</a></li>
+          <li><a href={t.roomsLink} class="text-primary-300 hover:text-white transition-colors">{t.roomsLabel}</a></li>
+          <li><a href={lang === 'fr' ? '/avis-des-hotes' : lang === 'en' ? '/en/testimonials/' : '/it/recensioni/'} class="text-primary-300 hover:text-white transition-colors">{t.reviewsLabel}</a></li>
+          <li><a href={lang === 'fr' ? '/evenements-cote-azur/' : lang === 'en' ? '/en/french-riviera-events/' : '/it/'} class="text-primary-300 hover:text-white transition-colors">{t.eventsLabel}</a></li>
+          <li><a href={lang === 'fr' ? '/acces' : lang === 'en' ? '/en/access/' : '/it/come-raggiungerci/'} class="text-primary-300 hover:text-white transition-colors">{t.accessLabel}</a></li>
+          <li><a href={t.contactLink} class="text-primary-300 hover:text-white transition-colors">{t.contactLabel}</a></li>
         </ul>
       </div>
 
       <!-- Chambres -->
       <div>
-        <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Nos Chambres</h4>
+        <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">{t.roomsLabel}</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="/chambres-hotes/la-cannoise/" class="text-primary-300 hover:text-white transition-colors">La Cannoise</a></li>
-          <li><a href="/chambres-hotes/la-nicoise/" class="text-primary-300 hover:text-white transition-colors">La Niçoise</a></li>
-          <li><a href="/chambres-hotes/la-saint-pauloise/" class="text-primary-300 hover:text-white transition-colors">La Saint Pauloise</a></li>
-          <li><a href="/chambres-hotes/petit-mas/" class="text-primary-300 hover:text-white transition-colors">Le Petit Mas</a></li>
+          {rooms.map((r) => (
+            <li><a href={r.href} class="text-primary-300 hover:text-white transition-colors">{r.label}</a></li>
+          ))}
         </ul>
       </div>
     </div>
@@ -74,10 +84,10 @@ const year = new Date().getFullYear();
   <!-- Bottom bar -->
   <div class="border-t border-primary-800">
     <div class="max-w-7xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-400">
-      <p>&copy; {year} Mas du Chanoine. Tous droits réservés.</p>
+      <p>&copy; {year} Mas du Chanoine. {t.copyright}</p>
       <div class="flex gap-6">
-        <a href="/politique-de-confidentialite/" class="hover:text-white transition-colors">Politique de confidentialité</a>
-        <a href="/partenaires-liens/" class="hover:text-white transition-colors">Partenaires</a>
+        <a href={t.privacyLink} class="hover:text-white transition-colors">{t.privacyLabel}</a>
+        {lang === 'fr' && <a href={t.partnersLink} class="hover:text-white transition-colors">{t.partnersLabel}</a>}
       </div>
     </div>
   </div>

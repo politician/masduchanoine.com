@@ -1,0 +1,20 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="Saint Paul de Vence — Attività Costa d'Azzurra"
+  description="Saint Paul de Vence: attività vicino al nostro B&B sulla Costa Azzurra."
+  lang="it"
+  activityName="Saint Paul de Vence"
+  breadcrumb={[
+    { label: "Home", href: "/it/" },
+    { label: "Attività", href: "/it/attivita/" },
+    { label: "Saint Paul de Vence" }
+  ]}
+  image={{ src: "/media/activites/saint-paul-de-vence.jpg", alt: "Saint Paul de Vence" }}
+  backLabel="← Tutte le attività"
+  backUrl="/it/attivita/"
+  bookingLabel="Prenota"
+  alternates={{ fr: "/activites/visiter-stpauldevence/", en: "/en/activites/st-paul-de-vence/", it: "/it/activites/saint-paul-de-vence/" }}
+/>

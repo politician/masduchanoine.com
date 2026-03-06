@@ -1,40 +1,25 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Fête des violettes à Tourrettes-sur-Loup — Mas du Chanoine" description="La Fête des Violettes à Tourrettes-sur-Loup, village historique de la culture de la violette sur la Côte d'Azur.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Fête des violettes à Tourrettes-sur-Loup</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Découverte</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Fête des violettes à Tourrettes-sur-Loup</h1>
-        <time class="text-sm text-primary-500" datetime="2020-01-17">17 janvier 2020</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Fin février-début mars se déroule habituellement la Fête des Violettes à Tourrettes-sur-Loup. Il y a 150 ans, le village a commencé à cultiver la violette pour l'industrie de la parfumerie.</p>
-        <p>On trouve maintenant de nombreux produits dérivés, savons, sirops, bonbons… élaborés avec cette petite fleur très parfumée. Tout au long du week-end, le village est animé de défilés, marchés et dégustations.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Fête des violettes à Tourrettes-sur-Loup | Mas du chanoine"
+  description="Fin février, ou tout début mars la fête des violettes de Tourrettes-sur-Loup regroupe artisans parfumeurs, confiseurs et festivaliers"
+  eventName="Fête des violettes à Tourrettes-sur-Loup"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Fête des violettes à Tourrettes-sur-Loup" }
+  ]}
+  tags={["Côte d'azur", "Découverte"]}
+  date="17 janvier 2020"
+  datetime="2020-01-17"
+  image={{ src: "/media/evenements/violettes.jpg", alt: "Bonbons à la violette, Tourrettes-sur-Loup" }}
+  alternates={{ fr: "/fete-des-violettes-a-tourrettes-sur-loup/", en: "/en/violet-festival-in-tourrettes-loup/" }}
+>
+  <p>Fin février-début mars se déroule habituellement la Fête des Violettes à Tourrettes-sur-Loup.</p>
+          <p>Il y a 150 ans, le village a commencé à cultiver la violette pour l'industrie de la parfumerie. On trouve maintenant de nombreux produits dérivés, savons, sirops, bonbons, … élaborés avec cette petite fleur très parfumée.</p>
+          <p>Tout au long du week-end, le village est animé avec des spectacles de musique et de danse. Vous pouvez en profiter pour visiter le musée de «&nbsp;La Bastide aux Violettes&nbsp;» ainsi que la cité médiévale. Ce magnifique village de plan circulaire abrite de jolies maisons en pierre et une jolie vue dégagée jusqu'à la mer.</p>
+          <p>Au cours de ces 2 journées, les artisans présentent leurs produits sur un marché artisanal, et le dimanche après-midi est clôturé par la parade fleurie.</p>
+          <p><a href="http://www.tourrettessurloup.com/index.php?article=1196" target="_blank" rel="noopener noreferrer">Programme sur le site de l'Office du Tourisme</a></p>
+</EventLayout>

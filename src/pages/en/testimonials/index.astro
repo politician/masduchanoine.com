@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const testimonials = [
+  { text: 'There are so many wonderful things to say about our stay at your beautiful Mas. We do not know where to begin. Just know we loved meeting you. Your home and our stay has been absolutely perfect in every way. We enjoyed every morning your most delicious breakfasts and especially your homemade cakes.', author: 'Lee and Darlene', origin: 'USA' },
+  { text: 'Your hospitality has been a beautiful memory we will always remember. Always happy to chat and suggest places to go and places to eat. Mas du Chanoine is a gorgeous house and the room has been superb. A wonderful stay, thank you so much.', author: 'Peter and Sue', origin: 'Australia' },
+  { text: 'Thank you so much for your warm welcome to your wonderful home. We have so enjoyed every aspect of all that you offer – from the beautiful room with its exquisitely comfortable bed to the delicious breakfasts. The pool and garden are a delight and your hospitality completed our most enjoyable stay.', author: 'Liz and Barrie', origin: 'USA' },
+  { text: 'Thank you for a wonderful stay! As hosts, you have been second to none! Thank you for all your helpful input and guidance, as we discovered more of this beautiful area of France. A big thank you too for the delicious breakfasts and the coffee!', author: 'Keith and Jane', origin: 'England' },
+];
+---
+
+<BaseLayout title="Guest Testimonials — Mas du Chanoine" description="Read guest testimonials from Mas du Chanoine, charming B&B in Saint-Paul de Vence. Guest book and reviews from our visitors." lang="en">
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/media/mas-du-chanoine-jardin.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-primary-950/60"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">Testimonials</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold">Guest Book</h1>
+    </div>
+  </section>
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <p class="text-lg text-primary-600 leading-relaxed">Thank you to all our guests for their warm words. Here are some testimonials from those who stayed at Mas du Chanoine.</p>
+      </div>
+      <div class="space-y-8 max-w-3xl mx-auto">
+        {testimonials.map((t) => (
+          <blockquote class="bg-primary-50 rounded-sm p-8 md:p-10 border-l-4 border-accent-500">
+            <svg class="w-8 h-8 text-accent-200 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+            <p class="text-primary-700 leading-relaxed italic mb-6">{t.text}</p>
+            <footer class="text-sm"><cite class="not-italic font-semibold text-primary-900">{t.author}</cite><span class="text-primary-400"> — {t.origin}</span></footer>
+          </blockquote>
+        ))}
+      </div>
+      <div class="text-center mt-16">
+        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=en" target="_blank" rel="noopener noreferrer" class="btn-primary">Book your stay</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

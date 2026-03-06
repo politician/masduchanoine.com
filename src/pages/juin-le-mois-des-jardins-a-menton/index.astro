@@ -1,40 +1,28 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Juin le mois des jardins à Menton — Mas du Chanoine" description="Jardins remarquables de Menton : visites guidées en juin des jardins classés monuments historiques sur la Côte d'Azur.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Juin le mois des jardins à Menton</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Découverte</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Juin le mois des jardins à Menton</h1>
-        <time class="text-sm text-primary-500" datetime="2020-04-02">2 avril 2020</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>La ville de Menton abrite plusieurs jardins remarquables, classés monuments historiques. Créés au dix-neuvième siècle ou dans les années 1920 par différents botanistes hauts en couleur, ils ont été classés dans les années 1990 et ré-ouverts au public.</p>
-        <p>En juin, lors du mois des jardins, des visites guidées sont organisées dans ces lieux magiques aux essences rares et aux paysages méditerranéens.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Juin le mois des jardins à Menton | Mas du chanoine"
+  description="La ville de Menton abrite plusieurs jardins remarquables, classés monuments historiques. En juin, lors du mois des jardins, des visites guidées sont organisées."
+  eventName="Juin le mois des jardins à Menton"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Juin le mois des jardins à Menton" }
+  ]}
+  tags={["Côte d'azur", "Découverte"]}
+  date="2 avril 2020"
+  datetime="2020-04-02"
+  image={{ src: "/media/evenements/jardins-menton.jpg", alt: "Menton, jardin Maria Serena" }}
+  alternates={{ fr: "/juin-le-mois-des-jardins-a-menton/", en: "/en/june-is-the-garden-month-in-menton/" }}
+>
+  <p>La ville de Menton abrite plusieurs jardins remarquables, classés monuments historiques. Créés au dix-neuvième siècle ou dans les années 1920 par différents botanistes hauts en couleur, ils ont été classés dans les années 1990 et ré-ouverts au public.</p>
+          <p>En juin, lors du mois des jardins, des visites guidées sont organisées dans ces lieux magiques aux essences tropicales.</p>
+          <p>Le jardin Serre de la Madone s'étend sur 6 hectares environ, avec une partie haute forestière et une partie basse, jointes par des tonnelles, un belvédère, des escaliers et des bassins pour irriguer l'ensemble de la propriété. La route, qui donne accès au jardin est bordée d'arbres rares. Ouvert tous les jours sauf le lundi de 10h à 18h d'avril à octobre, visites guidées à 15h.</p>
+          <p>Le jardin Fontana Rosa aussi appelé jardin des romanciers est dédié aux écrivains mondiaux du XIXe siècle dont les bustes ornent le fronton du lourd portail et de la rotonde. Rosiers, orangers exhalent leurs parfums, et le bruit des fontaines rafraîchit l'atmosphère. Visites guidées le vendredi et lundi.</p>
+          <p>Le jardin botanique exotique du Val Rameh ouvert en 1967, juxtapose des jardins aux essences différentes&nbsp;: venant d'origines géographiques bien distinctes&nbsp;: fruitiers tropicaux ou subtropicaux, oliviers centenaires, palmiers (arécacées) et solanacées. Une partie tropicale avec une végétation pour climat sec est aussi présente. Le jardin d'eau avec ses lotus et nymphéas se pare de couleurs dès le printemps. Ouvert de 10h30 à 12h30 et de 14h30 à 18h30 l'été.</p>
+          <p>Le jardin Maria Serena est une palmeraie avec une vue sur la mer regroupant sur deux plans, séparés par un talus très pentu des espèces variées de palmiers.</p>
+          <p>Venez visiter ces lieux calmes et découvrez Menton.</p>
+          <p class="text-sm text-primary-500 italic">Crédit photo&nbsp;: CRT Riviera Côte d'Azur – Cindy JOIGNY</p>
+</EventLayout>
