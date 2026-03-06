@@ -1,0 +1,69 @@
+name: PR Guardrails
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR body checklist
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          required_items=(
+            "Change is limited to the smallest possible scope."
+            "No unrelated refactor/renaming/reformatting was included."
+            "\`npm run ci\`"
+            "Manual spot-check on changed pages (desktop + mobile)"
+          )
+
+          for item in "${required_items[@]}"; do
+            if ! grep -Fq -- "- [x] ${item}" <<< "$PR_BODY" && ! grep -Fq -- "- [X] ${item}" <<< "$PR_BODY"; then
+              echo "Missing checked item in PR template: ${item}"
+              exit 1
+            fi
+          done
+
+      - name: Block edits to protected paths unless explicit override
+        uses: actions/github-script@v7
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        with:
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
+              per_page: 100,
+            });
+
+            const protectedMatchers = [
+              /^\.github\/workflows\//,
+              /^package-lock\.json$/,
+              /^astro\.config\.mjs$/,
+              /^tailwind\.config\.mjs$/,
+            ];
+
+            const touchedProtected = files
+              .map((f) => f.filename)
+              .filter((name) => protectedMatchers.some((rx) => rx.test(name)));
+
+            if (touchedProtected.length === 0) {
+              core.info('No protected files touched.');
+              return;
+            }
+
+            const body = process.env.PR_BODY || '';
+            const hasOverride = body.includes('[override-guardrails]');
+
+            if (!hasOverride) {
+              core.setFailed(
+                `Protected files were modified (${touchedProtected.join(', ')}). ` +
+                'Add rationale and include [override-guardrails] in PR body.'
+              );
+            } else {
+              core.warning(`Override detected for protected files: ${touchedProtected.join(', ')}`);
+            }

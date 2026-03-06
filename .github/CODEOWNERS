@@ -1,0 +1,10 @@
+# Default owner for the whole repository.
+* @politician
+
+# Sensitive areas: require explicit review from owner.
+/.github/ @politician
+/package.json @politician
+/package-lock.json @politician
+/astro.config.mjs @politician
+/tailwind.config.mjs @politician
+/scripts/ @politician
