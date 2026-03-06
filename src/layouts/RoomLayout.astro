@@ -1,0 +1,162 @@
+---
+import type { Lang } from '../i18n/translations';
+import { getBookingUrl } from '../i18n/translations';
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  lang?: Lang;
+  alternates?: Partial<Record<Lang, string>>;
+  /** Room display name for the h1 */
+  roomName: string;
+  /** Small text above the h1 (e.g. "Spacieuse & Cosy") */
+  subtitle?: string;
+  /** Tagline below the h1 */
+  tagline?: string;
+  /** Hero background image URL */
+  heroImage: string;
+  /** Amenities list */
+  amenities: string[];
+  /** Title for amenities sidebar (e.g. "Caractéristiques", "Room Equipment") */
+  amenitiesTitle?: string;
+  /** Summary line under amenities title (e.g. "Surface : 36 m²…") */
+  amenitiesSummary?: string;
+  /** Photo gallery items */
+  gallery?: { src: string; alt: string }[];
+  /** Gallery section title */
+  galleryTitle?: string;
+  /** Breadcrumb items — array of { label, href } pairs, last one is current page (no href needed) */
+  breadcrumb: { label: string; href?: string }[];
+  /** CTA booking button label */
+  bookingLabel?: string;
+  /** "Other rooms" section title */
+  otherRoomsTitle?: string;
+  /** "Other rooms" button label */
+  otherRoomsLabel?: string;
+  /** "Other rooms" link URL */
+  otherRoomsUrl?: string;
+}
+
+const {
+  title,
+  description,
+  lang,
+  alternates,
+  roomName,
+  subtitle,
+  tagline,
+  heroImage,
+  amenities,
+  amenitiesTitle = 'Caractéristiques',
+  amenitiesSummary,
+  gallery = [],
+  galleryTitle = 'Galerie photos',
+  breadcrumb,
+  bookingLabel = 'Réserver cette chambre',
+  otherRoomsTitle = 'Découvrir nos autres chambres',
+  otherRoomsLabel = 'Voir toutes les chambres',
+  otherRoomsUrl = '/chambres-dhotes/',
+} = Astro.props;
+
+const effectiveLang = lang || 'fr';
+const bookingUrl = getBookingUrl(effectiveLang);
+---
+
+<BaseLayout title={title} description={description} lang={lang} alternates={alternates}>
+  <!-- Hero -->
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style={`background-image:url('${heroImage}')`}></div>
+    <div class="absolute inset-0 bg-primary-950/60"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      {subtitle && <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">{subtitle}</p>}
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold">{roomName}</h1>
+      {tagline && <p class="mt-4 text-lg text-primary-100 font-light">{tagline}</p>}
+    </div>
+  </section>
+
+  <!-- Breadcrumb -->
+  <nav class="max-w-6xl mx-auto px-4 md:px-8 py-4 text-sm text-primary-400" aria-label="Breadcrumb">
+    <ol class="flex items-center gap-2">
+      {breadcrumb.map((crumb, i) => (
+        <>
+          {i > 0 && <li>›</li>}
+          <li>
+            {crumb.href
+              ? <a href={crumb.href} class="hover:text-accent-600 transition-colors">{crumb.label}</a>
+              : <span class="text-primary-700">{crumb.label}</span>
+            }
+          </li>
+        </>
+      ))}
+    </ol>
+  </nav>
+
+  <!-- Content + Sidebar -->
+  <section class="section-pad pt-8">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-5 gap-12">
+        <div class="lg:col-span-3 prose-content text-base md:text-lg">
+          <slot />
+        </div>
+        <aside class="lg:col-span-2">
+          <div class="bg-primary-50 rounded-sm p-6 md:p-8 sticky top-24">
+            <h2 class="text-lg font-serif font-semibold text-primary-900 mb-2">{amenitiesTitle}</h2>
+            {amenitiesSummary && <p class="text-sm text-primary-600 mb-6">{amenitiesSummary}</p>}
+            <div class="grid grid-cols-2 gap-3">
+              {amenities.map((a) => (
+                <div class="flex items-center gap-2 text-sm text-primary-700">
+                  <svg class="w-4 h-4 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {a}
+                </div>
+              ))}
+            </div>
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary w-full text-center mt-8 text-xs"
+            >
+              {bookingLabel}
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  {gallery.length > 0 && (
+    <section class="section-pad bg-primary-50">
+      <div class="container-narrow">
+        <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-8 text-center">{galleryTitle}</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {gallery.map((img) => (
+            <div class="aspect-[4/3] rounded-sm overflow-hidden">
+              <img
+                src={img.src}
+                alt={img.alt}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Other rooms -->
+  {otherRoomsUrl && (
+    <section class="section-pad">
+      <div class="container-narrow text-center">
+        <h2 class="text-2xl font-serif font-semibold text-primary-900 mb-6">{otherRoomsTitle}</h2>
+        <a href={otherRoomsUrl} class="btn-outline">{otherRoomsLabel}</a>
+      </div>
+    </section>
+  )}
+</BaseLayout>

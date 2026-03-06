@@ -1,61 +1,45 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import ActivityLayout from '../../layouts/ActivityLayout.astro';
 ---
 
-<BaseLayout title="Golf — Mas du Chanoine" description="Golf sur la Côte d'Azur. 10 parcours 18 trous et 6 de 9 trous dans un rayon de 15 km autour du Mas du Chanoine à Saint-Paul de Vence.">
-  <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-    <div class="absolute inset-0 bg-primary-100"></div>
-    <div class="relative z-10 max-w-3xl mx-auto">
-      <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-        <ol class="flex items-center gap-2">
-          <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-          <li>›</li>
-          <li><a href="/activites/" class="hover:text-accent-600 transition-colors">Activités</a></li>
-          <li>›</li>
-          <li class="text-primary-700">Golf</li>
-        </ol>
-      </nav>
-      <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Golf</h1>
-    </div>
-  </section>
+<ActivityLayout
+  title="Golfer sur la Cote d'azur | Mas du chanoine"
+  description="Golf sur la Côte d'Azur. 10 parcours 18 trous et 6 de 9 trous dans un rayon de 15 km autour du Mas du Chanoine à Saint-Paul de Vence."
+  activityName="Golf"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Activités", href: "/activites-cote-azur/" },
+    { label: "Golf" }
+  ]}
+  image={{ src: "/media/activites/golf.jpg", alt: "Golf sur la Côte d'Azur" }}
+  alternates={{ fr: "/activites/golf/", en: "/en/activites/golf-en/", it: "/it/activites/golf-3/" }}
+>
+  <p>La Côte d'Azur est une destination idéale pour les amateurs de golf. En effet, pas moins de 10 parcours de golf 18 trous et 6 de 9 trous sont accessibles dans un rayon de 15 km autour du Mas du Chanoine.</p>
+  <p>Les parcours sont variés par leur tracé, leur emplacement (proche de la Mer Méditerranée ou plus dans les terres) et leur difficulté. Ils sont très verdoyants et peuvent offrir un panorama exceptionnel comme le Monte-Carlo Golf Club.</p>
+  <p>Vous pourrez également choisir des golfs de niveau international connus des meilleurs joueurs du Monde, comme le Golf Country Club de Cannes Mougins.</p>
 
-  <section class="section-pad pt-8">
-    <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-      <p>La Côte d'Azur est une destination idéale pour les amateurs de golf. En effet, pas moins de 10 parcours de golf 18 trous et 6 de 9 trous sont accessibles dans un rayon de 15 km autour du Mas du Chanoine.</p>
-      <p>Les parcours sont variés par leur tracé, leur emplacement (proche de la Mer Méditerranée ou plus dans les terres) et leur difficulté. Ils sont très verdoyants et peuvent offrir un panorama exceptionnel comme le Monte-Carlo Golf Club.</p>
-      <p>Vous pourrez également choisir des golfs de niveau international connus des meilleurs joueurs du Monde, comme le Golf Country Club de Cannes Mougins.</p>
+  <p><strong>Deux golfs proposent un parcours 18 trous et un parcours 9 trous&nbsp;:</strong></p>
+  <ul>
+    <li>Golf country club de Saint-Donat – Grasse</li>
+    <li>Golf Old Course – Mandelieu-la-Napoule</li>
+  </ul>
 
-      <p><strong>Deux golfs proposent un parcours 18 trous et un parcours 9 trous&nbsp;:</strong></p>
-      <ul>
-        <li>Golf country club de Saint-Donat – Grasse</li>
-        <li>Golf Old Course – Mandelieu-la-Napoule</li>
-      </ul>
+  <p><strong>Golfs proposant un parcours 18 trous&nbsp;:</strong></p>
+  <ul>
+    <li>Monte-Carlo Golf Club – La Turbie</li>
+    <li>Golf Club de Biot</li>
+    <li>Golf Country Club de Cannes Mougins</li>
+    <li>Golf d'Opio – Valbonne</li>
+    <li>Golf de la Grande Bastide – Châteauneuf de Grasse</li>
+    <li>Golf du Royal Mougins</li>
+    <li>Golf du Claux-Amic – Grasse</li>
+  </ul>
 
-      <p><strong>Golfs proposant un parcours 18 trous&nbsp;:</strong></p>
-      <ul>
-        <li>Monte-Carlo Golf Club – La Turbie</li>
-        <li>Golf Club de Biot</li>
-        <li>Golf Country Club de Cannes Mougins</li>
-        <li>Golf d'Opio – Valbonne</li>
-        <li>Golf de la Grande Bastide – Châteauneuf de Grasse</li>
-        <li>Golf du Royal Mougins</li>
-        <li>Golf du Claux-Amic – Grasse</li>
-      </ul>
-
-      <p><strong>Golfs proposant un parcours 9 trous&nbsp;:</strong></p>
-      <ul>
-        <li>Golf de Villeneuve-Loubet</li>
-        <li>Golf Country Club de Nice</li>
-        <li>Le Provençal Golf – Biot</li>
-        <li>Victoria Golf Club – Valbonne</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section-pad pt-0">
-    <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-      <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Voir toutes les activités</a>
-      <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-    </div>
-  </section>
-</BaseLayout>
+  <p><strong>Golfs proposant un parcours 9 trous&nbsp;:</strong></p>
+  <ul>
+    <li>Golf de Villeneuve-Loubet</li>
+    <li>Golf Country Club de Nice</li>
+    <li>Le Provençal Golf – Biot</li>
+    <li>Victoria Golf Club – Valbonne</li>
+  </ul>
+</ActivityLayout>

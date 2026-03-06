@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seasons = {
+  rooms: [
+    { label: 'Low season', dates: '01/01 to 04/30, 10/01 to 12/31', price: '€255 - €285' },
+    { label: 'Middle season', dates: '05/01 to 06/14, 09/15 to 09/30', price: '€300 - €330' },
+    { label: 'High season', dates: '06/15 to 09/14', price: '€340 - €370' },
+  ],
+  petitMas: [
+    { label: 'Low season', dates: '01/01 to 04/30, 10/01 to 12/31', price: '€355' },
+    { label: 'Middle season', dates: '05/01 to 06/14, 09/15 to 09/30', price: '€420' },
+    { label: 'High season', dates: '06/15 to 09/14', price: '€480' },
+  ],
+};
+
+const articles = [
+  { title: '1 – Length of stay', text: 'The signatory client of the contract concluded for a fixed term can not in any circumstances invoke any right to maintain the premises.' },
+  { title: '2 – Conclusion of the contract', text: 'Any reservation will become effective only upon receipt of a deposit of 50% of the total amount of the stay, with a minimum of one night. The payment of this deposit implies acceptance of the general terms and conditions.' },
+  { title: '3 – Cancellation policy', text: 'Based on the small size of our guest house, any cancellation has a significant impact on us. If a booking is canceled more than 60 days prior to arrival, we will refund your deposit (minus bank fees). Between 60 and 30 days prior to arrival, the deposit will be forfeited in full. Less than 30 days prior to arrival, the total amount due will be billed. In case of early departure, the total stay will be billed. We recommend that you purchase cancellation insurance.' },
+  { title: '4 – Check-in & Check-out', text: 'On the day of your arrival, we suggest that you arrive between 5 and 7pm. In case of late arrival, you must inform us before 5pm. On departure day, please vacate the room before 11 am.' },
+  { title: '5 – Payments', text: 'The deposit should be paid by credit card (VISA, Mastercard). The balance is payable on arrival in cash or by credit card.' },
+  { title: '6 – Taxes', text: 'Rates include 10% VAT. The tourist tax is €1.07 per night per person aged 18 and over.' },
+  { title: '7 – Use of the premises', text: 'A vehicle is required. All rooms, reception areas and the patio during breakfast are non-smoking. Access to the pool area is prohibited for unaccompanied minor children.' },
+  { title: '8 – Animals', text: 'The coexistence of various animals on the property does not allow us to host additional animals.' },
+  { title: '9 – Occupancy', text: 'The contract is for a specific number of people. The owner is able to deny additional customers.' },
+  { title: '10 – Insurance', text: 'The customer is responsible for all damages. The customer certifies to be covered by liability insurance.' },
+  { title: '11 – Litigation', text: 'The Court of Grasse has sole jurisdiction for disputes arising from this contract.' },
+];
+---
+
+<BaseLayout title="Guest Room Rates — Mas du Chanoine" description="2026 rates for guest rooms and family suite at Mas du Chanoine in Saint-Paul de Vence. Best rate guaranteed when booking directly." lang="en">
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Season 2026</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Rates</h1>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="prose-content text-base md:text-lg">
+          <p>The room rates vary according to the season. The best rate is guaranteed by booking directly with the Mas du Chanoine, either by email (<a href="mailto:pascale@masduchanoine.com">pascale@masduchanoine.com</a>), by phone (<a href="tel:+33627271649">+33 6 27 27 16 49</a>) or by using the online booking engine (button Book Now).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-primary-50 pt-0">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div class="bg-white rounded-sm shadow-lg overflow-hidden border border-primary-100">
+          <div class="bg-primary-900 text-white p-6 md:p-8 text-center">
+            <h2 class="text-2xl font-serif font-semibold mb-1">Cannoise, Niçoise, Saint-Pauloise</h2>
+            <p class="text-primary-300 text-sm">Guest rooms · 2 persons</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="space-y-4 mb-6">
+              {seasons.rooms.map((s) => (
+                <div class="flex items-center justify-between py-3 border-b border-primary-100 last:border-0">
+                  <div><p class="font-semibold text-primary-900">{s.label}</p><p class="text-xs text-primary-500">{s.dates}</p></div>
+                  <p class="text-xl font-serif font-semibold text-accent-600">{s.price}</p>
+                </div>
+              ))}
+            </div>
+            <div class="bg-primary-50 rounded-sm p-4 text-xs text-primary-600 leading-relaxed">
+              <p>The price includes double occupancy per night, complimentary continental breakfast, parking and WiFi. Single occupancy: -€10. The lowest price is for "Saint-Pauloise" and the highest for the ground floor rooms. Rates include VAT. Tourist tax: €1.07/night/person over 18.</p>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=en" target="_blank" rel="noopener noreferrer" class="btn-primary">Book now</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-sm shadow-lg overflow-hidden border border-primary-100">
+          <div class="bg-accent-600 text-white p-6 md:p-8 text-center">
+            <h2 class="text-2xl font-serif font-semibold mb-1">Le Petit Mas</h2>
+            <p class="text-white/80 text-sm">2-Bedroom Suite · 3 persons</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="space-y-4 mb-6">
+              {seasons.petitMas.map((s) => (
+                <div class="flex items-center justify-between py-3 border-b border-primary-100 last:border-0">
+                  <div><p class="font-semibold text-primary-900">{s.label}</p><p class="text-xs text-primary-500">{s.dates}</p></div>
+                  <p class="text-xl font-serif font-semibold text-accent-600">{s.price}</p>
+                </div>
+              ))}
+            </div>
+            <div class="bg-primary-50 rounded-sm p-4 text-xs text-primary-600 leading-relaxed">
+              <p>The price includes 3 persons per night including complimentary breakfast, parking and WiFi. Double occupancy: -€10. Rates include VAT. Tourist tax: €1.07/night/person over 18.</p>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=en" target="_blank" rel="noopener noreferrer" class="btn-primary">Book now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <details class="group bg-white border border-primary-200 rounded-sm overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 md:p-8 hover:bg-primary-50 transition-colors">
+            <h2 class="text-xl md:text-2xl font-serif font-semibold text-primary-900">Terms and Conditions</h2>
+            <svg class="w-5 h-5 text-primary-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="px-6 md:px-8 pb-6 md:pb-8 space-y-6">
+            {articles.map((article) => (
+              <div>
+                <h3 class="font-semibold text-primary-900 mb-2 text-sm">{article.title}</h3>
+                <p class="text-sm text-primary-600 leading-relaxed">{article.text}</p>
+              </div>
+            ))}
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

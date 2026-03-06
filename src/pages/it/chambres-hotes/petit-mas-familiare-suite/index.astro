@@ -1,0 +1,50 @@
+---
+import RoomLayout from '../../../../layouts/RoomLayout.astro';
+
+const amenities = [
+  'Letto king size', 'Nespresso', "Doccia all'italiana", 'Letto queen size',
+  'Tè e tisane', 'WC autonomo', 'Wifi gratuito', 'Mini Bar',
+  'Asciugacapelli', 'TV a schermo piatto', 'Acqua minerale', 'Accappatoi',
+  'Aria condizionata', 'Bevande in supplemento', 'Pantofole', 'Cassaforte',
+  'Mobili da giardino', 'Kit di cortesia', 'Poltrona nella camera Queen', 'Parcheggio gratuito',
+  'Asciugamani piscina', 'Scrivania nella camera King',
+];
+
+const gallery = [
+  { src: '/media/chambres/chambre-petit-mas.jpg', alt: 'Le Petit Mas — vista esterna' },
+  { src: '/media/chambres/petit-mas-chambre-queen.jpg', alt: 'Le Petit Mas — camera Queen' },
+  { src: '/media/chambres/petit-mas-vue-exterieure.jpg', alt: 'Le Petit Mas — facciata e giardino' },
+  { src: '/media/chambres/petit-mas-chambre-king.jpg', alt: 'Le Petit Mas — camera King' },
+  { src: '/media/chambres/petit-mas-douche.jpg', alt: 'Le Petit Mas — doccia' },
+  { src: '/media/chambres/jardin-1.jpg', alt: 'Giardino del Mas du Chanoine' },
+];
+---
+
+<RoomLayout
+  title="Le Petit Mas: suite familiare | Mas du Chanoine"
+  description="Suite familiare per 3 persone: due camere in un edificio indipendente nel grande giardino mediterraneo"
+  lang="it"
+  alternates={{ fr: '/chambres-hotes/petit-mas/', en: '/en/chambres-hotes/petit-mas-family-suite/', it: '/it/chambres-hotes/petit-mas-familiare-suite/' }}
+  roomName="LE PETIT MAS"
+  subtitle="Indipendente & Familiare"
+  tagline="Edificio indipendente con 2 camere, per chi viaggia in tre, vista sulla vasca"
+  heroImage="/media/chambres/chambre-petit-mas.jpg"
+  amenities={amenities}
+  amenitiesTitle="Servizi in camera"
+  amenitiesSummary="Superficie: 35 m² — 2 camere — Piano terra"
+  gallery={gallery}
+  galleryTitle="Galleria fotografica"
+  bookingLabel="Prenota questa camera"
+  otherRoomsTitle="Scoprite le nostre altre camere"
+  otherRoomsLabel="Tutte le camere"
+  otherRoomsUrl="/it/bed-e-breakfast/"
+  breadcrumb={[
+    { label: 'Home', href: '/it/' },
+    { label: 'Camere', href: '/it/bed-e-breakfast/' },
+    { label: 'Le Petit Mas' },
+  ]}
+>
+  <p>Situato in un edificio indipendente, accanto alla vasca dei pesci, Le Petit Mas è una suite familiare ideale per ospitare chi viaggia in tre: 3 adulti oppure due adulti con un bambino di più di 12 anni. Le due camere separate garantiscono la privacy di ciascuno.</p>
+  <p>Su 35 m² disponete di: una camera con letto king size (180×200), climatizzazione, TV a schermo piatto, Wi-Fi, necessario per tè e caffè, mini-bar, cassaforte e scrivania; una camera con letto queen size (160×200) e una poltrona; una doccia all'italiana; WC indipendenti.</p>
+  <p>Entrambe le camere sono dotate di mensole e grandi armadi scorrevoli per il vostro comfort. Davanti a Le Petit Mas, potrete godere dei mobili da giardino.</p>
+</RoomLayout>

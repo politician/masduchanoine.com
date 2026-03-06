@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const rooms = [
+  {
+    name: 'Cannoise Guestroom',
+    slug: '/en/chambres-hotes/cannoise-guestroom/',
+    tagline: 'Provençal Chic & Modern',
+    shortDesc: 'Sunny room with a view of the fish basin, classy Provençal style with trendy Cannes accents',
+    details: 'Junior suite: room with an adjoining living-sitting area\nGround floor\nPrivate access\n2 persons\nKing size bed\nWalk-in shower\n388 sq ft',
+    image: '/media/chambres/chambre-cannoise.jpg',
+  },
+  {
+    name: 'Niçoise Guestroom',
+    slug: '/en/chambres-hotes/nicoise-guestroom/',
+    tagline: 'Spacious & Cosy',
+    shortDesc: 'Room under the lemon tree, with a view of the fish basin, Provençal style, the charm of Old Nice',
+    details: 'Junior suite: room with a separate living-sitting area\nGround floor\nPrivate access\n2 persons\nKing size bed or twin beds\nWalk-in shower\n388 sq ft',
+    image: '/media/chambres/chambre-nicoise.jpg',
+  },
+  {
+    name: 'Saint Pauloise Guestroom',
+    slug: '/en/chambres-hotes/saint-pauloise-guestroom/',
+    tagline: 'Charm & Village View',
+    shortDesc: 'In the oldest part of the Mas, master bedroom overlooking the village of Saint-Paul de Vence',
+    details: '1st floor\nPrivate access\n2 persons\nKing size bed\nWalk-in shower and bathtub\n323 sq ft',
+    image: '/media/chambres/chambre-saint-pauloise.jpg',
+  },
+  {
+    name: 'Petit Mas Family Suite',
+    slug: '/en/chambres-hotes/petit-mas-family-suite/',
+    tagline: '2-Bedroom Suite · Independent & Family',
+    shortDesc: 'Small independent cottage with 2 bedrooms, for three people traveling together, with a view of the fish basin',
+    details: '3 persons more than 12 years old\n1 King size bed + 1 Queen size bed\nWalk-in shower\n377 sq ft',
+    image: '/media/chambres/chambre-petit-mas.jpg',
+  },
+];
+
+const amenities = [
+  'Nespresso Coffee', 'Tea & Herbal Tea', 'Mini Bar', 'Mineral Water',
+  'Flat Screen TV', 'International Channels', 'Free Wi-Fi', 'Air Conditioning',
+  'Safe', 'Hair Dryer', 'Bathrobes', 'Slippers',
+  'Fragonard Amenities', 'Pool Towels', 'Garden Furniture', 'Free Parking',
+];
+---
+
+<BaseLayout
+  title="Guest Rooms — Mas du Chanoine, Saint-Paul de Vence"
+  description="Discover our 3 guest rooms and family suite at Mas du Chanoine, Saint-Paul de Vence. Spacious suites, Provençal décor, luxury amenities, pool."
+  lang="en"
+>
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/media/chambres/chambre-cannoise.jpg')] bg-cover bg-center"></div>
+    <div class="absolute inset-0 bg-primary-950/60"></div>
+    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">Accommodation</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold mb-4">Guest Rooms & Family Suite</h1>
+      <p class="text-lg text-primary-200">All rooms have private access from the garden. Very spacious, they are decorated in Provençal style and equipped with comfortable bedding.</p>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        {rooms.map((room) => (
+          <a href={room.slug} class="group bg-white rounded-sm overflow-hidden border border-primary-100 hover:shadow-lg transition-all duration-300">
+            <div class="aspect-[3/2] overflow-hidden">
+              <img src={room.image} alt={`${room.name} at Mas du Chanoine`} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="400" />
+            </div>
+            <div class="p-6 md:p-8">
+              <p class="text-xs tracking-[0.2em] uppercase text-accent-600 mb-2 font-medium">{room.tagline}</p>
+              <h2 class="text-2xl font-serif font-semibold text-primary-900 mb-3 group-hover:text-accent-600 transition-colors">{room.name}</h2>
+              <p class="text-sm text-primary-600 mb-4">{room.shortDesc}</p>
+              <div class="text-xs text-primary-500 space-y-1">
+                {room.details.split('\n').map((line: string) => (<p>{line}</p>))}
+              </div>
+              <span class="inline-block mt-4 text-sm text-accent-600 font-medium group-hover:translate-x-1 transition-transform">View room →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-primary-50">
+    <div class="container-narrow">
+      <div class="text-center mb-12">
+        <p class="text-sm tracking-[0.2em] uppercase text-accent-600 mb-3 font-medium">Comfort</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900">Services & Facilities</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="prose-content text-center mb-10">
+          <p>The 3 guest rooms located in the main body of the Mas all have private access from the garden. The family suite called "Petit Mas" is located in an independent building in the garden.</p>
+          <p>Very spacious, all the guest rooms are tastefully decorated in the tradition of Provence. For your comfort, they are air-conditioned and equipped with quality King size beds. The Niçoise can be available with two twin beds upon request.</p>
+          <p>Each guestroom includes:</p>
+          <ul class="text-left">
+            <li>a flat screen TV connected to a parabolic dish offering a range of international channels,</li>
+            <li>Internet access via Ethernet cable or WIFI,</li>
+            <li>a courtesy tray with a Nespresso coffee machine, kettle with tea service,</li>
+            <li>a mini bar with mineral water, other drinks being extra,</li>
+            <li>a safe large enough for a laptop.</li>
+          </ul>
+          <p>Each bathroom includes welcoming amenities from the famous Fragonard perfumes from Grasse. There is a hairdryer, bathrobes and slippers.</p>
+          <p>The rooms are cleaned every day and we prepare the beds in the evening.</p>
+          <p>We wish to inform you that all rooms, reception areas and the patio during breakfast hours are all non-smoking areas.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {amenities.map((a) => (
+            <div class="flex items-center gap-2 text-sm text-primary-700">
+              <svg class="w-4 h-4 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              {a}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad text-center">
+    <div class="container-narrow">
+      <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-4">Choose & Book at the best rate from our website</h2>
+      <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=en" target="_blank" rel="noopener noreferrer" class="btn-primary mt-6">Book now</a>
+    </div>
+  </section>
+</BaseLayout>

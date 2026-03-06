@@ -1,0 +1,51 @@
+---
+import RoomLayout from '../../../../layouts/RoomLayout.astro';
+
+const amenities = [
+  'King Size bed', 'Nespresso coffee', 'Bathtub', 'Air conditioning',
+  'Tea and herbal teas', 'Walk-in shower', 'Free Wi-Fi', 'Mini Fridge',
+  'WC', 'Flat screen TV', 'Mineral water', 'Hair dryer',
+  'International channels', 'Optional beverages', 'Bathrobes', 'Safe',
+  'Free Parking', "Local amenities", '2 armchairs', 'Desk',
+  'Pool towels',
+];
+
+const gallery = [
+  { src: '/media/chambres/chambre-saint-pauloise.jpg', alt: 'Saint Pauloise Guestroom — main bedroom' },
+  { src: '/media/chambres/saint-pauloise-armoire.jpg', alt: 'Saint Pauloise Guestroom — painted Provençal wardrobe' },
+  { src: '/media/chambres/saint-pauloise-salle-bain.jpg', alt: 'Saint Pauloise Guestroom — bathroom with bathtub' },
+  { src: '/media/chambres/saint-pauloise-entree.jpg', alt: 'Saint Pauloise Guestroom — entrance from the staircase' },
+  { src: '/media/chambres/saint-pauloise-entree-riviera.jpg', alt: 'Saint Pauloise Guestroom — room entrance' },
+  { src: '/media/photos/saint-pauloise-1400.jpg', alt: 'Saint Pauloise Guestroom — panoramic view' },
+  { src: '/media/chambres/saint-paul-village.jpg', alt: 'Village of Saint-Paul de Vence' },
+];
+---
+
+<RoomLayout
+  title="Saint Pauloise Guestroom | Mas du Chanoine"
+  description="In the oldest part of the Mas, a master bedroom with a view of the village of Saint-Paul de Vence"
+  lang="en"
+  alternates={{ fr: '/chambres-hotes/la-saint-pauloise/', en: '/en/chambres-hotes/saint-pauloise-guestroom/', it: '/it/chambres-hotes/saint-pauloise-camera/' }}
+  roomName="SAINT PAULOISE GUESTROOM"
+  subtitle="Charm & Village View"
+  tagline="In the oldest part of the Mas, a master bedroom with a view of the village of Saint-Paul de Vence"
+  heroImage="/media/chambres/chambre-saint-pauloise.jpg"
+  amenities={amenities}
+  amenitiesTitle="Room Equipment"
+  amenitiesSummary="Surface: 30 m² — 1 bedroom — First floor"
+  gallery={gallery}
+  galleryTitle="Photo Gallery"
+  bookingLabel="Book this room"
+  otherRoomsTitle="Discover our other rooms"
+  otherRoomsLabel="View all rooms"
+  otherRoomsUrl="/en/bed-breakfast/"
+  breadcrumb={[
+    { label: 'Home', href: '/en/' },
+    { label: 'Rooms', href: '/en/bed-breakfast/' },
+    { label: 'Saint Pauloise Guestroom' },
+  ]}
+>
+  <p>This charming guestroom (30 m²) on the first floor is directly accessible via a staircase from the outdoor patio. It is located in the oldest part of the Mas dating from the 17th century and owes its name to the magnificent view it offers of the village of Saint-Paul de Vence.</p>
+  <p>It was the bedroom of the Canon and successive masters of the house. Furnished in the Provençal tradition with authentic painted furniture, it offers cosy comfort thanks to its oak parquet flooring.</p>
+  <p>In addition to a King Size bed (180×200), you have two armchairs and a desk. The very spacious and bright bathroom includes a sunken bathtub, a shower and a toilet. It offers a lovely view of the mountains.</p>
+</RoomLayout>

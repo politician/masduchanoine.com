@@ -1,0 +1,20 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="I Villaggi Collinari — Attività Costa d'Azzurra"
+  description="I Villaggi Collinari: attività vicino al nostro B&B sulla Costa Azzurra."
+  lang="it"
+  activityName="I Villaggi Collinari"
+  breadcrumb={[
+    { label: "Home", href: "/it/" },
+    { label: "Attività", href: "/it/attivita/" },
+    { label: "I Villaggi Collinari" }
+  ]}
+  image={{ src: "/media/activites/villages-perches.jpg", alt: "I Villaggi Collinari" }}
+  backLabel="← Tutte le attività"
+  backUrl="/it/attivita/"
+  bookingLabel="Prenota"
+  alternates={{ fr: "/activites/visiter-les-villages-perches/", en: "/en/activites/hilltop-villages/", it: "/it/activites/i-villaggi-collinari/" }}
+/>

@@ -1,45 +1,27 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Salon des antiquaires d'Antibes — Mas du Chanoine" description="Le Salon des antiquaires d'Antibes sur le pré des pêcheurs. Art et antiquités sur la Côte d'Azur, près du Mas du Chanoine.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Salon des antiquaires d'Antibes</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Foires / Salons</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Salon des antiquaires d'Antibes</h1>
-        <time class="text-sm text-primary-500" datetime="2020-03-20">20 mars 2020</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Le rendez-vous annuel des amateurs d'art et d'antiquités de la Côte d'Azur se tiendra du 11 au 22 juin sur le pré des pêcheurs à Antibes (journée VIP le 10 juin 2020).</p>
-        <p>Depuis l'an dernier, est organisé fin août une édition consacrée à l'art moderne et contemporain (Summer art fair), prévue du 23 août au 2 septembre 2020.</p>
-        <p>Sous le chapiteau, vous trouverez des stands aménagés comme des appartements mettant en valeur pièces de mobiliers d'exception, tables dressées avec orfèvrerie et porcelaines ravissantes, des vitrines de magasins d'antiquité, des cabinets de curiosité. Vous pourrez aussi visiter des galeries de tableaux signés, anciens ou modernes, galeristes, joailliers et spécialistes d'objets d'art du monde entier (Asie, arts premiers).</p>
-        <p>A ciel ouvert vous trouverez des échoppes et des brocantes, avec des objets plus abordables.</p>
-        <p>Au total, une centaine d'exposants qui vous présentent des objets, des tableaux ou des meubles de très belle facture, qui ont traversé les siècles pour le plaisir des yeux.</p>
-        <p><a href="http://www.salon-antiquaires-antibes.com/" target="_blank" rel="noopener noreferrer">Salon des antiquaires</a></p>
-        <p class="text-sm text-primary-500 italic">Crédit Photo&nbsp;: salon des antiquaires</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Salon des antiquaires d'Antibes | Mas du chanoine"
+  description="Le rendez vous annuel des amateurs d'art et d'antiquités de la Côte d'azur se tiendra du 11 au 22 juin sur le pré des pêcheurs à Antibes"
+  eventName="Salon des antiquaires d'Antibes"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Salon des antiquaires d'Antibes" }
+  ]}
+  tags={["Côte d'azur", "Foires / Salons"]}
+  date="20 mars 2020"
+  datetime="2020-03-20"
+  image={{ src: "/media/evenements/salon-antiquaires.jpg", alt: "Salon des antiquaires d'Antibes" }}
+  alternates={{ fr: "/salon-des-antiquaires-dantibes/", en: "/en/antibes-art-fair/" }}
+>
+  <p>Le rendez-vous annuel des amateurs d'art et d'antiquités de la Côte d'Azur se tiendra du 11 au 22 juin sur le pré des pêcheurs à Antibes (journée VIP le 10 juin 2020).</p>
+          <p>Depuis l'an dernier, est organisé fin août une édition consacrée à l'art moderne et contemporain (Summer art fair), prévue du 23 août au 2 septembre 2020.</p>
+          <p>Sous le chapiteau, vous trouverez des stands aménagés comme des appartements mettant en valeur pièces de mobiliers d'exception, tables dressées avec orfèvrerie et porcelaines ravissantes, des vitrines de magasins d'antiquité, des cabinets de curiosité. Vous pourrez aussi visiter des galeries de tableaux signés, anciens ou modernes, galeristes, joailliers et spécialistes d'objets d'art du monde entier (Asie, arts premiers).</p>
+          <p>A ciel ouvert vous trouverez des échoppes et des brocantes, avec des objets plus abordables.</p>
+          <p>Au total, une centaine d'exposants qui vous présentent des objets, des tableaux ou des meubles de très belle facture, qui ont traversé les siècles pour le plaisir des yeux.</p>
+          <p><a href="http://www.salon-antiquaires-antibes.com/" target="_blank" rel="noopener noreferrer">Salon des antiquaires</a></p>
+          <p class="text-sm text-primary-500 italic">Crédit Photo&nbsp;: salon des antiquaires</p>
+</EventLayout>

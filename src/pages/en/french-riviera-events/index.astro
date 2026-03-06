@@ -1,0 +1,68 @@
+---
+import Sidebar from '../../../components/Sidebar.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const articles = [
+  { title: 'Flowers and fruits festivals introduce spring', date: '27 January 2023', slug: '/en/flowers-and-fruits-festivals-introduce-spring/', categories: ['French Riviera', 'Festivals'] },
+  { title: 'Nice carnival: King of the World\'s Treasures', date: '20 January 2023', slug: '/en/nice-carnival-king-of-cinema/', categories: ['French Riviera', 'Festivals'] },
+  { title: 'High season for citrus', date: '13 January 2023', slug: '/en/high-season-for-citrus/', categories: ['French Riviera'] },
+  { title: 'Film Festival in Cannes', date: '18 June 2021', slug: '/en/film-festival-in-cannes/', categories: ['French Riviera'] },
+  { title: 'Follow the Guide in St Paul de Vence', date: '17 June 2021', slug: '/en/follow-the-guide-in-st-paul-de-vence/', categories: ['French Riviera', 'Discovery'] },
+  { title: 'June is the Garden Month in Menton', date: '2 April 2020', slug: '/en/june-is-the-garden-month-in-menton/', categories: ['French Riviera', 'Discovery'] },
+  { title: 'Antibes Art Fair', date: '20 March 2020', slug: '/en/antibes-art-fair/', categories: ['French Riviera', 'Fairs'] },
+  { title: 'Grand Prix in Monaco', date: '18 March 2020', slug: '/en/grand-prix-in-monaco/', categories: ['French Riviera', 'Sport'] },
+  { title: 'Ironman in Nice', date: '4 March 2020', slug: '/en/ironman-in-nice/', categories: ['French Riviera', 'Sport'] },
+  { title: 'Violet Festival in Tourrettes-sur-Loup', date: '17 January 2020', slug: '/en/violet-festival-in-tourrettes-loup/', categories: ['French Riviera', 'Discovery'] },
+  { title: 'Cocteau and the French Riviera', date: '13 January 2020', slug: '/en/cocteau-and-the-french-riviera/', categories: ['French Riviera', 'Museums'] },
+  { title: 'Summer Festivals on the French Riviera', date: '15 December 2019', slug: '/en/summer-festivals-on-the-french-riviera/', categories: ['French Riviera', 'Festivals'] },
+  { title: 'Santon Fair in Mouans-Sartoux', date: '2 November 2019', slug: '/en/santon-fair-in-mouans-sartoux/', categories: ['French Riviera', 'Fairs'] },
+  { title: 'Royal Regattas in Cannes', date: '4 August 2019', slug: '/en/royal-regatas-in-cannes/', categories: ['French Riviera', 'Sport'] },
+  { title: 'Spring on the French Riviera', date: '13 March 2019', slug: '/en/spring-on-the-french-riviera/', categories: ['French Riviera', 'Discovery'] },
+  { title: 'Garden Festival', date: '2 March 2019', slug: '/en/garden-festival/', categories: ['French Riviera', 'Festivals'] },
+  { title: 'Chagall Museum in Nice', date: '23 November 2018', slug: '/en/chagall-museum-in-nice/', categories: ['French Riviera', 'Museums'] },
+  { title: 'Opera House in Nice', date: '26 October 2018', slug: '/en/opera-house-in-nice/', categories: ['French Riviera', 'Museums'] },
+  { title: 'Classic Music Festival in Nice', date: '17 October 2018', slug: '/en/classic-music-festival-in-nice/', categories: ['French Riviera', 'Festivals'] },
+  { title: 'Vineyard and Chestnuts Fest', date: '20 September 2018', slug: '/en/vineyard-and-chestnuts-fast/', categories: ['French Riviera', 'Fairs'] },
+  { title: 'Petanque Lessons', date: '18 July 2018', slug: '/en/petanque-lessons-in-saint-paul-de-vence/', categories: ['French Riviera', 'Discovery'] },
+  { title: 'Cooking Lessons near our Guesthouse', date: '22 June 2018', slug: '/en/cooking-lessons-near-our-guesthouse/', categories: ['French Riviera', 'Discovery'] },
+  { title: 'Polygone Riviera Shopping Center', date: '16 May 2018', slug: '/en/polygone-riviera-shopping-center/', categories: ['French Riviera'] },
+  { title: 'Olive Fair in Le Cannet', date: '1 April 2018', slug: '/en/olive-fair-in-le-cannet/', categories: ['French Riviera', 'Fairs'] },
+  { title: 'Folon Chapel in Saint-Paul de Vence', date: '27 December 2018', slug: '/en/folon-chapel-in-saint-paul-de-vence/', categories: ['French Riviera', 'Museums'] },
+  { title: 'Monte-Carlo Circus Festival', date: '14 December 2018', slug: '/en/monte-carlo-circus-festival/', categories: ['French Riviera', 'Festivals'] },
+];
+---
+
+<BaseLayout title="Events on the French Riviera — Mas du Chanoine" description="Discover events, festivals and activities on the French Riviera. Guide to outings near Mas du Chanoine, Saint-Paul de Vence." lang="en">
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Blog & News</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Events on the French Riviera</h1>
+    </div>
+  </section>
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <div class="grid md:grid-cols-2 gap-8">
+            {articles.map((article) => (
+              <article class="bg-white border border-primary-100 rounded-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <div class="p-6">
+                  <time class="text-xs text-primary-400 tracking-wider uppercase">{article.date}</time>
+                  <h2 class="text-lg font-serif font-semibold text-primary-900 mt-2 mb-3 leading-snug">
+                    <a href={article.slug} class="hover:text-accent-600 transition-colors">{article.title}</a>
+                  </h2>
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    {article.categories.map((cat) => (<span class="text-[11px] tracking-wider uppercase px-2 py-0.5 bg-accent-50 text-accent-700 rounded-sm font-medium">{cat}</span>))}
+                  </div>
+                  <a href={article.slug} class="inline-flex items-center text-sm font-medium text-accent-600 hover:text-accent-700 transition-colors">Read more <span class="ml-1">→</span></a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+        <aside class="lg:col-span-1"><Sidebar /></aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,29 +1,13 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import RoomLayout from '../../../layouts/RoomLayout.astro';
 
 const amenities = [
-  'Lit King Size ou lits jumeaux',
-  'Café Nespresso',
-  'Douche italienne',
-  'Air conditionné',
-  'Thé et tisanes',
-  'WC indépendant',
-  'Wi-Fi gratuit',
-  'Mini Bar',
-  'Sèche-cheveux',
-  'TV écran plat',
-  'Eau minérale',
-  'Peignoirs',
-  'Chaînes internationales',
-  'Autres boissons en option',
-  'Chaussons',
-  'Coffre-fort',
-  'Salon de jardin',
-  "Produits d'accueil",
-  'Coin salon',
-  'Parking gratuit',
-  'Serviettes de piscine',
-  'Bureau',
+  'Lit King Size ou lits jumeaux', 'Café Nespresso', 'Douche italienne', 'Air conditionné',
+  'Thé et tisanes', 'WC indépendant', 'Wi-Fi gratuit', 'Mini Bar',
+  'Sèche-cheveux', 'TV écran plat', 'Eau minérale', 'Peignoirs',
+  'Chaînes internationales', 'Autres boissons en option', 'Chaussons', 'Coffre-fort',
+  'Salon de jardin', "Produits d'accueil", 'Coin salon', 'Parking gratuit',
+  'Serviettes de piscine', 'Bureau',
 ];
 
 const gallery = [
@@ -36,100 +20,24 @@ const gallery = [
 ];
 ---
 
-<BaseLayout
-  title="La Niçoise — Chambre d'hôtes spacieuse et cosy | Mas du Chanoine"
-  description="La Niçoise, suite junior de 36m² aux couleurs de Provence. Sous le citronnier, accès jardin, lit King Size ou lits jumeaux. Chambre d'hôtes à Saint-Paul de Vence."
+<RoomLayout
+  title="La Nicoise | Mas du chanoine"
+  description="En passant sous un magnifique citronnier, vous entrez dans cette chambre d'hôtes spacieuse (36m²) en rez de jardin aux couleurs de Provence."
+  alternates={{ fr: '/chambres-hotes/la-nicoise/', en: '/en/chambres-hotes/nicoise-guestroom/', it: '/it/chambres-hotes/nicoise-camera/' }}
+  roomName="LA NIÇOISE"
+  subtitle="Spacieuse & Cosy"
+  tagline="Chambre d'hôtes sous le citronnier, avec vue sur le bassin, style provençal, le charme du Vieux Nice"
+  heroImage="/media/chambres/chambre-nicoise.jpg"
+  amenities={amenities}
+  amenitiesSummary="Surface : 36 m² ― 1 chambre avec coin salon ― Rez de jardin"
+  gallery={gallery}
+  breadcrumb={[
+    { label: 'Accueil', href: '/' },
+    { label: 'Chambres', href: '/chambres-dhotes/' },
+    { label: 'La Niçoise' },
+  ]}
 >
-  <!-- Hero -->
-  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('/media/chambres/chambre-nicoise.jpg')] bg-cover bg-center"></div>
-    <div class="absolute inset-0 bg-primary-950/60"></div>
-    <div class="relative z-10 text-center text-white max-w-3xl mx-auto">
-      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-primary-200 font-light">Spacieuse & Cosy</p>
-      <h1 class="text-4xl md:text-5xl font-serif font-semibold">LA NIÇOISE</h1>
-    </div>
-  </section>
-
-  <!-- Breadcrumb -->
-  <nav class="max-w-6xl mx-auto px-4 md:px-8 py-4 text-sm text-primary-400" aria-label="Breadcrumb">
-    <ol class="flex items-center gap-2">
-      <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-      <li>›</li>
-      <li><a href="/chambres-dhotes/" class="hover:text-accent-600 transition-colors">Chambres</a></li>
-      <li>›</li>
-      <li class="text-primary-700">La Niçoise</li>
-    </ol>
-  </nav>
-
-  <!-- Content -->
-  <section class="section-pad pt-8">
-    <div class="container-narrow">
-      <div class="grid lg:grid-cols-5 gap-12">
-        <div class="lg:col-span-3 prose-content text-base md:text-lg">
-          <p>
-            En passant sous un magnifique citronnier, vous entrez dans cette chambre d'hôtes spacieuse (36&nbsp;m²) aux couleurs de Provence. Située au rez-de-chaussée, vous accédez directement dans le jardin où vous trouvez votre table et des chaises ainsi que des transats pour apprécier le calme des lieux à l'ombre du jacaranda.
-          </p>
-          <p>
-            Dans l'espace cosy de la chambre au plafond mansardé et poutres apparentes, vous disposez pour dormir d'un lit King Size (180×200) ou de deux lits jumeaux (90×200) selon votre choix. Un coin salon, un bureau, une salle de douche et des toilettes indépendants complètent la suite.
-          </p>
-          <p>
-            Décorée et meublée dans le style provençal, la suite junior Niçoise vous transportera immédiatement dans l'ambiance du Vieux Nice, capitale de la Côte d'Azur.
-          </p>
-        </div>
-        <aside class="lg:col-span-2">
-          <div class="bg-primary-50 rounded-sm p-6 md:p-8 sticky top-24">
-            <h2 class="text-lg font-serif font-semibold text-primary-900 mb-2">Caractéristiques</h2>
-            <p class="text-sm text-primary-600 mb-6">Surface : 36 m² ― 1 chambre avec coin salon ― Rez de jardin</p>
-            <div class="grid grid-cols-2 gap-3">
-              {amenities.map((a) => (
-                <div class="flex items-center gap-2 text-sm text-primary-700">
-                  <svg class="w-4 h-4 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  {a}
-                </div>
-              ))}
-            </div>
-            <a
-              href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primary w-full text-center mt-8 text-xs"
-            >
-              Réserver cette chambre
-            </a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="section-pad bg-primary-50">
-    <div class="container-narrow">
-      <h2 class="text-2xl md:text-3xl font-serif font-semibold text-primary-900 mb-8 text-center">Galerie photos</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        {gallery.map((img) => (
-          <div class="aspect-[4/3] rounded-sm overflow-hidden">
-            <img
-              src={img.src}
-              alt={img.alt}
-              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              loading="lazy"
-              width="400"
-              height="300"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Other rooms -->
-  <section class="section-pad">
-    <div class="container-narrow text-center">
-      <h2 class="text-2xl font-serif font-semibold text-primary-900 mb-6">Découvrir nos autres chambres</h2>
-      <a href="/chambres-dhotes/" class="btn-outline">Voir toutes les chambres</a>
-    </div>
-  </section>
-</BaseLayout>
+  <p>En passant sous un magnifique citronnier, vous entrez dans cette chambre d'hôtes spacieuse (36&nbsp;m²) aux couleurs de Provence. Située au rez-de-chaussée, vous accédez directement dans le jardin où vous trouvez votre table et des chaises ainsi que des transats pour apprécier le calme des lieux à l'ombre du jacaranda.</p>
+  <p>Dans l'espace cosy de la chambre au plafond mansardé et poutres apparentes, vous disposez pour dormir d'un lit King Size (180×200) ou de deux lits jumeaux (90×200) selon votre choix. Un coin salon, un bureau, une salle de douche et des toilettes indépendants complètent la suite.</p>
+  <p>Décorée et meublée dans le style provençal, la suite junior Niçoise vous transportera immédiatement dans l'ambiance du Vieux Nice, capitale de la Côte d'Azur.</p>
+</RoomLayout>

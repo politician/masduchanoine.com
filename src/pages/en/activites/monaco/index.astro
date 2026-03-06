@@ -1,0 +1,25 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="Monaco — Activities near Mas du Chanoine"
+  description="Monaco: discover this activity near our guesthouse on the French Riviera."
+  lang="en"
+  activityName="Monaco"
+  breadcrumb={[
+    { label: "Home", href: "/en/" },
+    { label: "Activities", href: "/en/activities-french-riviera/" },
+    { label: "Monaco" }
+  ]}
+  image={{ src: "/media/activites/monaco.jpg", alt: "Monaco" }}
+  backLabel="← All activities"
+  backUrl="/en/activities-french-riviera/"
+  bookingLabel="Book Now"
+  alternates={{ fr: "/activites/visiter-monaco/", en: "/en/activites/monaco/", it: "/it/activites/monaco-2/" }}
+>
+  <p>The Principality of Monaco is an independent country, the smallest in the world after the Vatican. Despite its small size, Monaco offers countless tourist attractions, including its Formula 1 Grand Prix.</p>
+  <p>Discover the Prince's Palace and its Square, and do not miss the changing of the Princely Guard every day at exactly five to midday!</p>
+  <p>Built more than a century ago by Prince Albert I, the Oceanographic Museum is both a museum dedicated to the marine world and an aquarium.</p>
+  <p>Monte Carlo is Monaco's best-known district, thanks to its famous Casino, where a fortune is made and disbanded every night. Immerse yourself in this unique atmosphere for a few hours.</p>
+</ActivityLayout>

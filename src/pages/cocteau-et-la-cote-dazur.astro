@@ -1,0 +1,26 @@
+---
+import EventLayout from '../layouts/EventLayout.astro';
+---
+
+<EventLayout
+  title="Cocteau et la Côte d'azur | Mas du chanoine"
+  description="Ecrivain, dramaturge, cinéaste Cocteau a aussi laissé sur la Côte d'Azur des fresques, des mosaïques, des tapisseries. Trois lieux privilégiés par l'artiste."
+  eventName="Cocteau et la Côte d'azur"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Cocteau et la Côte d'azur" }
+  ]}
+  tags={["Côte d'azur", "Musées"]}
+  date="13 janvier 2020"
+  datetime="2020-01-13"
+  image={{ src: "/media/evenements/cocteau.jpg", alt: "Cocteau sur la Côte d'Azur" }}
+  alternates={{ fr: "/cocteau-et-la-cote-dazur/", en: "/en/cocteau-and-the-french-riviera/" }}
+>
+  <p>Ecrivain, dramaturge, cinéaste Cocteau a aussi laissé sur la Côte d'Azur des fresques, des mosaïques, des tapisseries.</p>
+          <p>Trois lieux privilégiés par l'artiste, souvent en villégiature dans les Alpes maritimes&nbsp;: Villefranche sur mer dans la chapelle des pêcheurs, Villa Sancto Sospir au Cap Ferrat et Menton, où deux musées rassemblent ses oeuvres.</p>
+          <p>La chapelle de Saint Pierre des pêcheurs a été décorée, à l'intérieur et à l'extérieur par des fresques en 1956 par Cocteau sur la vie de Saint Pierre, et les rassemblements de gitans aux Saintes Maries de la Mer.</p>
+          <p>A la Villa Santo Sospir, Cocteau était reçu en ami dans cette villa de vacances donnant sur le phare du Saint Soupir de St Jean Cap Ferrat il y a laissé des fresques ornant murs, plafonds et portes sur des thèmes mythologiques ou animaliers. <a href="http://www.villasantosospir.fr/fresques.html" target="_blank" rel="noopener noreferrer">http://www.villasantosospir.fr/fresques.html</a></p>
+          <p>A Menton, il avait orné la salle des mariages de la mairie, le Bastion construit par l'artiste réunit une centaines de ses oeuvres (affiches, pastels, tapisseries) et depuis novembre 2011 un musée rassemble la collection Wunderman présente environ 900 oeuvres dans un cadre extraordinaire. <a href="http://www.menton.fr/Musee-du-Bastion.html" target="_blank" rel="noopener noreferrer">http://www.menton.fr/Musee-du-Bastion.html</a></p>
+          <p class="text-sm text-primary-500 italic">Crédit photos&nbsp;: CRT Riviera Côte d'Azur – Photographe&nbsp;: Georges VERAN</p>
+</EventLayout>

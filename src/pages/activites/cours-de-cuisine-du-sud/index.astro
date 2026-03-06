@@ -1,39 +1,23 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ActivityLayout from '../../../layouts/ActivityLayout.astro';
 ---
 
-<BaseLayout title="Cours de cuisine — Mas du Chanoine" description="Cours de cuisine provençale près de Saint-Paul de Vence. Notes de Cuisine, Chef Alain Llorca. Découvrez les saveurs de la Côte d'Azur.">
-  <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-    <div class="absolute inset-0 bg-primary-100"></div>
-    <div class="relative z-10 max-w-3xl mx-auto">
-      <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-        <ol class="flex items-center gap-2">
-          <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-          <li>›</li>
-          <li><a href="/activites/" class="hover:text-accent-600 transition-colors">Activités</a></li>
-          <li>›</li>
-          <li class="text-primary-700">Cours de cuisine</li>
-        </ol>
-      </nav>
-      <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Cours de cuisine</h1>
-    </div>
-  </section>
-
-  <section class="section-pad pt-8">
-    <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-      <p>Si vous souhaitez profiter de votre séjour sur la Côte d'Azur pour découvrir la cuisine de Provence, plusieurs solutions s'offrent à vous.</p>
-      <p>Venez apprendre à cuisiner les produits emblématiques de la Région&nbsp;: courgettes de Nice, tomates, légumes provençaux, poissons de Méditerranée, sans oublier les desserts (bugnes, tarte au citron de Menton, …).</p>
-      <p>A l'atelier «&nbsp;Notes de Cuisine&nbsp;», Laurence vous accueille en petits groupes pour vous initier à la cuisine du Comté de Nice. Au cœur du village de La Colle Sur Loup, dans une jolie maison en pierres, les cours ont lieu dans sa cuisine équipée de matériel professionnel. Sur son site internet, vous pourrez admirer de magnifiques photos de ses plats (petits farcis niçois, gnocchis, tourte aux blettes, …). Vous pouvez au choix regarder les dates ouvertes sur le planning ou bien la contacter pour une demande personnalisée. <a href="https://www.notesdecuisine.fr/" target="_blank" rel="noopener noreferrer">https://www.notesdecuisine.fr/</a></p>
-      <p>Le Chef Alain Llorca vous propose de venir dans les cuisines de son restaurant gastronomique (1 étoile au guide Michelin) pour participer à un de ses cours. Il vous fera partager ses trucs et astuces à travers la réalisation d'un menu sur un produit à l'honneur ou sur une thématique spécifique (cuisiner la truffe, menu spécial Pâques, …).</p>
-      <p>Son frère, le Chef Jean-Michel Llorca, Chef pâtissier du restaurant gastronomique, propose des ateliers gourmands de pâtisserie.</p>
-      <p>Le planning des cours est en ligne à l'adresse suivante&nbsp;: <a href="https://www.alainllorca.com/atelier-degustation/" target="_blank" rel="noopener noreferrer">https://www.alainllorca.com/atelier-degustation/</a></p>
-    </div>
-  </section>
-
-  <section class="section-pad pt-0">
-    <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-      <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Voir toutes les activités</a>
-      <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-    </div>
-  </section>
-</BaseLayout>
+<ActivityLayout
+  title="Cours de cuisine | Mas du chanoine"
+  description="Cours de cuisine provençale près de Saint-Paul de Vence. Notes de Cuisine, Chef Alain Llorca. Découvrez les saveurs de la Côte d'Azur."
+  activityName="Cours de cuisine"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Activités", href: "/activites-cote-azur/" },
+    { label: "Cours de cuisine" }
+  ]}
+  image={{ src: "/media/activites/cuisine.jpg", alt: "Cours de cuisine provençale" }}
+  alternates={{ fr: "/activites/cours-de-cuisine-du-sud/", en: "/en/activites/cooking-lessons/", it: "/it/activites/corso-di-cucina/" }}
+>
+  <p>Si vous souhaitez profiter de votre séjour sur la Côte d'Azur pour découvrir la cuisine de Provence, plusieurs solutions s'offrent à vous.</p>
+  <p>Venez apprendre à cuisiner les produits emblématiques de la Région&nbsp;: courgettes de Nice, tomates, légumes provençaux, poissons de Méditerranée, sans oublier les desserts (bugnes, tarte au citron de Menton, …).</p>
+  <p>A l'atelier «&nbsp;Notes de Cuisine&nbsp;», Laurence vous accueille en petits groupes pour vous initier à la cuisine du Comté de Nice. Au cœur du village de La Colle Sur Loup, dans une jolie maison en pierres, les cours ont lieu dans sa cuisine équipée de matériel professionnel. Sur son site internet, vous pourrez admirer de magnifiques photos de ses plats (petits farcis niçois, gnocchis, tourte aux blettes, …). Vous pouvez au choix regarder les dates ouvertes sur le planning ou bien la contacter pour une demande personnalisée. <a href="https://www.notesdecuisine.fr/" target="_blank" rel="noopener noreferrer">https://www.notesdecuisine.fr/</a></p>
+  <p>Le Chef Alain Llorca vous propose de venir dans les cuisines de son restaurant gastronomique (1 étoile au guide Michelin) pour participer à un de ses cours. Il vous fera partager ses trucs et astuces à travers la réalisation d'un menu sur un produit à l'honneur ou sur une thématique spécifique (cuisiner la truffe, menu spécial Pâques, …).</p>
+  <p>Son frère, le Chef Jean-Michel Llorca, Chef pâtissier du restaurant gastronomique, propose des ateliers gourmands de pâtisserie.</p>
+  <p>Le planning des cours est en ligne à l'adresse suivante&nbsp;: <a href="https://www.alainllorca.com/atelier-degustation/" target="_blank" rel="noopener noreferrer">https://www.alainllorca.com/atelier-degustation/</a></p>
+</ActivityLayout>

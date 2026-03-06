@@ -1,54 +1,36 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Pleine saison des agrumes — Mas du Chanoine" description="La saison des agrumes sur la Côte d'Azur. Le citron de Menton, nos citronniers et la confiture de citron maison au Mas du Chanoine.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Pleine saison des agrumes</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Notre Maison d'hôtes</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Pleine saison des agrumes</h1>
-        <time class="text-sm text-primary-500" datetime="2023-01-13">13 janvier 2023</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Le citron est un fruit emblématique de la Côte d'Azur, notamment le célèbre citron de Menton.</p>
-        <p>Chaque année, les 3 citronniers de la propriété nous donnent beaucoup de fruits. Nous préparons donc pour agrémenter vos petits-déjeuners de la confiture de citron dont vous trouverez la recette dans cet article.</p>
-        <p>Pour votre accueil, à l'apéritif ou au bord de la piscine, nous avons également enrichi notre offre avec du «&nbsp;Vin de citron&nbsp;», subtil mélange de vin blanc de Provence, d'alcool, de citrons et de sucre, le tout macéré pendant 45 jours avant mise en bouteille.</p>
-        <p>Venez déguster ces spécialités lors d'un séjour dans notre maison d'hôtes de charme, à mi-chemin entre Nice et Antibes.</p>
-        <h2 class="text-2xl font-serif font-semibold text-primary-900 mt-10 mb-4">Recette de la Confiture de Citron</h2>
-        <p><strong>Ingrédients&nbsp;:</strong></p>
-        <ul>
-          <li>1 kg de citrons BIO non traités</li>
-          <li>2,5 l d'eau minérale</li>
-          <li>Sucre en poudre</li>
-        </ul>
-        <p>Laver les citrons, couper les extrémités. Les couper en fines rondelles d'environ 1 mm à l'aide d'une mandoline. Couper ensuite chaque rondelle en 4. Regrouper tous les pépins dans une mousseline, ils aideront à la prise de la confiture.</p>
-        <p>Pour enlever toute l'amertume de la partie blanche sous le zeste, mettre à tremper les fruits dans l'eau minérale au réfrigérateur pendant une nuit avec la mousseline de pépins.</p>
-        <p>Le lendemain, cuire le mélange pendant 15 minutes. Remettre au réfrigérateur pour une nuit.</p>
-        <p>Le jour suivant, peser votre mélange et ajouter 90% du poids en sucre en poudre. Faire alors cuire à feu doux dans une bassine à confiture sans cesser de remuer pendant 15 minutes.</p>
-        <p>Remplir des bocaux stérilisés et les retourner en attendant le refroidissement.</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Pleine saison des agrumes | Mas du chanoine"
+  description="Les citrons font partie de la légende de la Côte d'azur fêtée chaque année à Menton. Découvrez la recette de confiture de citrons de Pascale"
+  eventName="Pleine saison des agrumes"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Pleine saison des agrumes" }
+  ]}
+  tags={["Côte d'azur", "Notre Maison d'hôtes"]}
+  date="13 janvier 2023"
+  datetime="2023-01-13"
+  image={{ src: "/media/evenements/agrumes.jpg", alt: "Citron : Du fruit à la confiture" }}
+  alternates={{ fr: "/pleine-saison-des-agrumes/", en: "/en/high-season-for-citrus/" }}
+>
+  <p>Le citron est un fruit emblématique de la Côte d'Azur, notamment le célèbre citron de Menton.</p>
+          <p>Chaque année, les 3 citronniers de la propriété nous donnent beaucoup de fruits. Nous préparons donc pour agrémenter vos petits-déjeuners de la confiture de citron dont vous trouverez la recette dans cet article.</p>
+          <p>Pour votre accueil, à l'apéritif ou au bord de la piscine, nous avons également enrichi notre offre avec du «&nbsp;Vin de citron&nbsp;», subtil mélange de vin blanc de Provence, d'alcool, de citrons et de sucre, le tout macéré pendant 45 jours avant mise en bouteille.</p>
+          <p>Venez déguster ces spécialités lors d'un séjour dans notre maison d'hôtes de charme, à mi-chemin entre Nice et Antibes.</p>
+          <h2 class="text-2xl font-serif font-semibold text-primary-900 mt-10 mb-4">Recette de la Confiture de Citron</h2>
+          <p><strong>Ingrédients&nbsp;:</strong></p>
+          <ul>
+            <li>1 kg de citrons BIO non traités</li>
+            <li>2,5 l d'eau minérale</li>
+            <li>Sucre en poudre</li>
+          </ul>
+          <p>Laver les citrons, couper les extrémités. Les couper en fines rondelles d'environ 1 mm à l'aide d'une mandoline. Couper ensuite chaque rondelle en 4. Regrouper tous les pépins dans une mousseline, ils aideront à la prise de la confiture.</p>
+          <p>Pour enlever toute l'amertume de la partie blanche sous le zeste, mettre à tremper les fruits dans l'eau minérale au réfrigérateur pendant une nuit avec la mousseline de pépins.</p>
+          <p>Le lendemain, cuire le mélange pendant 15 minutes. Remettre au réfrigérateur pour une nuit.</p>
+          <p>Le jour suivant, peser votre mélange et ajouter 90% du poids en sucre en poudre. Faire alors cuire à feu doux dans une bassine à confiture sans cesser de remuer pendant 15 minutes.</p>
+          <p>Remplir des bocaux stérilisés et les retourner en attendant le refroidissement.</p>
+</EventLayout>

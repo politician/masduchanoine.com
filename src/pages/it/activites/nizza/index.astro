@@ -1,0 +1,20 @@
+---
+import ActivityLayout from '../../../../layouts/ActivityLayout.astro';
+---
+
+<ActivityLayout
+  title="Nizza — Attività Costa d'Azzurra"
+  description="Nizza: attività vicino al nostro B&B sulla Costa Azzurra."
+  lang="it"
+  activityName="Nizza"
+  breadcrumb={[
+    { label: "Home", href: "/it/" },
+    { label: "Attività", href: "/it/attivita/" },
+    { label: "Nizza" }
+  ]}
+  image={{ src: "/media/activites/nice.jpg", alt: "Nizza" }}
+  backLabel="← Tutte le attività"
+  backUrl="/it/attivita/"
+  bookingLabel="Prenota"
+  alternates={{ fr: "/activites/visiter-nice/", en: "/en/activites/nice/", it: "/it/activites/nizza/" }}
+/>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Galleria Foto — Mas du Chanoine" description="Galleria fotografica del Mas du Chanoine: camere, giardino, piscina, patio e colazione." lang="it">
+  <section class="relative py-20 md:py-28 px-4 overflow-hidden">
+    <div class="absolute inset-0 bg-primary-100"></div>
+    <div class="relative z-10 text-center max-w-3xl mx-auto">
+      <p class="text-sm tracking-[0.3em] uppercase mb-4 text-accent-600 font-light">Il Mas in immagini</p>
+      <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Galleria Foto</h1>
+    </div>
+  </section>
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        <div class="rounded-sm overflow-hidden shadow-md break-inside-avoid"><img src="/media/photos/mas-pin.jpg" alt="Piscina sotto il pino al Mas du Chanoine" class="w-full h-auto object-cover" loading="lazy" /></div>
+        <div class="rounded-sm overflow-hidden shadow-md break-inside-avoid"><img src="/media/photos/jardin-marronnier.jpg" alt="Nel giardino sotto il castagno" class="w-full h-auto object-cover" loading="lazy" /></div>
+        <div class="rounded-sm overflow-hidden shadow-md break-inside-avoid"><img src="/media/photos/bassin-nenuphars.jpg" alt="Il laghetto con ninfee" class="w-full h-auto object-cover" loading="lazy" /></div>
+        <div class="rounded-sm overflow-hidden shadow-md break-inside-avoid"><img src="/media/piscine/vue-montagne.jpg" alt="Piscina con vista" class="w-full h-auto object-cover" loading="lazy" /></div>
+        <div class="rounded-sm overflow-hidden shadow-md break-inside-avoid"><img src="/media/photos/patio-fleurs.jpg" alt="Il patio con i fiori" class="w-full h-auto object-cover" loading="lazy" /></div>
+        <div class="rounded-sm overflow-hidden shadow-md break-inside-avoid"><img src="/media/photos/bougainvillee.jpg" alt="Bouganvillea e tavolo della colazione" class="w-full h-auto object-cover" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

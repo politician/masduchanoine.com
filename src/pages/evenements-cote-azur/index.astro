@@ -1,4 +1,5 @@
 ---
+import Sidebar from '../../components/Sidebar.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const articles = [
@@ -72,14 +73,118 @@ const articles = [
     categories: ['Côte d\'azur', 'Découverte'],
     excerpt: 'Fin février-début mars se déroule habituellement la Fête des Violettes...',
   },
-];
-
-const activities = [
-  { label: 'Festivals & Spectacles', href: '#' },
-  { label: 'Découverte & Culture', href: '#' },
-  { label: 'Sport & Plein air', href: '#' },
-  { label: 'Foires & Salons', href: '#' },
-  { label: 'Notre Maison d\'hôtes', href: '#' },
+  {
+    title: 'Cocteau et la Côte d\'azur',
+    date: '13 janvier 2020',
+    slug: '/cocteau-et-la-cote-dazur/',
+    categories: ['Côte d\'azur', 'Musées'],
+    excerpt: 'Jean Cocteau a vécu et créé sur la Côte d\'azur, laissant des oeuvres majeures à Menton et Villefranche-sur-Mer...',
+  },
+  {
+    title: 'Été en musique sur la Côte d\'azur',
+    date: '15 décembre 2019',
+    slug: '/ete-en-musique-sur-la-cote-dazur/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles'],
+    excerpt: 'L\'été sur la Côte d\'azur est rythmé par les festivals de musique : Jazz à Juan, Nice Jazz Festival, Les Nuits du Sud à Vence...',
+  },
+  {
+    title: 'Foire aux santons de Mouans-Sartoux',
+    date: '2 novembre 2019',
+    slug: '/foire-aux-santons-de-mouans-sartoux/',
+    categories: ['Côte d\'azur', 'Foires / Salons'],
+    excerpt: 'La foire aux santons de Mouans-Sartoux est l\'une des plus importantes du sud-est de la France...',
+  },
+  {
+    title: 'Régates royales à Cannes',
+    date: '4 août 2019',
+    slug: '/regates-royales-a-cannes/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles', 'Sport'],
+    excerpt: 'Les Régates Royales de Cannes, une course de voiliers classiques dans la baie de Cannes fin septembre...',
+  },
+  {
+    title: 'Printemps sur la Côte d\'azur',
+    date: '13 mars 2019',
+    slug: '/printemps-sur-la-cote-dazur/',
+    categories: ['Côte d\'azur', 'Découverte', 'Foires / Salons', 'Sport'],
+    excerpt: 'Le printemps arrive sur la Côte d\'azur avec son lot de festivités : Printemps des Arts, Tennis Rolex Masters, triathlon de Cannes...',
+  },
+  {
+    title: 'Festival des jardins',
+    date: '2 mars 2019',
+    slug: '/festival-des-jardins/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles'],
+    excerpt: 'Les jardins de la Côte d\'azur se mettent en fête à l\'occasion du Festival des Jardins...',
+  },
+  {
+    title: 'Le musée Chagall à Nice',
+    date: '23 novembre 2018',
+    slug: '/musee-chagall-a-nice/',
+    categories: ['Côte d\'azur', 'Musées'],
+    excerpt: 'Les oeuvres de Chagall de la collection Cantique des Cantiques sont le principal joyau du musée...',
+  },
+  {
+    title: 'L\'Opéra de Nice',
+    date: '26 octobre 2018',
+    slug: '/lopera-de-nice/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles', 'Musées'],
+    excerpt: 'L\'Opéra de Nice propose une programmation riche en opéras, ballets et concerts symphoniques...',
+  },
+  {
+    title: 'Festival C\'PasClassique à Nice',
+    date: '17 octobre 2018',
+    slug: '/festival-cpasclassique-a-nice/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles'],
+    excerpt: 'Le festival C\'PasClassique à Nice propose de la musique classique dans un format décontracté et accessible...',
+  },
+  {
+    title: 'Fête des vendanges et de la châtaigne',
+    date: '20 septembre 2018',
+    slug: '/fete-des-vendanges-et-de-la-chataigne/',
+    categories: ['Côte d\'azur', 'Foires / Salons'],
+    excerpt: 'En automne, les villages de l\'arrière-pays célèbrent les vendanges et la récolte de la châtaigne...',
+  },
+  {
+    title: 'Initiation à la pétanque',
+    date: '18 juillet 2018',
+    slug: '/initiation-a-la-petanque/',
+    categories: ['Côte d\'azur', 'Découverte'],
+    excerpt: 'Découvrez la pétanque, sport emblématique de la Provence et de la Côte d\'azur...',
+  },
+  {
+    title: 'Cours de cuisine près de nos chambres d\'hôtes',
+    date: '22 juin 2018',
+    slug: '/cours-de-cuisine-pres-de-nos-chambres-dhotes/',
+    categories: ['Côte d\'azur', 'Découverte'],
+    excerpt: 'Des cours de cuisine provençale et méditerranéenne à proximité de nos chambres d\'hôtes...',
+  },
+  {
+    title: 'Polygone Riviera à Cagnes sur mer',
+    date: '16 mai 2018',
+    slug: '/polygone-riviera-a-cagnes-sur-mer/',
+    categories: ['Côte d\'azur', 'Notre Maison d\'hôtes'],
+    excerpt: 'Centre commercial à ciel ouvert à 2 km de nos chambres d\'hôtes avec 150 boutiques et des oeuvres d\'art...',
+  },
+  {
+    title: 'Fête de l\'olive au Cannet',
+    date: '1 avril 2018',
+    slug: '/fete-de-lolive-au-cannet/',
+    categories: ['Côte d\'azur', 'Foires / Salons'],
+    excerpt: 'La fête de l\'olive au Cannet célèbre ce fruit emblématique de la Côte d\'azur...',
+  },
+  {
+    title: 'Chapelle Folon à Saint-Paul',
+    date: '27 décembre 2018',
+    slug: '/chapelle-folon-a-saint-paul/',
+    categories: ['Côte d\'azur', 'Musées'],
+    excerpt: 'La Chapelle des Pénitents Blancs décorée par Jean-Michel Folon à Saint-Paul de Vence...',
+  },
+  {
+    title: 'Festival du Cirque de Monte-Carlo',
+    date: '14 décembre 2018',
+    slug: '/festival-du-cirque-de-monte-carlo/',
+    categories: ['Côte d\'azur', 'Festivals / Spectacles'],
+    excerpt: 'Le Festival International du Cirque de Monte-Carlo, créé par le Prince Rainier III en 1974...',
+  },
 ];
 ---
 
@@ -127,29 +232,7 @@ const activities = [
 
         <!-- Sidebar -->
         <aside class="lg:col-span-1">
-          <div class="sticky top-24 space-y-8">
-            <div class="bg-primary-50 rounded-sm p-6">
-              <h3 class="text-lg font-serif font-semibold text-primary-900 mb-4">Activités & Thèmes</h3>
-              <ul class="space-y-3">
-                {activities.map((a) => (
-                  <li>
-                    <a href={a.href} class="flex items-center text-sm text-primary-600 hover:text-accent-600 transition-colors">
-                      <svg class="w-4 h-4 mr-2 text-accent-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                      {a.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div class="bg-accent-50 rounded-sm p-6">
-              <h3 class="text-lg font-serif font-semibold text-primary-900 mb-3">Séjourner au Mas</h3>
-              <p class="text-sm text-primary-600 leading-relaxed mb-4">
-                Profitez de votre séjour pour explorer les événements de la Côte d'Azur depuis notre maison d'hôtes à Saint-Paul de Vence.
-              </p>
-              <a href="/chambres-dhotes/" class="btn-primary text-xs w-full text-center">Voir nos chambres</a>
-            </div>
-          </div>
+          <Sidebar />
         </aside>
       </div>
     </div>

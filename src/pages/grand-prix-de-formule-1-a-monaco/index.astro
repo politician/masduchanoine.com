@@ -1,45 +1,27 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventLayout from '../../layouts/EventLayout.astro';
 ---
 
-<BaseLayout title="Grand Prix de Formule 1 à Monaco — Mas du Chanoine" description="Le Grand Prix de Monaco de Formule 1. Circuit mythique dans les rues de la Principauté, à proximité du Mas du Chanoine.">
-  <article>
-    <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-      <div class="absolute inset-0 bg-primary-100"></div>
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-          <ol class="flex items-center gap-2">
-            <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-            <li>›</li>
-            <li><a href="/evenements-cote-azur/" class="hover:text-accent-600 transition-colors">Événements</a></li>
-            <li>›</li>
-            <li class="text-primary-700">Grand Prix de Formule 1 à Monaco</li>
-          </ol>
-        </nav>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Côte d'azur</span>
-          <span class="text-xs bg-accent-50 text-accent-700 px-3 py-1 rounded-full font-medium">Sport</span>
-        </div>
-        <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Grand Prix de Formule 1 à Monaco</h1>
-        <time class="text-sm text-primary-500" datetime="2020-03-18">18 mars 2020</time>
-      </div>
-    </section>
-    <section class="section-pad pt-8 pb-16">
-      <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-        <p>Depuis 1954, le dernier week-end du mois de mai a lieu le Grand Prix de Monaco, qui est une épreuve très prisée du championnat du monde de Formule 1 (malheureusement annulé cette année 2020).</p>
-        <p>Le circuit de 3,7 km dessiné en 1929 serpente en pleine ville dans les rues de Monaco, de la Condamine et du port Hercule&nbsp;: virages serrés, décor de rêve, les spectateurs voient passer 78 fois les bolides avant la ligne d'arrivée.</p>
-        <p>Ce Grand Prix de F1 est très apprécié par les amateurs de sport mécanique&nbsp;: ils viennent du monde entier sur la Côte d'Azur pour y assister. Généralement, il vaut mieux réserver sa place et son hébergement bien à l'avance.</p>
-        <p>Vous pouvez acheter vos entrées en tribune&nbsp;: <a href="http://www.monte-carlo.mc/fr/grand-prix-monaco/tickets-tribunes/" target="_blank" rel="noopener noreferrer">http://www.monte-carlo.mc/fr/grand-prix-monaco/tickets-tribunes/</a></p>
-        <p>De bons souvenirs en perspective, pour nos hôtes qui peuvent se rendre sur le circuit en auto ou plus facilement en train.</p>
-        <p>15 jours avant, la course du Championnat de Formule E se déroulera sur le même circuit (raccourci de 2 km pour éviter les montées jugées trop gourmandes en énergie électrique).</p>
-        <p class="text-sm text-primary-500 italic">Crédit Photos&nbsp;: Ambiance GPH 2014 et GRAND PRIX DE MONACO ©ACM_MICHAEL ALESI</p>
-      </div>
-    </section>
-    <section class="section-pad pt-0">
-      <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-        <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Retour aux événements</a>
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-      </div>
-    </section>
-  </article>
-</BaseLayout>
+<EventLayout
+  title="Grand Prix de Formule 1 à Monaco | Mas du chanoine"
+  description="Depuis 1954, le dernier week-end du mois de mai a lieu le Grand Prix de Monaco, qui est une épreuve très prisée du championnat du monde de Formule 1."
+  eventName="Grand Prix de Formule 1 à Monaco"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Grand Prix de Formule 1 à Monaco" }
+  ]}
+  tags={["Côte d'azur", "Sport"]}
+  date="18 mars 2020"
+  datetime="2020-03-18"
+  image={{ src: "/media/evenements/grand-prix-monaco.jpg", alt: "Grand Prix de Monaco" }}
+  alternates={{ fr: "/grand-prix-de-formule-1-a-monaco/", en: "/en/grand-prix-in-monaco/" }}
+>
+  <p>Depuis 1954, le dernier week-end du mois de mai a lieu le Grand Prix de Monaco, qui est une épreuve très prisée du championnat du monde de Formule 1 (malheureusement annulé cette année 2020).</p>
+          <p>Le circuit de 3,7 km dessiné en 1929 serpente en pleine ville dans les rues de Monaco, de la Condamine et du port Hercule&nbsp;: virages serrés, décor de rêve, les spectateurs voient passer 78 fois les bolides avant la ligne d'arrivée.</p>
+          <p>Ce Grand Prix de F1 est très apprécié par les amateurs de sport mécanique&nbsp;: ils viennent du monde entier sur la Côte d'Azur pour y assister. Généralement, il vaut mieux réserver sa place et son hébergement bien à l'avance.</p>
+          <p>Vous pouvez acheter vos entrées en tribune&nbsp;: <a href="http://www.monte-carlo.mc/fr/grand-prix-monaco/tickets-tribunes/" target="_blank" rel="noopener noreferrer">http://www.monte-carlo.mc/fr/grand-prix-monaco/tickets-tribunes/</a></p>
+          <p>De bons souvenirs en perspective, pour nos hôtes qui peuvent se rendre sur le circuit en auto ou plus facilement en train.</p>
+          <p>15 jours avant, la course du Championnat de Formule E se déroulera sur le même circuit (raccourci de 2 km pour éviter les montées jugées trop gourmandes en énergie électrique).</p>
+          <p class="text-sm text-primary-500 italic">Crédit Photos&nbsp;: Ambiance GPH 2014 et GRAND PRIX DE MONACO ©ACM_MICHAEL ALESI</p>
+</EventLayout>

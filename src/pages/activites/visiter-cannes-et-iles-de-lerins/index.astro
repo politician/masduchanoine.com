@@ -1,39 +1,23 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ActivityLayout from '../../../layouts/ActivityLayout.astro';
 ---
 
-<BaseLayout title="Cannes et les iles de Lérins — Mas du Chanoine" description="Découvrez Cannes et les Îles de Lérins. La Croisette, Festival du Film, Île Sainte-Marguerite, monastère de Saint-Honorat.">
-  <section class="relative py-16 md:py-24 px-4 overflow-hidden">
-    <div class="absolute inset-0 bg-primary-100"></div>
-    <div class="relative z-10 max-w-3xl mx-auto">
-      <nav class="text-sm text-primary-400 mb-6" aria-label="Breadcrumb">
-        <ol class="flex items-center gap-2">
-          <li><a href="/" class="hover:text-accent-600 transition-colors">Accueil</a></li>
-          <li>›</li>
-          <li><a href="/activites/" class="hover:text-accent-600 transition-colors">Activités</a></li>
-          <li>›</li>
-          <li class="text-primary-700">Cannes et les iles de Lérins</li>
-        </ol>
-      </nav>
-      <h1 class="text-3xl md:text-4xl font-serif font-semibold text-primary-900 mb-4">Cannes et les iles de Lérins</h1>
-    </div>
-  </section>
-
-  <section class="section-pad pt-8">
-    <div class="max-w-3xl mx-auto prose-content text-base md:text-lg">
-      <p>La très célèbre ville de Cannes est connue du monde entier pour son Festival du Film qui se déroule depuis 70 ans au printemps. Durant une semaine, la ville vit au rythme du cinéma, des projections de films et des très nombreuses soirées réunissant des artistes, des célébrités et des people du monde entier. Sur le «&nbsp;Chemin des Etoiles&nbsp;», plus de 300 artistes ont laissé l'empreinte de leur main gravée dans le sol.</p>
-      <p>Sur la très réputée Croisette, vous serez éblouis par les palaces, les boutiques de luxe, les magnifiques bâtiments Art Déco d'un côté et les plages de sable fin côté mer.</p>
-      <p>Le quartier historique du Suquet vous attend à côté du vieux port avec ses bâtiments anciens, ses ruelles pentues coupées par des escaliers. Du haut de la vieille ville, vous aurez une vue époustouflante sur les Iles et la Croisette.</p>
-      <p>Face à cette ville animée, vous pourrez trouver le calme et la nature à moins de 15 minutes de bateau sur les Iles de Lérins. En face de Cannes, deux îles préservées sont propices au repos, à la promenade et à la méditation.</p>
-      <p>L'île de Sainte Marguerite a su conserver son caractère sauvage. Elle est parcourue de nombreux chemins à l'ombre des pins et des eucalyptus&nbsp;; vous pourrez également faire un petit plongeon dans la Mer Méditerranée. C'est une réserve naturelle, refuge de nombreux oiseaux lors des périodes de migration. Au Fort Royal, vous redécouvrez la légende du Masque de Fer.</p>
-      <p>Sa petite voisine, l'île de Saint-Honorat, est privée, propriété des moines cisterciens. Elle a été fondée par Saint Honorat, au 5ème siècle. Vous pourrez y visiter le monastère fortifié, la Chapelle de la Trinité (l'île en compte 7 au total) ainsi qu'un four à boulet de l'époque de Napoléon. Les moines y produisent un célèbre vin ainsi que des liqueurs et de l'huile d'olive. Profitez de cette journée pour déjeuner au restaurant de La Tonnelle, dans un cadre enchanteur, les pieds dans le sable…</p>
-    </div>
-  </section>
-
-  <section class="section-pad pt-0">
-    <div class="max-w-3xl mx-auto border-t border-primary-100 pt-8 flex justify-between items-center">
-      <a href="/evenements-cote-azur/" class="text-accent-600 hover:text-accent-700 text-sm font-medium">← Voir toutes les activités</a>
-      <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=fr" target="_blank" rel="noopener noreferrer" class="btn-primary text-xs">Réserver</a>
-    </div>
-  </section>
-</BaseLayout>
+<ActivityLayout
+  title="Visiter Cannes, la croisette, les plages, et les iles de Lérins | Mas du chanoine"
+  description="à Cannes, voir la très réputée Croisette et ses palaces, boutiques de luxe et plages de sable fin, contrastant avec le vieux port et au quartier du Suquet et les iles de Lérins"
+  activityName="Cannes et les iles de Lérins"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Activités", href: "/activites-cote-azur/" },
+    { label: "Cannes et les iles de Lérins" }
+  ]}
+  image={{ src: "/media/activites/cannes.jpg", alt: "Cannes, Ile Saint-Honorat" }}
+  alternates={{ fr: "/activites/visiter-cannes-et-iles-de-lerins/", en: "/en/activites/cannes-and-lerins-islands/", it: "/it/activites/cannes-e-isole-lerins/" }}
+>
+  <p>La très célèbre ville de Cannes est connue du monde entier pour son Festival du Film qui se déroule depuis 70 ans au printemps. Durant une semaine, la ville vit au rythme du cinéma, des projections de films et des très nombreuses soirées réunissant des artistes, des célébrités et des people du monde entier. Sur le «&nbsp;Chemin des Etoiles&nbsp;», plus de 300 artistes ont laissé l'empreinte de leur main gravée dans le sol.</p>
+  <p>Sur la très réputée Croisette, vous serez éblouis par les palaces, les boutiques de luxe, les magnifiques bâtiments Art Déco d'un côté et les plages de sable fin côté mer.</p>
+  <p>Le quartier historique du Suquet vous attend à côté du vieux port avec ses bâtiments anciens, ses ruelles pentues coupées par des escaliers. Du haut de la vieille ville, vous aurez une vue époustouflante sur les Iles et la Croisette.</p>
+  <p>Face à cette ville animée, vous pourrez trouver le calme et la nature à moins de 15 minutes de bateau sur les Iles de Lérins. En face de Cannes, deux îles préservées sont propices au repos, à la promenade et à la méditation.</p>
+  <p>L'île de Sainte Marguerite a su conserver son caractère sauvage. Elle est parcourue de nombreux chemins à l'ombre des pins et des eucalyptus&nbsp;; vous pourrez également faire un petit plongeon dans la Mer Méditerranée. C'est une réserve naturelle, refuge de nombreux oiseaux lors des périodes de migration. Au Fort Royal, vous redécouvrez la légende du Masque de Fer.</p>
+  <p>Sa petite voisine, l'île de Saint-Honorat, est privée, propriété des moines cisterciens. Elle a été fondée par Saint Honorat, au 5ème siècle. Vous pourrez y visiter le monastère fortifié, la Chapelle de la Trinité (l'île en compte 7 au total) ainsi qu'un four à boulet de l'époque de Napoléon. Les moines y produisent un célèbre vin ainsi que des liqueurs et de l'huile d'olive. Profitez de cette journée pour déjeuner au restaurant de La Tonnelle, dans un cadre enchanteur, les pieds dans le sable…</p>
+</ActivityLayout>

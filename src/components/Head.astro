@@ -1,4 +1,7 @@
 ---
+import type { Lang } from '../i18n/translations';
+import { getHomeLabel, getLangFromPath, langMap, ogLocaleMap } from '../i18n/translations';
+
 export interface Props {
   title: string;
   description: string;
@@ -6,6 +9,8 @@ export interface Props {
   ogImage?: string;
   noindex?: boolean;
   structuredData?: object;
+  lang?: Lang;
+  alternates?: Partial<Record<Lang, string>>;
 }
 
 const {
@@ -15,10 +20,85 @@ const {
   ogImage = '/media/mas-du-chanoine-og.jpg',
   noindex = false,
   structuredData,
+  alternates,
 } = Astro.props;
 
+const lang: Lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
 const siteName = 'Mas du Chanoine';
+const siteUrl = (Astro.site?.toString() || 'https://masduchanoine.com').replace(/\/$/, '');
+const ogLocale = ogLocaleMap[lang];
+
+// Build breadcrumb from URL path
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+// For EN/IT pages, skip the lang prefix in the breadcrumb display
+const displaySegments = (lang !== 'fr' && pathSegments[0] === lang) ? pathSegments.slice(1) : pathSegments;
+const homeLabel = getHomeLabel(lang);
+
+const breadcrumbItems = [
+  { name: homeLabel, url: lang === 'fr' ? siteUrl + '/' : `${siteUrl}/${lang}/` },
+  ...displaySegments.map((segment, i) => ({
+    name: decodeURIComponent(segment).replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+    url: `${siteUrl}/${pathSegments.slice(0, (lang !== 'fr' ? i + 2 : i + 1)).join('/')}/`,
+  })),
+];
+
+const defaultStructuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "url": siteUrl + '/',
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": siteName,
+    "url": siteUrl + '/',
+    "logo": `${siteUrl}/favicon.svg`,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+33627271649",
+      "contactType": "reservations",
+      "availableLanguage": ["French", "English", "Italian"],
+    },
+    "sameAs": [
+      "https://www.facebook.com/MasDuChanoine/",
+      "https://www.instagram.com/masduchanoine/",
+      "https://twitter.com/masduchanoine",
+    ],
+  },
+  ...(displaySegments.length > 0 ? [{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": item.name,
+      "item": item.url,
+    })),
+  }] : []),
+];
+
+// Build hreflang alternate links
+const hreflangLinks: { lang: string; href: string }[] = [];
+if (alternates) {
+  for (const [altLang, altPath] of Object.entries(alternates)) {
+    if (altPath) {
+      hreflangLinks.push({
+        lang: langMap[altLang as Lang]?.split('-')[0] === 'fr' ? 'fr' : langMap[altLang as Lang]?.split('-')[0] || altLang,
+        href: new URL(altPath, Astro.site).toString(),
+      });
+    }
+  }
+  // Add x-default pointing to French version
+  if (alternates.fr) {
+    hreflangLinks.push({
+      lang: 'x-default',
+      href: new URL(alternates.fr, Astro.site).toString(),
+    });
+  }
+}
 ---
 
 <head>
@@ -27,7 +107,16 @@ const siteName = 'Mas du Chanoine';
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
-  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  {noindex ? (
+    <meta name="robots" content="noindex, nofollow" />
+  ) : (
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+  )}
+
+  <!-- Hreflang alternates -->
+  {hreflangLinks.map(({ lang: hrefLang, href }) => (
+    <link rel="alternate" hreflang={hrefLang} href={href} />
+  ))}
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -36,7 +125,7 @@ const siteName = 'Mas du Chanoine';
   <meta property="og:url" content={canonicalURL} />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
-  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale" content={ogLocale} />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -48,7 +137,10 @@ const siteName = 'Mas du Chanoine';
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Structured Data -->
+  <!-- Default Structured Data (WebSite + Organization + BreadcrumbList) -->
+  <script type="application/ld+json" set:html={JSON.stringify(defaultStructuredData)} />
+
+  <!-- Page-specific Structured Data -->
   {structuredData && (
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   )}

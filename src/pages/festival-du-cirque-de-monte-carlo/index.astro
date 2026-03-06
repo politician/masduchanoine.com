@@ -1,0 +1,25 @@
+---
+import EventLayout from '../../layouts/EventLayout.astro';
+---
+
+<EventLayout
+  title="Festival du cirque de Monte-Carlo | Mas du chanoine"
+  description="Mi janvier, après une semaine de compétition entre funambules, dompteurs, acrobates, clowns de tous les pays, un jury international décerne les clowns d'or."
+  eventName="Festival du cirque de Monte-Carlo"
+  breadcrumb={[
+    { label: "Accueil", href: "/" },
+    { label: "Événements", href: "/evenements-cote-azur/" },
+    { label: "Festival du cirque de Monte-Carlo" }
+  ]}
+  tags={["Côte d'azur", "Festivals / Spectacles"]}
+  date="14 décembre 2018"
+  datetime="2018-12-14"
+  image={{ src: "/media/evenements/cirque-monaco.jpg", alt: "Festival du cirque de Monte-Carlo" }}
+  alternates={{ fr: "/festival-du-cirque-de-monte-carlo/", en: "/en/monte-carlo-circus-festival/" }}
+>
+  <p>Mi janvier 2019, après une semaine de compétition entre funambules, dompteurs, acrobates, clowns de tous les pays, un jury international décerne les clowns d'or, d'argent, de bronze (qui sont l'équivalent de la palme d'or pour la profession).</p>
+          <p>La seconde semaine voit se produire les artistes primés pour le bonheur des petits et des grands. Ce festival a lieu du 17 au 27 janvier sous le chapiteau de Fontvieille.</p>
+          <p>Début février, toujours dans la discipline du cirque, les espoirs de la nouvelle génération montrent leurs talents et concourent eux aussi pour un palmarès.</p>
+          <p><a href="http://www.montecarlofestival.mc/" target="_blank" rel="noopener noreferrer">http://www.montecarlofestival.mc/</a></p>
+          <p class="text-sm text-primary-500 italic">Crédit Photo&nbsp;: cirque de Monte-Carlo</p>
+</EventLayout>
