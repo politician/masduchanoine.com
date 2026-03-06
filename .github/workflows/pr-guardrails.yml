@@ -15,7 +15,7 @@ jobs:
           required_items=(
             "Change is limited to the smallest possible scope."
             "No unrelated refactor/renaming/reformatting was included."
-            "`npm run ci`"
+            "\`npm run ci\`"
             "Manual spot-check on changed pages (desktop + mobile)"
           )
 
