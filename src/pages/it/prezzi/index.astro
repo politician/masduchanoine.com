@@ -1,7 +1,35 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seasons = {
+  camere: [
+    { label: 'Bassa stagione', dates: '01/01 - 30/04, 01/10 - 31/12', price: '255€ - 285€' },
+    { label: 'Media stagione', dates: '01/05 - 14/06, 15/09 - 30/09', price: '300€ - 330€' },
+    { label: 'Alta stagione', dates: '15/06 - 14/09', price: '340€ - 370€' },
+  ],
+  petitMas: [
+    { label: 'Bassa stagione', dates: '01/01 - 30/04, 01/10 - 31/12', price: '355€' },
+    { label: 'Media stagione', dates: '01/05 - 14/06, 15/09 - 30/09', price: '420€' },
+    { label: 'Alta stagione', dates: '15/06 - 14/09', price: '480€' },
+  ],
+};
+
+const articles = [
+  { title: '1 - Durata del soggiorno', text: 'Il cliente firmatario di un contratto a durata determinata non può in alcun caso rivendicare un diritto al mantenimento nei locali.' },
+  { title: '2 - Conclusione del contratto', text: 'La prenotazione diventa effettiva solo dopo l\'incasso di una caparra pari al 50% dell\'importo totale del soggiorno, con un minimo di una notte. Il pagamento della caparra implica l\'accettazione delle presenti condizioni generali di vendita.' },
+  { title: '3 - Cancellazione da parte del cliente', text: 'Data la dimensione ridotta della nostra casa d\'ospiti, ogni cancellazione ha un impatto significativo. Oltre 60 giorni prima dell\'arrivo rimborsiamo la caparra trattenendo le spese bancarie. Tra 60 e 30 giorni la caparra resta acquisita integralmente. Meno di 30 giorni prima dell\'arrivo o in caso di riduzione del soggiorno, l\'intero importo del soggiorno è dovuto. In caso di partenza anticipata, l\'intero soggiorno resta dovuto. Consigliamo un\'assicurazione annullamento.' },
+  { title: '4 - Arrivo e partenza', text: 'Per l\'arrivo al Mas du Chanoine, l\'accoglienza è prevista tra le 17:00 e le 19:00. In caso di arrivo tardivo o rinviato, vi chiediamo di informarci il prima possibile e comunque prima delle 17:00. Il giorno della partenza, la camera deve essere liberata entro le 11:00.' },
+  { title: '5 - Pagamenti', text: 'La caparra si paga con carta bancaria (VISA, Mastercard). Il saldo si paga all\'arrivo in contanti o con carta bancaria (VISA, Mastercard).' },
+  { title: '6 - Tasse', text: 'I prezzi includono IVA al 10%. La tassa di soggiorno è un\'imposta locale da versare al proprietario, che la riversa al Tesoro pubblico. Tariffa: 1,07€ per notte e per persona dai 18 anni in su.' },
+  { title: '7 - Utilizzo dei locali', text: 'Per godere al meglio del soggiorno è indispensabile avere un veicolo. Camere, aree di accoglienza e patio durante la colazione sono non fumatori (anche sigaretta elettronica). Il cliente deve rispettare la tranquillità dei luoghi e restituire la camera nello stato iniziale. Eventuali danni saranno addebitati. L\'accesso alla piscina è vietato ai minori non accompagnati.' },
+  { title: '8 - Animali', text: 'La presenza di animali già presenti nella proprietà (gatto, pesci, rane, tartarughe) non consente di ospitare ulteriori animali.' },
+  { title: '9 - Capacità', text: 'Il contratto è stabilito per un numero preciso di persone. Se il numero di ospiti supera tale numero, il proprietario può rifiutare i clienti supplementari senza che ciò costituisca modifica o risoluzione del contratto a suo carico.' },
+  { title: '10 - Assicurazione', text: 'Il cliente è responsabile di tutti i danni causati da lui o dai suoi accompagnatori e dichiara di essere coperto da assicurazione di responsabilità civile.' },
+  { title: '11 - Contenziosi', text: 'È consigliato rivolgersi al Mediatore del Turismo per favorire una soluzione amichevole. Il Tribunale di Grasse è l\'unico competente per le controversie relative a questo contratto.' },
+];
 ---
-<BaseLayout title="Prezzi — Mas du Chanoine" description="Prezzi delle camere al Mas du Chanoine, Saint-Paul de Vence, Costa Azzurra." lang="it">
+
+<BaseLayout title="Prezzi delle camere — Mas du Chanoine" description="Prezzi 2026 delle camere e suite familiare del Mas du Chanoine a Saint-Paul de Vence. Miglior tariffa garantita con prenotazione diretta." lang="it" alternates={{ fr: '/tarifs/', en: '/en/rates/', it: '/it/prezzi/' }}>
   <section class="relative py-20 md:py-28 px-4 overflow-hidden">
     <div class="absolute inset-0 bg-primary-100"></div>
     <div class="relative z-10 text-center max-w-3xl mx-auto">
@@ -9,12 +37,93 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
       <h1 class="text-4xl md:text-5xl font-serif font-semibold text-primary-900">Prezzi</h1>
     </div>
   </section>
+
   <section class="section-pad">
-    <div class="container-narrow"><div class="max-w-3xl mx-auto text-center prose-content">
-      <p class="text-lg">Questa pagina è disponibile solo in <a href="/tarifs/">francese</a> e in <a href="/en/rates/">inglese</a>.</p>
-      <div class="mt-8">
-        <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=it" target="_blank" rel="noopener noreferrer" class="btn-primary">Prenota ora</a>
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="prose-content text-base md:text-lg">
+          <p>Le tariffe variano in base alla stagione. La miglior tariffa è garantita prenotando direttamente con il Mas du Chanoine: via email (<a href="mailto:pascale@masduchanoine.com">pascale@masduchanoine.com</a>), telefono (<a href="tel:+33627271649">+33 6 27 27 16 49</a>) o tramite il motore di prenotazione online (pulsante Prenota).</p>
+        </div>
       </div>
-    </div></div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-primary-50 pt-0">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div class="bg-white rounded-sm shadow-lg overflow-hidden border border-primary-100">
+          <div class="bg-primary-900 text-white p-6 md:p-8 text-center">
+            <h2 class="text-2xl font-serif font-semibold mb-1">Cannoise, Niçoise, Saint-Pauloise</h2>
+            <p class="text-primary-300 text-sm">Camere · 2 persone</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="space-y-4 mb-6">
+              {seasons.camere.map((s) => (
+                <div class="flex items-center justify-between py-3 border-b border-primary-100 last:border-0">
+                  <div>
+                    <p class="font-semibold text-primary-900">{s.label}</p>
+                    <p class="text-xs text-primary-500">{s.dates}</p>
+                  </div>
+                  <p class="text-xl font-serif font-semibold text-accent-600">{s.price}</p>
+                </div>
+              ))}
+            </div>
+            <div class="bg-primary-50 rounded-sm p-4 text-xs text-primary-600 leading-relaxed">
+              <p>Il prezzo include la camera per 2 persone per notte, colazione continentale offerta, parcheggio e WiFi. In caso di occupazione singola: -10€. Il prezzo più basso corrisponde alla Saint-Pauloise, quello più alto alle camere al piano giardino (Cannoise e Niçoise). IVA inclusa. Tassa di soggiorno da aggiungere: 1,07€ per notte e per persona dai 18 anni in su.</p>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=it" target="_blank" rel="noopener noreferrer" class="btn-primary">Prenota</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-sm shadow-lg overflow-hidden border border-primary-100">
+          <div class="bg-accent-600 text-white p-6 md:p-8 text-center">
+            <h2 class="text-2xl font-serif font-semibold mb-1">Le Petit Mas</h2>
+            <p class="text-white/80 text-sm">Suite 2 camere · 3 persone</p>
+          </div>
+          <div class="p-6 md:p-8">
+            <div class="space-y-4 mb-6">
+              {seasons.petitMas.map((s) => (
+                <div class="flex items-center justify-between py-3 border-b border-primary-100 last:border-0">
+                  <div>
+                    <p class="font-semibold text-primary-900">{s.label}</p>
+                    <p class="text-xs text-primary-500">{s.dates}</p>
+                  </div>
+                  <p class="text-xl font-serif font-semibold text-accent-600">{s.price}</p>
+                </div>
+              ))}
+            </div>
+            <div class="bg-primary-50 rounded-sm p-4 text-xs text-primary-600 leading-relaxed">
+              <p>Il prezzo include la suite Petit Mas per 3 persone, colazione continentale offerta, parcheggio e WiFi. In caso di occupazione da 2 persone: -10€. IVA inclusa. Tassa di soggiorno da aggiungere: 1,07€ per notte e per persona dai 18 anni in su.</p>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=it" target="_blank" rel="noopener noreferrer" class="btn-primary">Prenota</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container-narrow">
+      <div class="max-w-3xl mx-auto">
+        <details class="group bg-white border border-primary-200 rounded-sm overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 md:p-8 hover:bg-primary-50 transition-colors">
+            <h2 class="text-xl md:text-2xl font-serif font-semibold text-primary-900">Condizioni generali di vendita</h2>
+            <svg class="w-5 h-5 text-primary-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="px-6 md:px-8 pb-6 md:pb-8 space-y-6">
+            {articles.map((article) => (
+              <div>
+                <h3 class="font-semibold text-primary-900 mb-2 text-sm">{article.title}</h3>
+                <p class="text-sm text-primary-600 leading-relaxed">{article.text}</p>
+              </div>
+            ))}
+          </div>
+        </details>
+      </div>
+    </div>
   </section>
 </BaseLayout>

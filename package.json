@@ -9,8 +9,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "check:links": "node scripts/check-internal-links.mjs",
     "validate": "node scripts/validate-routes.mjs",
-    "validate:live": "node scripts/validate-routes.mjs --live"
+    "validate:live": "node scripts/validate-routes.mjs --live",
+    "ci": "npm run build && npm run validate && npm run check:links"
   },
   "dependencies": {
     "astro": "^5.7.10",
