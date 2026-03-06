@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://masduchanoine.com/sitemap-index.xml
