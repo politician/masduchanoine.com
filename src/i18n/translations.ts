@@ -20,6 +20,97 @@ export const labelMap: Record<Lang, string> = {
   it: "Italiano",
 };
 
+export const uiDictionary: Record<
+  Lang,
+  {
+    bookNow: string;
+    switchLanguage: string;
+  }
+> = {
+  fr: {
+    bookNow: "Réserver",
+    switchLanguage: "Changer de langue",
+  },
+  en: {
+    bookNow: "Book Now",
+    switchLanguage: "Switch language",
+  },
+  it: {
+    bookNow: "Prenota",
+    switchLanguage: "Cambia lingua",
+  },
+};
+
+const staticRouteAlternates: Record<string, Partial<Record<Lang, string>>> = {
+  "/": { fr: "/", en: "/en/", it: "/it/" },
+  "/chambres-dhotes": {
+    fr: "/chambres-dhotes/",
+    en: "/en/bed-breakfast/",
+    it: "/it/bed-e-breakfast/",
+  },
+  "/tarifs": { fr: "/tarifs/", en: "/en/rates/", it: "/it/prezzi/" },
+  "/photos": {
+    fr: "/photos/",
+    en: "/en/pictures/",
+    it: "/it/foto-del-bed-and-breakfast/",
+  },
+  "/activites-cote-azur": {
+    fr: "/activites-cote-azur/",
+    en: "/en/activities-french-riviera/",
+    it: "/it/attivita/",
+  },
+  "/evenements-cote-azur": {
+    fr: "/evenements-cote-azur/",
+    en: "/en/french-riviera-events/",
+    it: "/it/",
+  },
+  "/contactez-nous": {
+    fr: "/contactez-nous/",
+    en: "/en/contact-us/",
+    it: "/it/contatto/",
+  },
+  "/acces": {
+    fr: "/acces",
+    en: "/en/access/",
+    it: "/it/come-raggiungerci/",
+  },
+  "/histoire": {
+    fr: "/histoire/",
+    en: "/en/history-of-the-guesthouse/",
+    it: "/it/storia-della-casa/",
+  },
+  "/esprit-chambre-dhotes": {
+    fr: "/esprit-chambre-dhotes/",
+    en: "/en/bed-and-breakfast-character/",
+    it: "/it/lo-spirito-del-bb/",
+  },
+  "/jardin-exterieurs": {
+    fr: "/jardin-exterieurs/",
+    en: "/en/garden-of-the-bed-and-breakfast/",
+    it: "/it/il-giardino/",
+  },
+  "/espace-piscine": {
+    fr: "/espace-piscine/",
+    en: "/en/swimming-pool-area/",
+    it: "/it/lo-spazio-piscina/",
+  },
+  "/petit-dejeuner": {
+    fr: "/petit-dejeuner/",
+    en: "/en/breakfast/",
+    it: "/it/la-colazione/",
+  },
+  "/avis-des-hotes": {
+    fr: "/avis-des-hotes",
+    en: "/en/testimonials/",
+    it: "/it/recensioni/",
+  },
+  "/politique-de-confidentialite": {
+    fr: "/politique-de-confidentialite/",
+    en: "/en/privacy-policy/",
+    it: "/it/",
+  },
+};
+
 export interface NavItem {
   label: string;
   href: string;
@@ -275,4 +366,18 @@ export function getHomeLabel(lang: Lang): string {
 export function getBookingUrl(lang: Lang): string {
   const langParam = lang === "it" ? "it" : lang === "en" ? "en" : "fr";
   return `https://masduchanoine.thais-hotel.com/hotel/website/reservations.php?lang=${langParam}`;
+}
+
+function normalizePath(path: string): string {
+  if (!path || path === "/") return "/";
+  return path.replace(/\/+$/, "");
+}
+
+export function getLanguageAlternates(
+  pathname: string,
+  alternates?: Partial<Record<Lang, string>>,
+): Partial<Record<Lang, string>> {
+  if (alternates && Object.keys(alternates).length > 0) return alternates;
+  const key = normalizePath(pathname);
+  return staticRouteAlternates[key] || {};
 }

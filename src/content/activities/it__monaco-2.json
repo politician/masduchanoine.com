@@ -1,0 +1,42 @@
+{
+  "key": "/activites/visiter-monaco/",
+  "lang": "it",
+  "slug": "monaco-2",
+  "route": "/it/activites/monaco-2",
+  "title": "Monaco — Attività Costa d'Azzurra",
+  "description": "Monaco: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/visiter-monaco/",
+    "en": "/en/activites/monaco/",
+    "it": "/it/activites/monaco-2/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Monaco"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/monaco.jpg",
+    "alt": "Monaco"
+  },
+  "paragraphs": [
+    "<p>Il Principato di Monaco è uno Stato indipendente, il più piccolo del mondo dopo il Vaticano. Incuneato nel territorio francese tra Nizza e Mentone, Monaco si estende per pochi chilometri lungo il Mediterraneo.</p>",
+    "<p>Nonostante le dimensioni ridotte, Monaco offre innumerevoli attrazioni turistiche, tra cui il Gran Premio di Formula 1 che si svolge nelle strade della città e che ha contribuito ampiamente alla sua fama mondiale.</p>",
+    "<p>A piedi, con il trenino turistico o in auto, scoprite nella città vecchia il Palazzo del Principe e la sua piazza; non perdete il cambio della guardia ogni giorno alle 11:55 precise! A poche viuzze da lì, visitate la Cattedrale di Monaco in pietra bianca di La Turbie.</p>",
+    "<p>Costruito più di un secolo fa dal Principe Alberto I, il Museo Oceanografico è allo stesso tempo museo del mondo marino e acquario. Situato sul fianco della scogliera, quasi cento metri sopra il mare, offre una vista mozzafiato dalla terrazza. Numerose sale, vasche, acquari e spazi ludici permettono a tutta la famiglia di vivere un piacevole momento di scoperta e relax.</p>",
+    "<p>Diversi musei di Monaco meritano una visita, come il Museo dei Francobolli, Villa Paloma, Villa Sauber e il Museo Navale.</p>",
+    "<p>Se amate le auto d'epoca, non perdete la magnifica collezione di circa cento vetture storiche di Sua Altezza Serenissima il Principe di Monaco.</p>"
+  ],
+  "activityName": "Monaco",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

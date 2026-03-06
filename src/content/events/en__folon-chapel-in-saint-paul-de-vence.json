@@ -1,0 +1,39 @@
+{
+  "key": "/chapelle-folon-a-saint-paul/",
+  "lang": "en",
+  "slug": "folon-chapel-in-saint-paul-de-vence",
+  "route": "/en/folon-chapel-in-saint-paul-de-vence",
+  "title": "Folon Chapel in Saint Paul de Vence | Mas du Chanoine",
+  "description": "Folon Chapel in Saint Paul de Vence: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/chapelle-folon-a-saint-paul/",
+    "en": "/en/folon-chapel-in-saint-paul-de-vence/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Folon Chapel in Saint Paul de Vence"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>The chapel of the white penitents, a sober building in white stones with a triangle bell tower. The Belgian artist Jean-Michel Folon decorated the interior: frescoes, mosaic with color gradations, stained glass windows and sculptures for the main altar. The inhabitants of Saint Paul find their village in the mosaic of the nave.</p>"
+  ],
+  "eventName": "Folon Chapel in Saint Paul de Vence",
+  "tags": [
+    "French Riviera",
+    "Museum"
+  ],
+  "date": "27 December 2018",
+  "datetime": "2018-12-27",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

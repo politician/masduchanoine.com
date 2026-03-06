@@ -1,0 +1,43 @@
+{
+  "key": "/activites/visiter-stpauldevence/",
+  "lang": "it",
+  "slug": "saint-paul-de-vence",
+  "route": "/it/activites/saint-paul-de-vence",
+  "title": "Saint Paul de Vence — Attività Costa d'Azzurra",
+  "description": "Saint Paul de Vence: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/visiter-stpauldevence/",
+    "en": "/en/activites/st-paul-de-vence/",
+    "it": "/it/activites/saint-paul-de-vence/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Saint Paul de Vence"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/saint-paul-de-vence.jpg",
+    "alt": "Saint Paul de Vence"
+  },
+  "paragraphs": [
+    "<p>Riconosciuto come uno dei borghi più belli di Francia, <strong>Saint-Paul de Vence</strong> vi conquisterà con la sua atmosfera unica.</p>",
+    "<p><strong>Borgo medievale fortificato</strong>, Saint-Paul de Vence è arroccato su uno sperone roccioso e domina il <strong>Mar Mediterraneo</strong>. La calma dei suoi vicoli e la luce eccezionale hanno sempre attirato e ispirato artisti da tutto il mondo: poeti, scrittori, pittori, scultori...</p>",
+    "<p>Entrate in questo pittoresco villaggio interamente pedonale passando dalla porta aperta nelle mura. Passeggiate senza fretta nei vicoli e scoprite piazzette, fontane e botteghe artigiane. Accanto alla chiesa, la celebre <strong>Cappella Folon</strong>, decorata dall'artista belga, vi sedurrà per la sua calma e serenità.</p>",
+    "<p>La via principale è ricca di gallerie che valorizzano tutte le forme d'arte.</p>",
+    "<p>Un giro del borgo <strong>lungo i bastioni</strong> vi offrirà una vista sul Mediterraneo e sulle montagne dell'entroterra.</p>",
+    "<p>La sera, dopo la partenza dei numerosi visitatori, il borgo ritrova la calma, permettendovi di scoprirlo sotto una luce più intima.</p>",
+    "<p>Non dimenticate di visitare la <strong>Fondazione Maeght</strong>, conosciuta in tutto il mondo e dedicata all'arte moderna e contemporanea. Oltre alla collezione permanente con opere di Giacometti, Chagall, Bonnard e Léger, le mostre temporanee dedicano ampi spazi agli artisti ospiti. Una particolarità del museo è il numero importante di sculture esposte nei suoi magnifici giardini, tra cui quelle di Miró.</p>"
+  ],
+  "activityName": "Saint Paul de Vence",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

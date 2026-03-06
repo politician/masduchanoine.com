@@ -1,0 +1,89 @@
+{
+  "key": "/chambres-hotes/la-cannoise/",
+  "lang": "fr",
+  "slug": "la-cannoise",
+  "route": "/chambres-hotes/la-cannoise",
+  "title": "La Cannoise | Mas du chanoine",
+  "description": "Chambre d'hôtes baignée de soleil, avec vue sur le bassin, style provençal chic et branché star de Cannes",
+  "alternates": {
+    "fr": "/chambres-hotes/la-cannoise/",
+    "en": "/en/chambres-hotes/cannoise-guestroom/",
+    "it": "/it/chambres-hotes/cannoise-camera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Chambres",
+      "href": "/chambres-dhotes/"
+    },
+    {
+      "label": "La Cannoise"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Baignée de soleil et très lumineuse, cette chambre d'hôtes dispose d'un accès direct depuis le jardin dans lequel vous trouverez votre table et des chaises pour apprécier le calme des lieux à l'ombre du marronnier. Dans un transat, vous pourrez admirer les poissons rouges du bassin couvert de nénuphars.</p>",
+    "<p>Cette suite junior vous ravira par son mélange de styles et de couleurs&nbsp;: la décoration évoque les artistes de la Côte d'Azur et le Festival de Cannes.</p>",
+    "<p>D'une superficie de 36&nbsp;m², elle est organisée avec une chambre avec un grand lit de 180×200, un coin salon, un bureau, une salle de douche et des toilettes indépendants. Le charme de l'ancien a été conservé avec les tomettes d'origine au sol et les poutres apparentes. Pour plus de confort et de chaleur, le sol de l'espace chambre et salon est en parquet de chêne.</p>"
+  ],
+  "roomName": "LA CANNOISE",
+  "subtitle": "Provençale Chic & Moderne",
+  "tagline": "Chambre d'hôtes baignée de soleil, avec vue sur le bassin, style provençal chic et branché star de Cannes",
+  "heroImage": "/media/chambres/cannoise-palme-fil.jpg",
+  "amenities": [
+    "Lit King Size",
+    "Café Nespresso",
+    "Douche italienne",
+    "Air conditionné",
+    "Thé et tisanes",
+    "WC indépendant",
+    "Wi-Fi gratuit",
+    "Mini Bar",
+    "Sèche-cheveux",
+    "TV écran plat",
+    "Eau minérale",
+    "Peignoirs",
+    "Chaînes internationales",
+    "Autres boissons en option",
+    "Chaussons",
+    "Coffre-fort",
+    "Salon de jardin",
+    "Produits d'accueil",
+    "Coin salon",
+    "Parking gratuit",
+    "Serviettes de piscine",
+    "Bureau"
+  ],
+  "amenitiesTitle": null,
+  "amenitiesSummary": "Surface : 36 m² ― 1 Chambre avec coin salon ― Rez de jardin",
+  "gallery": [
+    {
+      "src": "/media/chambres/chambre-cannoise.jpg",
+      "alt": "La Cannoise — chambre principale"
+    },
+    {
+      "src": "/media/chambres/cannoise-palme-festival.jpg",
+      "alt": "La Cannoise — décoration Festival de Cannes"
+    },
+    {
+      "src": "/media/chambres/cannoise-salon-jardin.jpg",
+      "alt": "La Cannoise — salon de jardin"
+    },
+    {
+      "src": "/media/chambres/cannoise-bureau-salon.jpg",
+      "alt": "La Cannoise — bureau et coin salon"
+    },
+    {
+      "src": "/media/chambres/cannoise-douche.jpg",
+      "alt": "La Cannoise — salle de douche et vasque"
+    }
+  ],
+  "galleryTitle": null,
+  "bookingLabel": null,
+  "otherRoomsTitle": null,
+  "otherRoomsLabel": null,
+  "otherRoomsUrl": null
+}

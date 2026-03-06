@@ -1,0 +1,43 @@
+{
+  "key": "/festival-de-cannes/",
+  "lang": "fr",
+  "slug": "festival-de-cannes",
+  "route": "/festival-de-cannes",
+  "title": "Festival de Cannes | Mas du chanoine",
+  "description": "Le festival international du film aura lieu du 6 au 17 juillet 2021. Jodie Foster sera l'invitée spéciale de la Cérémonie d'ouverture et nommée Palme d'or d'honneur du 74e Festival.",
+  "alternates": {
+    "fr": "/festival-de-cannes/",
+    "en": "/en/film-festival-in-cannes/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Festival de Cannes"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/festival-cannes.jpg",
+    "alt": "Festival de Cannes - Palme d'Or"
+  },
+  "paragraphs": [
+    "<p>Le festival international du film aura lieu du 6 au 17 juillet 2021.</p>",
+    "<p>Jodie Foster sera l'invitée spéciale de la Cérémonie d'ouverture et nommée Palme d'or d'honneur du 74e Festival.</p>",
+    "<p>Nous sommes impatients de montrer à nouveau au monde le décor de rêve des plages de Cannes, de la Côte d’azur avec le ciel bleu, les palmiers et la mer Méditerranée, et l’effervescence et la gaieté parfois factice de ces visiteurs éphémères.</p>"
+  ],
+  "eventName": "Festival de Cannes",
+  "tags": [
+    "Côte d'azur"
+  ],
+  "date": "18 juin 2021",
+  "datetime": "2021-06-18",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

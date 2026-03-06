@@ -1,0 +1,39 @@
+{
+  "key": "/cours-de-cuisine-pres-de-nos-chambres-dhotes/",
+  "lang": "en",
+  "slug": "cooking-lessons-near-our-guesthouse",
+  "route": "/en/cooking-lessons-near-our-guesthouse",
+  "title": "Cooking Lessons Near Our Guesthouse | Mas du Chanoine",
+  "description": "Cooking Lessons Near Our Guesthouse: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/cours-de-cuisine-pres-de-nos-chambres-dhotes/",
+    "en": "/en/cooking-lessons-near-our-guesthouse/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Cooking Lessons Near Our Guesthouse"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>At La Colle sur Loup, village near St Paul de Vence, Laurence proposes cooking workshops. Specialist of regional cooking, she will show you how to prepare local recipes. In the evening or the morning, you will learn how to prepare a full menu, followed by tasting in a friendly atmosphere.</p>"
+  ],
+  "eventName": "Cooking Lessons Near Our Guesthouse",
+  "tags": [
+    "Discoveries",
+    "French Riviera"
+  ],
+  "date": "22 June 2018",
+  "datetime": "2018-06-22",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

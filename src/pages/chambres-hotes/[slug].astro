@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import RoomLayout from '../../layouts/RoomLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('rooms', ({ data }) => data.lang === 'fr');
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { room: entry.data },
+  }));
+}
+
+const { room } = Astro.props;
+---
+
+<RoomLayout
+  title={room.title}
+  description={room.description}
+  lang="fr"
+  alternates={room.alternates}
+  roomName={room.roomName}
+  subtitle={room.subtitle ?? undefined}
+  tagline={room.tagline ?? undefined}
+  heroImage={room.heroImage}
+  amenities={room.amenities}
+  amenitiesTitle={room.amenitiesTitle ?? undefined}
+  amenitiesSummary={room.amenitiesSummary ?? undefined}
+  gallery={room.gallery}
+  galleryTitle={room.galleryTitle ?? undefined}
+  breadcrumb={room.breadcrumb}
+  bookingLabel={room.bookingLabel ?? undefined}
+  otherRoomsTitle={room.otherRoomsTitle ?? undefined}
+  otherRoomsLabel={room.otherRoomsLabel ?? undefined}
+  otherRoomsUrl={room.otherRoomsUrl ?? undefined}
+>
+  {room.paragraphs.map((paragraph: string) => (
+    <div set:html={paragraph} />
+  ))}
+</RoomLayout>

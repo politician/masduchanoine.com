@@ -1,0 +1,38 @@
+{
+  "key": "/festival-du-cirque-de-monte-carlo/",
+  "lang": "en",
+  "slug": "monte-carlo-circus-festival",
+  "route": "/en/monte-carlo-circus-festival",
+  "title": "Monte-Carlo Circus Festival | Mas du Chanoine",
+  "description": "Monte-Carlo Circus Festival: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/festival-du-cirque-de-monte-carlo/",
+    "en": "/en/monte-carlo-circus-festival/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Monte-Carlo Circus Festival"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>In mid-January, after a week of competition between tightrope walkers, acrobats, clowns from all countries, an international jury awards the golden, silver and bronze clowns. On the second week, the award-winning artists perform. At the beginning of February, the new generation show their talents.</p>"
+  ],
+  "eventName": "Monte-Carlo Circus Festival",
+  "tags": [
+    "French Riviera"
+  ],
+  "date": "14 December 2018",
+  "datetime": "2018-12-14",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

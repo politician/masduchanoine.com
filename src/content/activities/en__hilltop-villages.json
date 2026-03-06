@@ -1,0 +1,40 @@
+{
+  "key": "/activites/visiter-les-villages-perches/",
+  "lang": "en",
+  "slug": "hilltop-villages",
+  "route": "/en/activites/hilltop-villages",
+  "title": "Hilltop Villages — Activities near Mas du Chanoine",
+  "description": "Hilltop Villages: discover this activity near our guesthouse on the French Riviera.",
+  "alternates": {
+    "fr": "/activites/visiter-les-villages-perches/",
+    "en": "/en/activites/hilltop-villages/",
+    "it": "/it/activites/i-villaggi-collinari/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Activities",
+      "href": "/en/activities-french-riviera/"
+    },
+    {
+      "label": "Hilltop Villages"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/villages-perches.jpg",
+    "alt": "Hilltop Villages"
+  },
+  "paragraphs": [
+    "<p>The Alps take their rise in the Nice hinterland. The most remarkable perched villages from West to East are: Gourdon, Tourrettes-sur-Loup and Eze.</p>",
+    "<p>The village is perched on the rock 760 meters up to sea, above the Vallée du Loup. Only 10 km far from the Mediterranean Sea, it offers a unique panorama on the French Riviera from Nice to Théoule, more than 80km.</p>",
+    "<p>A medieval village nicknamed the City of Violets. Twenty workshops and craftmen's shops open their doors to you.</p>",
+    "<p>Built at the top of a cliff, overlooking Saint-Jean-Cap-Ferrat, the village of Eze offers many hidden treasures. Arrived at the top, you will see the Exotic Garden with hundreds of succulents and cacti.</p>"
+  ],
+  "activityName": "Hilltop Villages",
+  "backLabel": "← All activities",
+  "backUrl": "/en/activities-french-riviera/",
+  "bookingLabel": "Book Now"
+}

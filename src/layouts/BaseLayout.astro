@@ -36,7 +36,7 @@ const htmlLang = langMap[lang];
     alternates={alternates}
   />
   <body class="min-h-screen flex flex-col">
-    <Header lang={lang} />
+    <Header lang={lang} alternates={alternates} />
     <main class="flex-1 pt-16 md:pt-20">
       <slot />
     </main>

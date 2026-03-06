@@ -1,0 +1,40 @@
+{
+  "key": "/activites/shiatsu/",
+  "lang": "it",
+  "slug": "shiatsu-it",
+  "route": "/it/activites/shiatsu-it",
+  "title": "Shiatsu — Attività Costa d'Azzurra",
+  "description": "Shiatsu: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/shiatsu/",
+    "en": "/en/activites/shiatsu-en/",
+    "it": "/it/activites/shiatsu-it/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Shiatsu"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/shiatsu.jpg",
+    "alt": "Shiatsu"
+  },
+  "paragraphs": [
+    "<p>Lo shiatsu è una terapia manuale energetica che consiste nell'esercitare pressioni con le dita sui meridiani del corpo e nel praticare stiramenti. Come l'agopuntura, si basa sulla medicina tradizionale cinese e ha origini giapponesi. Mira a correggere accumuli o carenze di energia in alcune zone del corpo.</p>",
+    "<p>Potete beneficiare in camera di una seduta con Nadine, formata in medicina cinese e agopuntura. Sdraiati su un lettino da massaggio, questa seduta aiuta a ridurre le tensioni, stimolare e rafforzare il sistema immunitario, offrendo anche un profondo rilassamento fisico e mentale.</p>",
+    "<p>Per la seduta, della durata di un'ora, sarete vestiti con abiti leggeri. Il costo della prestazione si paga direttamente alla praticante.</p>",
+    "<p>È fortemente consigliato prenotare la seduta di shiatsu prima del vostro arrivo, per assicurarvi la disponibilità di Nadine.</p>"
+  ],
+  "activityName": "Shiatsu",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

@@ -1,0 +1,46 @@
+{
+  "key": "/fete-de-lolive-au-cannet/",
+  "lang": "fr",
+  "slug": "fete-de-lolive-au-cannet",
+  "route": "/fete-de-lolive-au-cannet",
+  "title": "Fête de l'Olive au Cannet | Mas du chanoine",
+  "description": "Cette fête annuelle de l'olive réunit au mois d'avril au Cannet exploitants et récoltants de l'olive sur l'avenue principale du vieux quartier de Rocheville.",
+  "alternates": {
+    "fr": "/fete-de-lolive-au-cannet/",
+    "en": "/en/olive-fair-in-le-cannet/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Fête de l'Olive au Cannet"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/fete-olive.jpg",
+    "alt": "Fête de l'olive au Cannet"
+  },
+  "paragraphs": [
+    "<p>Cette fête annuelle de l'olive réunit au mois d'avril au Cannet exploitants et récoltants de l'olive sur l'avenue principale du vieux quartier de Rocheville.</p>",
+    "<p>Vous trouverez de nombreux stands pour déguster et acheter olives noires ou vertes, vous pourrez comparer les différentes variétés et acheter celles de votre préférence. De même pour les huiles d'olives pressées dans la région, et des spécialités culinaires à base d'olive (tapenades&nbsp;: pâtes d'olives assaisonnées de diverses manières…).</p>",
+    "<p>Des animations gastronomiques et dégustation vous sont proposées.</p>",
+    "<p>Des animations permettent de découvrir de vieux métiers, comme par exemple l'an dernier le tonnelier.</p>",
+    "<p>Renseignements office du tourisme du Cannet <a href=\"http://www.lecannet.fr\" target=\"_blank\" rel=\"noopener noreferrer\">www.lecannet.fr</a></p>"
+  ],
+  "eventName": "Fête de l'Olive au Cannet",
+  "tags": [
+    "Côte d'azur",
+    "Foires / Salons"
+  ],
+  "date": "1 avril 2018",
+  "datetime": "2018-04-01",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

@@ -1,0 +1,38 @@
+{
+  "key": "/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/",
+  "lang": "en",
+  "slug": "flowers-and-fruits-festivals-introduce-spring",
+  "route": "/en/flowers-and-fruits-festivals-introduce-spring",
+  "title": "Flowers and Fruits Festivals Introduce Spring | Mas du Chanoine",
+  "description": "Flowers and Fruits Festivals Introduce Spring: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/festivals-de-fleurs-et-fruits-sur-la-cote-dazur/",
+    "en": "/en/flowers-and-fruits-festivals-introduce-spring/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Flowers and Fruits Festivals Introduce Spring"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>As every year in February, flower-filled festivities celebrate the return of spring and the citrus season. In Menton, the citrus festival theme changes every year. The Carnival of Nice moves on the Promenade du Paillon. In Mandelieu, the mimosa festival is organized with corsos and guided tours.</p>"
+  ],
+  "eventName": "Flowers and Fruits Festivals Introduce Spring",
+  "tags": [
+    "French Riviera"
+  ],
+  "date": "27 January 2023",
+  "datetime": "2023-01-27",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

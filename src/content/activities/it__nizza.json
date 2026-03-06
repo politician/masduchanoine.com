@@ -1,0 +1,39 @@
+{
+  "key": "/activites/visiter-nice/",
+  "lang": "it",
+  "slug": "nizza",
+  "route": "/it/activites/nizza",
+  "title": "Nizza — Attività Costa d'Azzurra",
+  "description": "Nizza: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/visiter-nice/",
+    "en": "/en/activites/nice/",
+    "it": "/it/activites/nizza/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Nizza"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/nice.jpg",
+    "alt": "Nizza"
+  },
+  "paragraphs": [
+    "<p>Nizza, capitale della Costa Azzurra, vi aspetta a un quarto d'ora dal Mas du Chanoine. Questa città cosmopolita vi permetterà di passeggiare, fare shopping e visitare musei (molti artisti hanno vissuto qui, attratti dalla ricchezza dei paesaggi e dei colori).</p>",
+    "<p>Potrete passeggiare sulla famosissima Promenade des Anglais e rilassarvi sulle sue spiagge di sabbia e ciottoli, davanti a un mare turchese, oppure organizzare la giornata per tema:</p>",
+    "<p>e molte altre idee, in base ai vostri desideri.</p>"
+  ],
+  "activityName": "Nizza",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

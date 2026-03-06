@@ -1,0 +1,38 @@
+{
+  "key": "/festival-de-cannes/",
+  "lang": "en",
+  "slug": "film-festival-in-cannes",
+  "route": "/en/film-festival-in-cannes",
+  "title": "Film Festival in Cannes | Mas du Chanoine",
+  "description": "Film Festival in Cannes: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/festival-de-cannes/",
+    "en": "/en/film-festival-in-cannes/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Film Festival in Cannes"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>The Cannes Film Festival is one of the most prestigious events in the film industry, attracting movie stars, directors and film lovers from around the world every May on the famous Croisette.</p>"
+  ],
+  "eventName": "Film Festival in Cannes",
+  "tags": [
+    "French Riviera"
+  ],
+  "date": "18 June 2021",
+  "datetime": "2021-06-18",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

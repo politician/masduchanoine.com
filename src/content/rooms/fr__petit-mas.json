@@ -1,0 +1,93 @@
+{
+  "key": "/chambres-hotes/petit-mas/",
+  "lang": "fr",
+  "slug": "petit-mas",
+  "route": "/chambres-hotes/petit-mas",
+  "title": "Le Petit Mas : suite familiale | Mas du chanoine",
+  "description": "Suite familiale pour 3 personnes : deux chambres dans un petit bâtiment indépendant dans le grand jardin méditerranéen face au bassin",
+  "alternates": {
+    "fr": "/chambres-hotes/petit-mas/",
+    "en": "/en/chambres-hotes/petit-mas-family-suite/",
+    "it": "/it/chambres-hotes/petit-mas-familiare-suite/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Chambres",
+      "href": "/chambres-dhotes/"
+    },
+    {
+      "label": "Le Petit Mas"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Situé dans un bâtiment indépendant, à côté du bassin aux poissons, le Petit Mas est une suite familiale idéale pour accueillir les personnes voyageant à trois&nbsp;: 3 adultes ou bien deux adultes accompagnés d'un enfant de plus de 12 ans. La présence de deux chambres séparées permet de garantir l'intimité de chacun.</p>",
+    "<p>Vous disposez sur 35&nbsp;m²&nbsp;: d'une chambre avec un lit King size (180×200), climatisation, téléviseur écran plat, Wi-Fi, nécessaire pour le thé et le café, mini-bar, coffre-fort, et un bureau&nbsp;; d'une chambre avec un lit Queen size (160×200) et un fauteuil&nbsp;; d'une salle de douche à l'italienne&nbsp;; de toilettes indépendants.</p>",
+    "<p>Les deux chambres sont équipées d'étagères et de grands placards coulissants pour votre confort. Devant le Petit Mas, vous pourrez profiter d'un salon de jardin.</p>"
+  ],
+  "roomName": "LE PETIT MAS",
+  "subtitle": "Indépendant & Familial",
+  "tagline": "Bâtiment indépendant avec 2 chambres, pour les personnes voyageant à trois, vue sur le bassin",
+  "heroImage": "/media/chambres/chambre-petit-mas.jpg",
+  "amenities": [
+    "Lit King Size",
+    "Café Nespresso",
+    "Douche italienne",
+    "Lit Queen size",
+    "Thé et tisanes",
+    "WC indépendant",
+    "Wi-Fi gratuit",
+    "Mini Bar",
+    "Sèche-cheveux",
+    "TV écran plat",
+    "Eau minérale",
+    "Peignoirs",
+    "Air conditionné",
+    "Autres boissons en option",
+    "Chaussons",
+    "Coffre-fort",
+    "Salon de jardin",
+    "Produits d'accueil",
+    "Fauteuil dans chambre Queen",
+    "Parking gratuit",
+    "Serviettes de piscine",
+    "Bureau dans chambre King"
+  ],
+  "amenitiesTitle": null,
+  "amenitiesSummary": "Surface : 35 m² ― 2 Chambres ― Rez de jardin",
+  "gallery": [
+    {
+      "src": "/media/chambres/chambre-petit-mas.jpg",
+      "alt": "Le Petit Mas — vue extérieure"
+    },
+    {
+      "src": "/media/chambres/petit-mas-chambre-queen.jpg",
+      "alt": "Le Petit Mas — chambre Queen"
+    },
+    {
+      "src": "/media/chambres/petit-mas-vue-exterieure.jpg",
+      "alt": "Le Petit Mas — façade et jardin"
+    },
+    {
+      "src": "/media/chambres/petit-mas-chambre-king.jpg",
+      "alt": "Le Petit Mas — chambre King"
+    },
+    {
+      "src": "/media/chambres/petit-mas-douche.jpg",
+      "alt": "Le Petit Mas — salle de douche"
+    },
+    {
+      "src": "/media/chambres/jardin-1.jpg",
+      "alt": "Le jardin du Mas du Chanoine"
+    }
+  ],
+  "galleryTitle": null,
+  "bookingLabel": null,
+  "otherRoomsTitle": null,
+  "otherRoomsLabel": null,
+  "otherRoomsUrl": null
+}

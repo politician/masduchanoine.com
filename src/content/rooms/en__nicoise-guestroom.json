@@ -1,0 +1,93 @@
+{
+  "key": "/chambres-hotes/la-nicoise/",
+  "lang": "en",
+  "slug": "nicoise-guestroom",
+  "route": "/en/chambres-hotes/nicoise-guestroom",
+  "title": "Niçoise Guestroom | Mas du Chanoine",
+  "description": "Room under the lemon tree, with a view of the fish basin, Provençal style, the charm of Old Nice",
+  "alternates": {
+    "fr": "/chambres-hotes/la-nicoise/",
+    "en": "/en/chambres-hotes/nicoise-guestroom/",
+    "it": "/it/chambres-hotes/nicoise-camera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Rooms",
+      "href": "/en/bed-breakfast/"
+    },
+    {
+      "label": "Niçoise Guestroom"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Passing under a magnificent lemon tree, you enter this spacious guest room located on the ground floor, a lovely room decorated in the colors of Provence. There is direct access to the garden.</p>",
+    "<p>In this cosy room with sloping ceilings and exposed beams, there is either a King Size bed or two twin beds based on your preference. A sitting area, a desk, a shower room and a separate toilet complete this junior suite.</p>",
+    "<p>Decorated in the Provençal style, the Niçoise junior suite will immediately transport you in the atmosphere of Old Nice, capital of the French Riviera.</p>"
+  ],
+  "roomName": "NIÇOISE GUESTROOM",
+  "subtitle": "Spacious & Cosy",
+  "tagline": "Room under the lemon tree, with a view of the fish basin, Provençal style, the charm of Old Nice",
+  "heroImage": "/media/chambres/chambre-nicoise.jpg",
+  "amenities": [
+    "King Size bed or twin beds",
+    "Nespresso coffee",
+    "Walk-in shower",
+    "Air conditioning",
+    "Tea and herbal teas",
+    "Separate WC",
+    "Free Wi-Fi",
+    "Mini Fridge",
+    "Hair dryer",
+    "Flat screen TV",
+    "Mineral water",
+    "Bathrobes",
+    "International channels",
+    "Optional beverages",
+    "Slippers",
+    "Safe",
+    "Outdoor area",
+    "Local amenities",
+    "Living-sitting area",
+    "Free Parking",
+    "Pool towels",
+    "Desk"
+  ],
+  "amenitiesTitle": "Room Equipment",
+  "amenitiesSummary": "Surface: 36 m² — 1 bedroom with sitting area — Ground floor",
+  "gallery": [
+    {
+      "src": "/media/chambres/chambre-nicoise.jpg",
+      "alt": "Niçoise Guestroom — main bedroom"
+    },
+    {
+      "src": "/media/chambres/nicoise-bassin.jpg",
+      "alt": "Niçoise Guestroom — fish basin view"
+    },
+    {
+      "src": "/media/chambres/nicoise-coin-salon.jpg",
+      "alt": "Niçoise Guestroom — sitting area and desk"
+    },
+    {
+      "src": "/media/chambres/nicoise-douche-vasque.jpg",
+      "alt": "Niçoise Guestroom — shower room"
+    },
+    {
+      "src": "/media/chambres/nicoise-salon-jardin.jpg",
+      "alt": "Niçoise Guestroom — garden furniture"
+    },
+    {
+      "src": "/media/chambres/nicoise-nenuphars.jpg",
+      "alt": "Niçoise Guestroom — water lilies"
+    }
+  ],
+  "galleryTitle": "Photo Gallery",
+  "bookingLabel": "Book this room",
+  "otherRoomsTitle": "Discover our other rooms",
+  "otherRoomsLabel": "View all rooms",
+  "otherRoomsUrl": "/en/bed-breakfast/"
+}

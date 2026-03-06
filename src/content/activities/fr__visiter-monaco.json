@@ -1,0 +1,42 @@
+{
+  "key": "/activites/visiter-monaco/",
+  "lang": "fr",
+  "slug": "visiter-monaco",
+  "route": "/activites/visiter-monaco",
+  "title": "La principauté de Monaco entre Nice et Menton | Mas du chanoine",
+  "description": "La Principauté de Monaco est un pays indépendant, le plus petit du monde après le Vatican. Enserrée dans le territoire français entre Nice et Menton, Monaco s'étire sur quelques kilomètres le long de la Mer Méditerranée.",
+  "alternates": {
+    "fr": "/activites/visiter-monaco/",
+    "en": "/en/activites/monaco/",
+    "it": "/it/activites/monaco-2/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Activités",
+      "href": "/activites-cote-azur/"
+    },
+    {
+      "label": "Monaco"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/monaco.jpg",
+    "alt": "Monaco photo CRT Cote azur"
+  },
+  "paragraphs": [
+    "<p>La Principauté de Monaco est un pays indépendant, le plus petit du monde après le Vatican. Enserrée dans le territoire français entre Nice et Menton, Monaco s'étire sur quelques kilomètres le long de la Mer Méditerranée.</p>",
+    "<p>Malgré sa petite taille, Monaco offre d'innombrables attraits touristiques, dont son Grand Prix de Formule 1 se déroulant dans les rues de la ville, qui a largement contribué à sa réputation mondiale.</p>",
+    "<p>A pied, en petit train ou en voiture, découvrez dans la vieille ville le Palais Princier et sa Place, et ne manquez pas la relève de la Garde princière tous les jours à midi moins cinq précise&nbsp;! A quelques ruelles étroites de là, visitez la Cathédrale de Monaco, en pierres blanches de la Turbie, une commune située à quelques kilomètres.</p>",
+    "<p>Edifié il y a plus d'un siècle par le Prince Albert 1er, le Musée Océanographique est à la fois un musée dédié au monde marin et un aquarium. Situé à flanc de falaise, surplombant la mer près d'une centaine de mètres au-dessus, vous aurez une vue époustouflante depuis la terrasse du bâtiment. De nombreuses salles, des bassins, des aquariums et des espaces ludiques permettent à toute la famille de passer un agréable moment de découverte et de détente.</p>",
+    "<p>Plusieurs musées de Monaco méritent le détour, tels que le musée des Timbres, la Villa Paloma et la Villa Sauber, ainsi que le musée Naval.</p>",
+    "<p>Si vous êtes amateur de vieilles voitures, ne ratez pas la magnifique collection d'une centaine de voitures anciennes de Son Altesse Sérénissime Le Prince de Monaco.</p>"
+  ],
+  "activityName": "Monaco",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

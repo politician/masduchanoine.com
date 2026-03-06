@@ -1,0 +1,46 @@
+{
+  "key": "/regates-royales-a-cannes/",
+  "lang": "fr",
+  "slug": "regates-royales-a-cannes",
+  "route": "/regates-royales-a-cannes",
+  "title": "Régates royales à Cannes | Mas du chanoine",
+  "description": "Les Régates Royales de Cannes, une course de voiliers classiques dans la baie de Cannes fin septembre. 7 catégories de bateaux et un spectacle magnifique.",
+  "alternates": {
+    "fr": "/regates-royales-a-cannes/",
+    "en": "/en/royal-regatas-in-cannes/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Régates royales à Cannes"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/regates.jpg",
+    "alt": "Régates royales à Cannes"
+  },
+  "paragraphs": [
+    "<p>Les Régates Royales de Cannes se déroulent du 22 au 28 septembre 2019 dans la baie de Cannes.</p>",
+    "<p>C'est une course de voiliers classiques et modernes qui attire les plus beaux yachts du monde entier. L'événement propose 7 catégories de bateaux avec des parcours différents adaptés à chaque classe.</p>",
+    "<p>Les bateaux naviguent dans la magnifique baie de Cannes, offrant un spectacle saisissant depuis la Croisette et les plages cannoises.</p>",
+    "<p>C'est l'un des plus importants rassemblements de yachts classiques en Méditerranée, une tradition qui perpétue l'esprit de la navigation à voile sur la Côte d'azur.</p>"
+  ],
+  "eventName": "Régates royales à Cannes",
+  "tags": [
+    "Côte d'azur",
+    "Festivals / Spectacles",
+    "Sport"
+  ],
+  "date": "4 août 2019",
+  "datetime": "2019-08-04",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

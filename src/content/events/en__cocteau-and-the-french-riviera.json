@@ -1,0 +1,40 @@
+{
+  "key": "/cocteau-et-la-cote-dazur/",
+  "lang": "en",
+  "slug": "cocteau-and-the-french-riviera",
+  "route": "/en/cocteau-and-the-french-riviera",
+  "title": "Cocteau and the French Riviera | Mas du Chanoine",
+  "description": "Cocteau and the French Riviera: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/cocteau-et-la-cote-dazur/",
+    "en": "/en/cocteau-and-the-french-riviera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Cocteau and the French Riviera"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Writer, playwright, filmmaker Cocteau also left on the Riviera frescoes, mosaics, tapestries. Three special places: Villefranche-sur-Mer in the chapel of the fishermen, Villa Sancto Sospir Cap Ferrat and Menton, where two museums collect his works.</p>",
+    "<p>In Menton, the museum Wunderman collection presents about 900 works in an extraordinary setting.</p>"
+  ],
+  "eventName": "Cocteau and the French Riviera",
+  "tags": [
+    "French Riviera",
+    "Museum"
+  ],
+  "date": "13 January 2020",
+  "datetime": "2020-01-13",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

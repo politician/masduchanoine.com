@@ -1,0 +1,46 @@
+{
+  "key": "/printemps-sur-la-cote-dazur/",
+  "lang": "fr",
+  "slug": "printemps-sur-la-cote-dazur",
+  "route": "/printemps-sur-la-cote-dazur",
+  "title": "Printemps sur la Côte d'azur | Mas du chanoine",
+  "description": "Les événements du printemps sur la Côte d'azur : Printemps des Arts à Monte-Carlo, Tennis Rolex Masters, triathlon de Cannes, et bien d'autres.",
+  "alternates": {
+    "fr": "/printemps-sur-la-cote-dazur/",
+    "en": "/en/spring-on-the-french-riviera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Printemps sur la Côte d'azur"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/printemps.jpg",
+    "alt": "Printemps sur la Côte d'azur"
+  },
+  "paragraphs": [
+    "<p>Le printemps arrive sur la Côte d'azur et il apporte son lot de festivités et d'événements.</p>",
+    "<p>Quelques rendez-vous à ne pas manquer :</p>",
+    "<p>Le printemps est une saison idéale pour découvrir la Côte d'azur, avec des températures douces et une nature en fleurs.</p>"
+  ],
+  "eventName": "Printemps sur la Côte d'azur",
+  "tags": [
+    "Côte d'azur",
+    "Découverte",
+    "Foires / Salons",
+    "Sport"
+  ],
+  "date": "13 mars 2019",
+  "datetime": "2019-03-13",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

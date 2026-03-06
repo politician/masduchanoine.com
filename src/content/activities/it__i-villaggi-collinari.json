@@ -1,0 +1,49 @@
+{
+  "key": "/activites/visiter-les-villages-perches/",
+  "lang": "it",
+  "slug": "i-villaggi-collinari",
+  "route": "/it/activites/i-villaggi-collinari",
+  "title": "I Villaggi Collinari — Attività Costa d'Azzurra",
+  "description": "I Villaggi Collinari: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/visiter-les-villages-perches/",
+    "en": "/en/activites/hilltop-villages/",
+    "it": "/it/activites/i-villaggi-collinari/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "I Villaggi Collinari"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/villages-perches.jpg",
+    "alt": "I Villaggi Collinari"
+  },
+  "paragraphs": [
+    "<p>È nell'entroterra nizzardo che le Alpi iniziano a elevarsi. Qui troverete molti borghi arroccati sulle colline. I più notevoli da ovest a est sono: Gourdon, Tourrettes-sur-Loup ed Eze.</p>",
+    "<p>Il nome Gourdon deriva da \"montagna\": il villaggio è arroccato a 760 m di altitudine sopra la valle del Loup. A soli 10 km dal Mediterraneo, offre un panorama unico e impressionante sulla Costa Azzurra, da Nizza a Théoule, per oltre 80 km.</p>",
+    "<p>Il suo castello feudale con torre quadrata e mastio è tipicamente provenzale; i giardini sono ispirati a Le Nôtre, celebre paesaggista del re Luigi XIV.</p>",
+    "<p>La chiesa di Saint-Vincent risale al XIII secolo e conserva il pavimento in pietre originali.</p>",
+    "<p>Il villaggio, interamente pedonale, invita a scoprire i suoi vicoli, e da Place Victoria potrete ammirare la vista sul Mediterraneo.</p>",
+    "<p>Per raggiungere Gourdon attraverserete le Gorges du Loup e potrete fermarvi ad ammirare diverse cascate, tra cui il Saut du Loup.</p>",
+    "<p>Tourrettes-sur-Loup è un borgo medievale soprannominato la Città delle Violette. Fino a qualche anno fa, una decina di produttori coltivava violette utilizzate nell'industria del profumo di Grasse. La Bastide aux Violettes presenta i metodi di coltivazione e i prodotti realizzati con questo fiore profumatissimo (profumi, dolci, ...).</p>",
+    "<p>Anche questo villaggio, posato su uno sperone roccioso, ha conservato la sua autenticità; è costruito attorno al castello.</p>",
+    "<p>Una ventina di botteghe e atelier artigianali vi aprono le porte. Troverete ceramica, lavorazioni in legno d'ulivo, pelletteria, tessitura, ...</p>",
+    "<p>Costruito sul bordo di una falesia che domina Saint-Jean-Cap-Ferrat, il villaggio di Eze custodisce molti tesori nascosti, a pochi chilometri da Monaco.</p>",
+    "<p>All'ingresso del villaggio, la postierla del XIV secolo è scavata nel muro di cinta del castello. Bisogna salire per i vicoli a tornanti per raggiungere la cima del borgo.</p>",
+    "<p>Lasciatevi guidare dall'istinto per scoprire frammenti di mura dell'Età del Bronzo, resti sui quali si arrampicano bouganville, rose e gelsomini. Potrete vedere bassorilievi del XIII secolo, fontane e ferri battuti antichi. La Cappella dei Penitenti Bianchi è l'edificio più antico e la chiesa di Notre-Dame-de-l'Assomption vi apre le porte avvicinandovi alla sommità.</p>",
+    "<p>Arrivati in alto, vedrete i resti del castello e il Giardino Esotico, con centinaia di piante succulente e cactus che trovano posto tra le rovine aride.</p>"
+  ],
+  "activityName": "I Villaggi Collinari",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

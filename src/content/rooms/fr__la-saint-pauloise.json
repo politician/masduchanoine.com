@@ -1,0 +1,96 @@
+{
+  "key": "/chambres-hotes/la-saint-pauloise/",
+  "lang": "fr",
+  "slug": "la-saint-pauloise",
+  "route": "/chambres-hotes/la-saint-pauloise",
+  "title": "La Saint Pauloise | Mas du chanoine",
+  "description": "Dans la partie la plus ancienne du Mas, chambre de maître avec vue sur le village de Saint-Paul de Vence",
+  "alternates": {
+    "fr": "/chambres-hotes/la-saint-pauloise/",
+    "en": "/en/chambres-hotes/saint-pauloise-guestroom/",
+    "it": "/it/chambres-hotes/saint-pauloise-camera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Chambres",
+      "href": "/chambres-dhotes/"
+    },
+    {
+      "label": "La Saint Pauloise"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Cette chambre d'hôtes de charme (30&nbsp;m²) située au 1er étage est accessible directement par un escalier depuis le patio extérieur. Elle se trouve dans la partie la plus ancienne du Mas datant du 17ème siècle et elle doit son nom à la vue magnifique qu'elle offre sur le village de Saint-Paul de Vence.</p>",
+    "<p>Elle fut la chambre du Chanoine et des maîtres de maison successifs. Meublée dans la tradition provençale avec d'authentiques meubles peints, elle offre un confort chaleureux grâce à son parquet de chêne.</p>",
+    "<p>En plus d'un lit King Size (180×200), vous disposez de deux fauteuils et d'un bureau. La salle de bain très spacieuse et lumineuse comprend une baignoire encastrée dans le sol, une douche et des toilettes. Elle offre une jolie vue sur les montagnes.</p>"
+  ],
+  "roomName": "LA SAINT PAULOISE",
+  "subtitle": "Charme & Vue sur le village",
+  "tagline": "Dans la partie la plus ancienne du Mas, chambre de maître avec vue sur le village de Saint-Paul de Vence",
+  "heroImage": "/media/chambres/chambre-saint-pauloise.jpg",
+  "amenities": [
+    "Lit King Size",
+    "Café Nespresso",
+    "Baignoire",
+    "Air conditionné",
+    "Thé et tisanes",
+    "Douche italienne",
+    "Wi-Fi gratuit",
+    "Mini Bar",
+    "WC",
+    "TV écran plat",
+    "Eau minérale",
+    "Sèche-cheveux",
+    "Chaînes internationales",
+    "Autres boissons en option",
+    "Peignoirs",
+    "Coffre-fort",
+    "Parking gratuit",
+    "Produits d'accueil",
+    "2 fauteuils",
+    "Bureau",
+    "Serviettes piscine"
+  ],
+  "amenitiesTitle": null,
+  "amenitiesSummary": "Surface : 30 m² ― 1 chambre ― 1er étage",
+  "gallery": [
+    {
+      "src": "/media/chambres/chambre-saint-pauloise.jpg",
+      "alt": "La Saint Pauloise — chambre principale"
+    },
+    {
+      "src": "/media/chambres/saint-pauloise-armoire.jpg",
+      "alt": "La Saint Pauloise — armoire provençale peinte"
+    },
+    {
+      "src": "/media/chambres/saint-pauloise-salle-bain.jpg",
+      "alt": "La Saint Pauloise — salle de bain avec baignoire"
+    },
+    {
+      "src": "/media/chambres/saint-pauloise-entree.jpg",
+      "alt": "La Saint Pauloise — entrée depuis l'escalier"
+    },
+    {
+      "src": "/media/chambres/saint-pauloise-entree-riviera.jpg",
+      "alt": "La Saint Pauloise — entrée de la chambre"
+    },
+    {
+      "src": "/media/photos/saint-pauloise-1400.jpg",
+      "alt": "La Saint Pauloise — vue panoramique"
+    },
+    {
+      "src": "/media/chambres/saint-paul-village.jpg",
+      "alt": "Village de Saint-Paul de Vence"
+    }
+  ],
+  "galleryTitle": null,
+  "bookingLabel": null,
+  "otherRoomsTitle": null,
+  "otherRoomsLabel": null,
+  "otherRoomsUrl": null
+}

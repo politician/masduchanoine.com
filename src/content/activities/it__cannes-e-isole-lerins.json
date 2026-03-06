@@ -1,0 +1,42 @@
+{
+  "key": "/activites/visiter-cannes-et-iles-de-lerins/",
+  "lang": "it",
+  "slug": "cannes-e-isole-lerins",
+  "route": "/it/activites/cannes-e-isole-lerins",
+  "title": "Cannes e Isole Lerins — Attività Costa d'Azzurra",
+  "description": "Cannes e Isole Lerins: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/visiter-cannes-et-iles-de-lerins/",
+    "en": "/en/activites/cannes-and-lerins-islands/",
+    "it": "/it/activites/cannes-e-isole-lerins/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Cannes e Isole Lerins"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/cannes.jpg",
+    "alt": "Cannes e Isole Lerins"
+  },
+  "paragraphs": [
+    "<p>La celebre città di Cannes è conosciuta in tutto il mondo per il suo Festival del Cinema, che si svolge ogni primavera da oltre 70 anni. Per una settimana la città vive al ritmo del cinema, delle proiezioni e delle numerose serate che riuniscono artisti, celebrità e ospiti internazionali. Sul \"Chemin des Étoiles\", più di 300 artisti hanno lasciato l'impronta della loro mano.</p>",
+    "<p>Sulla rinomata Croisette resterete colpiti dai grandi hotel, dalle boutique di lusso, dagli splendidi edifici Art Déco da un lato e dalle spiagge di sabbia fine dall'altro.</p>",
+    "<p>Il quartiere storico del Suquet vi aspetta vicino al vecchio porto, con edifici antichi, vicoli in salita e scalinate. Dalla parte alta del centro storico avrete una vista spettacolare sulle isole e sulla Croisette.</p>",
+    "<p>Di fronte a questa città animata, potrete trovare calma e natura a meno di 15 minuti di barca sulle Isole di Lérins. Davanti a Cannes, due isole preservate sono ideali per riposo, passeggiate e meditazione.</p>",
+    "<p>L'isola di Sainte-Marguerite ha conservato il suo carattere selvaggio. È attraversata da numerosi sentieri all'ombra di pini ed eucalipti; potrete anche fare un tuffo nel Mediterraneo. È una riserva naturale, rifugio di molti uccelli durante le migrazioni. Al Fort Royal ritroverete la leggenda della Maschera di Ferro.</p>",
+    "<p>La sua vicina, l'isola di Saint-Honorat, è privata e appartiene ai monaci cistercensi. Fondata da Saint Honorat nel V secolo, ospita il monastero fortificato, la Cappella della Trinità (l'isola ne conta 7) e un forno per palle di cannone dell'epoca napoleonica. I monaci producono un celebre vino, liquori e olio d'oliva. Approfittate della giornata per pranzare al ristorante La Tonnelle, in una cornice incantevole con i piedi nella sabbia.</p>"
+  ],
+  "activityName": "Cannes e Isole Lerins",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

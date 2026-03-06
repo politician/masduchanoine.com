@@ -1,0 +1,39 @@
+{
+  "key": "/polygone-riviera-a-cagnes-sur-mer/",
+  "lang": "en",
+  "slug": "polygone-riviera-shopping-center",
+  "route": "/en/polygone-riviera-shopping-center",
+  "title": "Polygone Riviera Shopping Center | Mas du Chanoine",
+  "description": "Polygone Riviera Shopping Center: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/polygone-riviera-a-cagnes-sur-mer/",
+    "en": "/en/polygone-riviera-shopping-center/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Polygone Riviera Shopping Center"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Only 2 kilometers from our guesthouse, Polygone Riviera is an attractive outdoor shopping center with pedestrian streets, shops, cinemas and restaurants grouped into 4 themed districts. Nearly 150 stores including Printemps department store invite you to stroll and window shop, and works of art including the famous Sacha Sosno sculpture are on display.</p>"
+  ],
+  "eventName": "Polygone Riviera Shopping Center",
+  "tags": [
+    "French Riviera",
+    "Our guesthouse"
+  ],
+  "date": "16 May 2018",
+  "datetime": "2018-05-16",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

@@ -1,17 +1,27 @@
 ---
 import type { Lang } from '../i18n/translations';
-import { navItems as allNavItems, getHomePath, getBookingUrl, labelMap, getLangFromPath } from '../i18n/translations';
+import {
+  navItems as allNavItems,
+  getHomePath,
+  getBookingUrl,
+  labelMap,
+  getLangFromPath,
+  getLanguageAlternates,
+  uiDictionary,
+} from '../i18n/translations';
 
 export interface Props {
   lang?: Lang;
+  alternates?: Partial<Record<Lang, string>>;
 }
 
 const lang: Lang = Astro.props.lang || getLangFromPath(Astro.url.pathname);
+const alternates = getLanguageAlternates(Astro.url.pathname, Astro.props.alternates);
 const navItems = allNavItems[lang];
 const currentPath = Astro.url.pathname;
 const homePath = getHomePath(lang);
 const bookingUrl = getBookingUrl(lang);
-const bookLabel = lang === 'it' ? 'Prenota' : lang === 'en' ? 'Book Now' : 'Réserver';
+const bookLabel = uiDictionary[lang].bookNow;
 
 const langSwitchItems = (['fr', 'en', 'it'] as const).filter(l => l !== lang);
 ---
@@ -78,9 +88,9 @@ const langSwitchItems = (['fr', 'en', 'it'] as const).filter(l => l !== lang);
       <div class="flex items-center gap-2 mr-2">
         {langSwitchItems.map((l) => (
           <a
-            href={l === 'fr' ? '/' : `/${l}/`}
+            href={alternates[l] || getHomePath(l)}
             class="text-xs font-medium uppercase text-primary-500 hover:text-accent-600 transition-colors"
-            title={labelMap[l]}
+            title={`${uiDictionary[lang].switchLanguage}: ${labelMap[l]}`}
           >
             {l.toUpperCase()}
           </a>
@@ -162,9 +172,9 @@ const langSwitchItems = (['fr', 'en', 'it'] as const).filter(l => l !== lang);
       <div class="flex items-center gap-3 mt-4 mb-2">
         {langSwitchItems.map((l) => (
           <a
-            href={l === 'fr' ? '/' : `/${l}/`}
+            href={alternates[l] || getHomePath(l)}
             class="text-xs font-medium uppercase text-primary-500 hover:text-accent-600 transition-colors"
-            title={labelMap[l]}
+            title={`${uiDictionary[lang].switchLanguage}: ${labelMap[l]}`}
           >
             {labelMap[l]}
           </a>

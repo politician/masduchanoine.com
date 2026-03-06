@@ -1,0 +1,39 @@
+{
+  "key": "/activites/golf/",
+  "lang": "en",
+  "slug": "golf-en",
+  "route": "/en/activites/golf-en",
+  "title": "Golf — Activities near Mas du Chanoine",
+  "description": "Golf: discover this activity near our guesthouse on the French Riviera.",
+  "alternates": {
+    "fr": "/activites/golf/",
+    "en": "/en/activites/golf-en/",
+    "it": "/it/activites/golf-3/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Activities",
+      "href": "/en/activities-french-riviera/"
+    },
+    {
+      "label": "Golf"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/golf.jpg",
+    "alt": "Golf"
+  },
+  "paragraphs": [
+    "<p>The French Riviera is an ideal destination for golf lovers. More than 10 18-hole golf courses and 6 9-hole golf courses are accessible within a 15-km radius around Mas du Chanoine.</p>",
+    "<p>18-hole courses: Monte-Carlo Golf Club, Golf Club de Biot, Golf Country Club de Cannes Mougins, Golf d'Opio, Golf de la Grande Bastide, Golf du Royal Mougins, Golf du Claux-Amic, Golf Country Club de Saint-Donat, Golf Old Course Mandelieu.</p>",
+    "<p>9-hole courses: Golf de Villeneuve-Loubet, Golf Country Club de Nice, Le Provençal Golf Biot, Victoria Golf Club Valbonne.</p>"
+  ],
+  "activityName": "Golf",
+  "backLabel": "← All activities",
+  "backUrl": "/en/activities-french-riviera/",
+  "bookingLabel": "Book Now"
+}

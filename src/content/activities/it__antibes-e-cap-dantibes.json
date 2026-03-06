@@ -1,0 +1,41 @@
+{
+  "key": "/activites/antibes-et-cap-dantibes/",
+  "lang": "it",
+  "slug": "antibes-e-cap-dantibes",
+  "route": "/it/activites/antibes-e-cap-dantibes",
+  "title": "Antibes e Cap d'Antibes — Attività Costa d'Azzurra",
+  "description": "Antibes e Cap d'Antibes: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/antibes-et-cap-dantibes/",
+    "en": "/en/activites/antibes-and-cap-dantibes/",
+    "it": "/it/activites/antibes-e-cap-dantibes/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Antibes e Cap d'Antibes"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/antibes.jpg",
+    "alt": "Antibes e Cap d'Antibes"
+  },
+  "paragraphs": [
+    "<p>A metà strada tra Nizza e Cannes, la località balneare di Antibes Juan-les-Pins offre lunghe spiagge di sabbia fine dove praticare tutti gli sport nautici.</p>",
+    "<p>Iniziate la giornata visitando il centro storico. Ogni mattina il Cours Masséna ospita un mercato di prodotti locali. Poco distante si trova il porto Vauban, dove potrete ammirare barche a vela, yacht e le imbarcazioni più lussuose del mondo ormeggiate al Quai des Milliardaires.</p>",
+    "<p>Una parte della città vecchia è pedonale: di giorno troverete numerose botteghe, mentre la sera le terrazze di bar e ristoranti si animano con orchestre dal vivo. L'atmosfera è sempre vivace.</p>",
+    "<p>Per gli amanti dell'arte, il Museo Picasso occupa il Castello Grimaldi, splendida costruzione medievale. L'artista vi installò il suo atelier per 6 mesi e lasciò al museo tutte le opere realizzate in quel periodo: dipinti e anche ceramiche create con gli artigiani di Vallauris.</p>",
+    "<p>Nel primo pomeriggio partite alla scoperta di Cap d'Antibes. Potrete fare un'escursione lungo il sentiero costiero di \"Tirepoil\" fino al faro: costeggia una successione di piccole calette dove riposarsi. Vedrete Villa Eilenroc e grandi proprietà dai giardini lussureggianti. Nella baia di La Garoupe potrete anche scegliere se fare il bagno o trascorrere una giornata di relax in una spiaggia privata.</p>"
+  ],
+  "activityName": "Antibes e Cap d'Antibes",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

@@ -1,0 +1,39 @@
+{
+  "key": "/fete-de-lolive-au-cannet/",
+  "lang": "en",
+  "slug": "olive-fair-in-le-cannet",
+  "route": "/en/olive-fair-in-le-cannet",
+  "title": "Olive Fair in Le Cannet | Mas du Chanoine",
+  "description": "Olive Fair in Le Cannet: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/fete-de-lolive-au-cannet/",
+    "en": "/en/olive-fair-in-le-cannet/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Olive Fair in Le Cannet"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>This annual festival of olive brings together farmers and harvesters in Le Cannet. You will find stalls to taste and buy olives, compare varieties, and buy olive oil pressed in the region and culinary specialties (tapenade, anchovy puree, olive pasta…).</p>"
+  ],
+  "eventName": "Olive Fair in Le Cannet",
+  "tags": [
+    "Fairs/shows",
+    "French Riviera"
+  ],
+  "date": "01 April 2018",
+  "datetime": "2018-04-01",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

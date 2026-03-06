@@ -1,0 +1,46 @@
+{
+  "key": "/fete-des-violettes-a-tourrettes-sur-loup/",
+  "lang": "fr",
+  "slug": "fete-des-violettes-a-tourrettes-sur-loup",
+  "route": "/fete-des-violettes-a-tourrettes-sur-loup",
+  "title": "Fête des violettes à Tourrettes-sur-Loup | Mas du chanoine",
+  "description": "Fin février, ou tout début mars la fête des violettes de Tourrettes-sur-Loup regroupe artisans parfumeurs, confiseurs et festivaliers",
+  "alternates": {
+    "fr": "/fete-des-violettes-a-tourrettes-sur-loup/",
+    "en": "/en/violet-festival-in-tourrettes-loup/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Fête des violettes à Tourrettes-sur-Loup"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/violettes.jpg",
+    "alt": "Bonbons à la violette, Tourrettes-sur-Loup"
+  },
+  "paragraphs": [
+    "<p>Fin février-début mars se déroule habituellement la Fête des Violettes à Tourrettes-sur-Loup.</p>",
+    "<p>Il y a 150 ans, le village a commencé à cultiver la violette pour l'industrie de la parfumerie. On trouve maintenant de nombreux produits dérivés, savons, sirops, bonbons, … élaborés avec cette petite fleur très parfumée.</p>",
+    "<p>Tout au long du week-end, le village est animé avec des spectacles de musique et de danse. Vous pouvez en profiter pour visiter le musée de «&nbsp;La Bastide aux Violettes&nbsp;» ainsi que la cité médiévale. Ce magnifique village de plan circulaire abrite de jolies maisons en pierre et une jolie vue dégagée jusqu'à la mer.</p>",
+    "<p>Au cours de ces 2 journées, les artisans présentent leurs produits sur un marché artisanal, et le dimanche après-midi est clôturé par la parade fleurie.</p>",
+    "<p><a href=\"http://www.tourrettessurloup.com/index.php?article=1196\" target=\"_blank\" rel=\"noopener noreferrer\">Programme sur le site de l'Office du Tourisme</a></p>"
+  ],
+  "eventName": "Fête des violettes à Tourrettes-sur-Loup",
+  "tags": [
+    "Côte d'azur",
+    "Découverte"
+  ],
+  "date": "17 janvier 2020",
+  "datetime": "2020-01-17",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

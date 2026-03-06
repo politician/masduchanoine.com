@@ -1,0 +1,46 @@
+{
+  "key": "/carnaval/",
+  "lang": "fr",
+  "slug": "carnaval",
+  "route": "/carnaval",
+  "title": "Carnaval de Nice : Roi des trésors du Monde | Mas du chanoine",
+  "description": "Du 10 au 26 février 2023, la promenade des Anglais et le quartier Masséna accueillent les défilés (corsos) du Carnaval de Nice, créé en 1873 qui fête cette année ses 150 ans.",
+  "alternates": {
+    "fr": "/carnaval/",
+    "en": "/en/nice-carnival-king-of-cinema/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Carnaval de Nice"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/carnaval.jpg",
+    "alt": "Carnaval de Nice"
+  },
+  "paragraphs": [
+    "<p>Du 10 au 26 février 2023, la promenade des Anglais et le quartier Masséna accueillent les défilés (corsos) du Carnaval de Nice, créé en 1873 qui fête cette année ses 150 ans.</p>",
+    "<p>Vous pouvez assister à des batailles de fleurs lancées depuis les chars sur la promenade des Anglais, ou bien au corso carnavalesque des chars fleuris de plus de 10 mètres de hauteur, sur le thème du «&nbsp;Roi des Trésors du Monde&nbsp;» en version jour ou nuit. Le tout animé par des centaines de danseurs et musiciens venus du monde entier.</p>",
+    "<p>Chaque année, le thème change, ce qui donne l'occasion aux carnavaliers de réaliser et découvrir de nouveaux personnages et de nouveaux chars.</p>",
+    "<p>Durant ces 2 semaines, la ville a un esprit de fête pour apporter beaucoup de chaleur au cœur de l'hiver&nbsp;: une autre façon de découvrir la Côte d'Azur.</p>",
+    "<p>Informations et réservations sur le <a href=\"https://www.nicecarnaval.com/\" target=\"_blank\" rel=\"noopener noreferrer\">site du Carnaval</a>.</p>"
+  ],
+  "eventName": "Carnaval de Nice : Roi des trésors du Monde",
+  "tags": [
+    "Côte d'azur",
+    "Festivals / Spectacles"
+  ],
+  "date": "20 janvier 2023",
+  "datetime": "2023-01-20",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

@@ -1,0 +1,42 @@
+{
+  "key": "/activites/cours-de-cuisine-du-sud/",
+  "lang": "it",
+  "slug": "corso-di-cucina",
+  "route": "/it/activites/corso-di-cucina",
+  "title": "Corso di Cucina — Attività Costa d'Azzurra",
+  "description": "Corso di Cucina: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/cours-de-cuisine-du-sud/",
+    "en": "/en/activites/cooking-lessons/",
+    "it": "/it/activites/corso-di-cucina/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Corso di Cucina"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/cuisine.jpg",
+    "alt": "Corso di Cucina"
+  },
+  "paragraphs": [
+    "<p>Se volete approfittare del vostro soggiorno in Costa Azzurra per scoprire la cucina provenzale, avete diverse possibilità.</p>",
+    "<p>Imparate a cucinare i prodotti emblematici della regione: zucchine di Nizza, pomodori, verdure provenzali, pesce del Mediterraneo, senza dimenticare i dessert (bugnes, crostata al limone di Mentone, ...).</p>",
+    "<p>Nel laboratorio \"Notes de Cuisine\", Laurence vi accoglie in piccoli gruppi per introdurvi alla cucina della Contea di Nizza. Nel cuore del villaggio di La Colle-sur-Loup, in una bella casa in pietra, i corsi si tengono nella sua cucina con attrezzature professionali. Sul suo sito potete vedere bellissime foto dei suoi piatti (petits farcis niçois, gnocchi, torta di bietole, ...). Potete consultare le date del calendario o contattarla per una richiesta personalizzata. <a href=\"https://www.notesdecuisine.fr/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.notesdecuisine.fr/</a></p>",
+    "<p>Lo chef Alain Llorca vi propone di entrare nelle cucine del suo ristorante gastronomico (1 stella Michelin) per partecipare a uno dei suoi corsi. Condividerà trucchi e consigli attraverso la realizzazione di un menu dedicato a un prodotto o a un tema specifico (cucinare il tartufo, menu speciale di Pasqua, ...).</p>",
+    "<p>Suo fratello, lo chef Jean-Michel Llorca, pasticcere del ristorante gastronomico, propone laboratori golosi di pasticceria.</p>",
+    "<p>Il calendario dei corsi è disponibile qui: <a href=\"https://www.alainllorca.com/atelier-degustation/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.alainllorca.com/atelier-degustation/</a></p>"
+  ],
+  "activityName": "Corso di Cucina",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

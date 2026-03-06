@@ -1,0 +1,45 @@
+{
+  "key": "/ete-en-musique-sur-la-cote-dazur/",
+  "lang": "fr",
+  "slug": "ete-en-musique-sur-la-cote-dazur",
+  "route": "/ete-en-musique-sur-la-cote-dazur",
+  "title": "Eté en Musique sur la Cote d'azur | Mas du chanoine",
+  "description": "De nombreux festivals de musique sont organisés sur la Côte d'azur et attirent d'année en année les mélomanes en visite dans la région.",
+  "alternates": {
+    "fr": "/ete-en-musique-sur-la-cote-dazur/",
+    "en": "/en/summer-festivals-on-the-french-riviera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Eté en Musique sur la Côte d'azur"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/ete-musique.jpg",
+    "alt": "Festivals de musique sur la Côte d'Azur"
+  },
+  "paragraphs": [
+    "<p>De nombreux festivals de musique sont organisés sur la Côte d'azur et attirent d'année en année les mélomanes en visite dans la région.</p>",
+    "<p>Nous vous préciserons les dates, les lieux et donnerons le lien vers la programmation de chaque événement dès qu'ils seront officiels, la plupart à moins d'une demi-heure de trajet depuis notre maison d'hôtes&nbsp;:</p>",
+    "<p>Si vous voulez nous faire profiter d'un moment musical, après l'heure du petit déjeuner au mas du chanoine, un piano est à votre disposition dans la salle à manger.</p>",
+    "<p class=\"text-sm text-primary-500 italic\">Crédit photos&nbsp;: «&nbsp;Music Concert&nbsp;» by Pixomar chez freedigitalphotos et Jazz à Juan © Office de Tourisme d'Antibes Juan-les-Pins – Gilles Lefrancq</p>"
+  ],
+  "eventName": "Eté en Musique sur la Côte d'azur",
+  "tags": [
+    "Côte d'azur",
+    "Festivals / Spectacles"
+  ],
+  "date": "15 décembre 2019",
+  "datetime": "2019-12-15",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

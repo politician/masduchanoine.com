@@ -1,0 +1,39 @@
+{
+  "key": "/salon-des-antiquaires-dantibes/",
+  "lang": "en",
+  "slug": "antibes-art-fair",
+  "route": "/en/antibes-art-fair",
+  "title": "Antibes Art Fair | Mas du Chanoine",
+  "description": "Antibes Art Fair: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/salon-des-antiquaires-dantibes/",
+    "en": "/en/antibes-art-fair/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Antibes Art Fair"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>The annual meeting of art and antique lovers on the French Riviera. Under the tent, you will find stalls built as apartments showcasing exceptional pieces of furniture, tables set with lovely china and silverware, but also galleries of signed paintings, jewelers and specialists of Art objects. In total one hundred exhibitors present objects, paintings or exquisite pieces of furniture.</p>"
+  ],
+  "eventName": "Antibes Art Fair",
+  "tags": [
+    "Fairs/shows",
+    "French Riviera"
+  ],
+  "date": "20 March 2020",
+  "datetime": "2020-03-20",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

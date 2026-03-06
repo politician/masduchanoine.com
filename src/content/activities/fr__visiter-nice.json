@@ -1,0 +1,39 @@
+{
+  "key": "/activites/visiter-nice/",
+  "lang": "fr",
+  "slug": "visiter-nice",
+  "route": "/activites/visiter-nice",
+  "title": "Nice, proche de nos chambres d'hôtes | Mas du chanoine",
+  "description": "Nice, capitale de la Côte d'Azur vous attend à un quart d'heure des chambres d'hôtes du Mas du Chanoine, avec la célèbre promenade des anglais le long de la mer.",
+  "alternates": {
+    "fr": "/activites/visiter-nice/",
+    "en": "/en/activites/nice/",
+    "it": "/it/activites/nizza/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Activités",
+      "href": "/activites-cote-azur/"
+    },
+    {
+      "label": "Nice"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/nice.jpg",
+    "alt": "Place Masséna, Nice"
+  },
+  "paragraphs": [
+    "<p>Nice, capitale de la Côte d'Azur vous attend à un quart d'heure du Mas du Chanoine. Cette ville cosmopolite vous permettra de vous promener, de faire du shopping, de visiter des musées (de nombreux artistes ont vécu sur la Côte d'Azur, attirés par la richesse des paysages et des couleurs).</p>",
+    "<p>Vous pourrez flâner sur la très célèbre Promenade des Anglais et vous reposer sur ses jolies plages de sable et galets, au bord d'une eau turquoise, ou organiser votre journée selon un thème&nbsp;:</p>",
+    "<p>et bien d'autres encore selon vos envies.</p>"
+  ],
+  "activityName": "Nice",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

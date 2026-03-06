@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import ActivityLayout from '../../../layouts/ActivityLayout.astro';
+
+const routeLangs = ['en', 'it'] as const;
+
+export async function getStaticPaths() {
+  const entries = await getCollection('activities', ({ data }) => data.lang !== 'fr');
+  return entries.map((entry) => ({
+    params: { lang: entry.data.lang, slug: entry.data.slug },
+    props: { activity: entry.data },
+  }));
+}
+
+const { lang } = Astro.params;
+if (!lang || !routeLangs.includes(lang as (typeof routeLangs)[number])) {
+  return Astro.redirect('/');
+}
+
+const { activity } = Astro.props;
+---
+
+<ActivityLayout
+  title={activity.title}
+  description={activity.description}
+  lang={lang}
+  alternates={activity.alternates}
+  activityName={activity.activityName}
+  breadcrumb={activity.breadcrumb}
+  image={activity.image ?? undefined}
+  backLabel={activity.backLabel ?? undefined}
+  backUrl={activity.backUrl ?? undefined}
+  bookingLabel={activity.bookingLabel ?? undefined}
+>
+  {activity.paragraphs.map((paragraph: string) => (
+    <div set:html={paragraph} />
+  ))}
+</ActivityLayout>

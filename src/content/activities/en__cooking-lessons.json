@@ -1,0 +1,39 @@
+{
+  "key": "/activites/cours-de-cuisine-du-sud/",
+  "lang": "en",
+  "slug": "cooking-lessons",
+  "route": "/en/activites/cooking-lessons",
+  "title": "Cooking Lessons — Activities near Mas du Chanoine",
+  "description": "Cooking Lessons: discover this activity near our guesthouse on the French Riviera.",
+  "alternates": {
+    "fr": "/activites/cours-de-cuisine-du-sud/",
+    "en": "/en/activites/cooking-lessons/",
+    "it": "/it/activites/corso-di-cucina/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Activities",
+      "href": "/en/activities-french-riviera/"
+    },
+    {
+      "label": "Cooking Lessons"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/cuisine.jpg",
+    "alt": "Cooking Lessons"
+  },
+  "paragraphs": [
+    "<p>If you want to discover the cuisine of Provence, several solutions are available. Come and learn how to cook the emblematic products of the region: zucchini from Nice, tomatoes, Provençal vegetables, Mediterranean fish, and desserts.</p>",
+    "<p>At the \"Notes de Cuisine\" workshop, Laurence welcomes you in small groups to introduce you to the cuisine of the County of Nice.</p>",
+    "<p>Chef Alain Llorca invites you to the kitchens of his gourmet restaurant (1 Michelin star) to attend one of his classes. His brother Chef Jean-Michel Llorca offers pastry workshops.</p>"
+  ],
+  "activityName": "Cooking Lessons",
+  "backLabel": "← All activities",
+  "backUrl": "/en/activities-french-riviera/",
+  "bookingLabel": "Book Now"
+}

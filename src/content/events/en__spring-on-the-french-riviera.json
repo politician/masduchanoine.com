@@ -1,0 +1,40 @@
+{
+  "key": "/printemps-sur-la-cote-dazur/",
+  "lang": "en",
+  "slug": "spring-on-the-french-riviera",
+  "route": "/en/spring-on-the-french-riviera",
+  "title": "Spring on the French Riviera | Mas du Chanoine",
+  "description": "Spring on the French Riviera: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/printemps-sur-la-cote-dazur/",
+    "en": "/en/spring-on-the-french-riviera/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "Spring on the French Riviera"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>Several annual events attract visitors in April/May: Springtime Monte Carlo Arts, Tennis Rolex Masters in Monaco, International Triathlon in Cannes, La Napoule Boats Show in Mandelieu, Nice Semi-Marathon, Bridge Festival of Juan les Pins, the May festival in Cimiez gardens, Expo-rose in Grasse, and rose festivals in St Jean Cap Ferrat and La Colle sur Loup.</p>"
+  ],
+  "eventName": "Spring on the French Riviera",
+  "tags": [
+    "Discoveries",
+    "Fairs/shows",
+    "Sport"
+  ],
+  "date": "13 March 2019",
+  "datetime": "2019-03-13",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

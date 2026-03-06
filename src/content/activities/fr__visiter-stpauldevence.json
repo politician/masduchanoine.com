@@ -1,0 +1,43 @@
+{
+  "key": "/activites/visiter-stpauldevence/",
+  "lang": "fr",
+  "slug": "visiter-stpauldevence",
+  "route": "/activites/visiter-stpauldevence",
+  "title": "Saint Paul de Vence | Mas du chanoine",
+  "description": "Reconnu comme l'un des plus beaux villages de France, Saint-Paul de Vence vous charmera par son ambiance unique. Village médiéval fortifié, Saint-Paul de Vence est perché sur un éperon rocheux et surplombe la Mer Méditerranée.",
+  "alternates": {
+    "fr": "/activites/visiter-stpauldevence/",
+    "en": "/en/activites/st-paul-de-vence/",
+    "it": "/it/activites/saint-paul-de-vence/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Activités",
+      "href": "/activites-cote-azur/"
+    },
+    {
+      "label": "Saint Paul de Vence"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/saint-paul.jpg",
+    "alt": "village de Saint Paul de Vence CRT Cote azur"
+  },
+  "paragraphs": [
+    "<p>Reconnu comme l'un des plus beaux villages de France, <strong>Saint-Paul de Vence</strong> vous charmera par son ambiance unique.</p>",
+    "<p><strong>Village médiéval fortifié</strong>, Saint-Paul de Vence est perché sur un éperon rocheux et surplombe la <strong>Mer Méditerranée</strong>. Le calme de ses ruelles et la lumière exceptionnelle ont de tout temps attiré et inspiré les artistes du monde entier&nbsp;: poètes, écrivains, peintres, sculpteurs…</p>",
+    "<p>Vous pénétrez dans ce village pittoresque entièrement piéton en franchissant la porte aménagée dans les remparts. Flânez dans les ruelles, au gré de vos envies, et découvrez de petites places, des fontaines, des ateliers d'artisans d'Art, … A côté de l'église, la très célèbre <strong>Chapelle Folon</strong>, décorée par l'artiste belge vous séduira par son calme et sa sérénité.</p>",
+    "<p>La rue principale regorge de galeries mettant toutes les formes d'Art à l'honneur.</p>",
+    "<p>Un tour du village <strong>le long des remparts</strong> vous offrira une vue sur la Mer Méditerranée et les montagnes de l'arrière-pays.</p>",
+    "<p>Le soir, après le départ des nombreux visiteurs, le calme revient sur le village, vous laissant l'occasion de le voir sous un autre éclairage, plus intime.</p>",
+    "<p>N'oubliez pas de visiter <strong>la Fondation Maeght</strong>, mondialement connue, consacrée à l'Art moderne et contemporain. Outre l'exposition permanente présentant des œuvres de Giacometti, Chagall, Bonnard, Léger, les expositions temporaires réservent de grands espaces aux artistes mis à l'honneur. La particularité du musée, tient dans le nombre important de sculptures exposées dans les très beaux jardins, parmi lesquelles celles de Miro.</p>"
+  ],
+  "activityName": "Saint Paul de Vence",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

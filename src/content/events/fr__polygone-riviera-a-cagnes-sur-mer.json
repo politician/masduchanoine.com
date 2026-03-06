@@ -1,0 +1,45 @@
+{
+  "key": "/polygone-riviera-a-cagnes-sur-mer/",
+  "lang": "fr",
+  "slug": "polygone-riviera-a-cagnes-sur-mer",
+  "route": "/polygone-riviera-a-cagnes-sur-mer",
+  "title": "Polygone Riviera à Cagnes sur mer | Mas du chanoine",
+  "description": "Centre commercial à ciel ouvert à 2 km de nos chambres d'hôtes, Polygone Riviera propose 150 boutiques et des oeuvres d'art en plein air.",
+  "alternates": {
+    "fr": "/polygone-riviera-a-cagnes-sur-mer/",
+    "en": "/en/polygone-riviera-shopping-center/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Événements",
+      "href": "/evenements-cote-azur/"
+    },
+    {
+      "label": "Polygone Riviera à Cagnes sur mer"
+    }
+  ],
+  "image": {
+    "src": "/media/evenements/polygone-riviera.jpg",
+    "alt": "Polygone Riviera à Cagnes sur Mer"
+  },
+  "paragraphs": [
+    "<p>A 2 km à peine de nos chambres d'hôtes, Polygone Riviera est un centre commercial à ciel ouvert, situé à Cagnes-sur-mer. Il est organisé en 4 quartiers et propose environ 150 boutiques dont Le Printemps.</p>",
+    "<p>De multiples restaurants sont aussi proposés et il accueille un cinéma multiplexe.</p>",
+    "<p>Le centre intègre des oeuvres d'art contemporain en plein air, dont le « Guetteur » de Sacha Sosno, une sculpture monumentale de 26 mètres de haut visible depuis l'autoroute.</p>",
+    "<p>Plus d'informations sur <a href=\"https://www.polygone-riviera.fr\" target=\"_blank\" rel=\"noopener noreferrer\">www.polygone-riviera.fr</a></p>"
+  ],
+  "eventName": "Polygone Riviera à Cagnes sur mer",
+  "tags": [
+    "Côte d'azur",
+    "Notre Maison d'hôtes"
+  ],
+  "date": "16 mai 2018",
+  "datetime": "2018-05-16",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

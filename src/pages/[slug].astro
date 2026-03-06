@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import EventLayout from '../layouts/EventLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('events', ({ data }) => data.lang === 'fr');
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { event: entry.data },
+  }));
+}
+
+const { event } = Astro.props;
+---
+
+<EventLayout
+  title={event.title}
+  description={event.description}
+  lang="fr"
+  alternates={event.alternates}
+  eventName={event.eventName}
+  breadcrumb={event.breadcrumb}
+  tags={event.tags}
+  date={event.date ?? undefined}
+  datetime={event.datetime ?? undefined}
+  image={event.image ?? undefined}
+  backLabel={event.backLabel ?? undefined}
+  backUrl={event.backUrl ?? undefined}
+  bookingLabel={event.bookingLabel ?? undefined}
+>
+  {event.paragraphs.map((paragraph: string) => (
+    <div set:html={paragraph} />
+  ))}
+</EventLayout>

@@ -1,0 +1,39 @@
+{
+  "key": "/pleine-saison-des-agrumes/",
+  "lang": "en",
+  "slug": "high-season-for-citrus",
+  "route": "/en/high-season-for-citrus",
+  "title": "High Season for Citrus | Mas du Chanoine",
+  "description": "High Season for Citrus: French Riviera event near our guesthouse.",
+  "alternates": {
+    "fr": "/pleine-saison-des-agrumes/",
+    "en": "/en/high-season-for-citrus/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/en/"
+    },
+    {
+      "label": "Events",
+      "href": "/en/french-riviera-events/"
+    },
+    {
+      "label": "High Season for Citrus"
+    }
+  ],
+  "image": null,
+  "paragraphs": [
+    "<p>The lemon is an emblematic fruit of the French Riviera, especially the famous Menton lemon. Every year, the three lemon trees on the property give us a lot of fruits. We prepare the lemon jam to complement your breakfasts. For your welcome, we also offer \"Lemon wine\", a subtle blend of white wine from Provence, alcohol, lemons and sugar, macerated for 45 days.</p>"
+  ],
+  "eventName": "High Season for Citrus",
+  "tags": [
+    "French Riviera",
+    "Our guesthouse"
+  ],
+  "date": "13 January 2023",
+  "datetime": "2023-01-13",
+  "backLabel": "← Back to events",
+  "backUrl": "/en/french-riviera-events/",
+  "bookingLabel": "Book Now"
+}

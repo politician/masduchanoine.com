@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import ActivityLayout from '../../layouts/ActivityLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('activities', ({ data }) => data.lang === 'fr');
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { activity: entry.data },
+  }));
+}
+
+const { activity } = Astro.props;
+---
+
+<ActivityLayout
+  title={activity.title}
+  description={activity.description}
+  lang="fr"
+  alternates={activity.alternates}
+  activityName={activity.activityName}
+  breadcrumb={activity.breadcrumb}
+  image={activity.image ?? undefined}
+  backLabel={activity.backLabel ?? undefined}
+  backUrl={activity.backUrl ?? undefined}
+  bookingLabel={activity.bookingLabel ?? undefined}
+>
+  {activity.paragraphs.map((paragraph: string) => (
+    <div set:html={paragraph} />
+  ))}
+</ActivityLayout>

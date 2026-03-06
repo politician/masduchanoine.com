@@ -1,0 +1,42 @@
+{
+  "key": "/activites/golf/",
+  "lang": "it",
+  "slug": "golf-3",
+  "route": "/it/activites/golf-3",
+  "title": "Golf — Attività Costa d'Azzurra",
+  "description": "Golf: attività vicino al nostro B&B sulla Costa Azzurra.",
+  "alternates": {
+    "fr": "/activites/golf/",
+    "en": "/en/activites/golf-en/",
+    "it": "/it/activites/golf-3/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Home",
+      "href": "/it/"
+    },
+    {
+      "label": "Attività",
+      "href": "/it/attivita/"
+    },
+    {
+      "label": "Golf"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/golf.jpg",
+    "alt": "Golf"
+  },
+  "paragraphs": [
+    "<p>La Costa Azzurra è una destinazione ideale per gli amanti del golf. Entro 15 km dal Mas du Chanoine sono accessibili ben 10 campi da golf a 18 buche e 6 a 9 buche.</p>",
+    "<p>I percorsi sono vari per tracciato, posizione (vicino al Mediterraneo o più nell'entroterra) e livello di difficoltà. Sono molto verdi e possono offrire panorami eccezionali, come il Monte-Carlo Golf Club.</p>",
+    "<p>Potrete anche scegliere campi di livello internazionale noti ai migliori giocatori del mondo, come il Golf Country Club di Cannes Mougins.</p>",
+    "<p><strong>Due golf club propongono un percorso a 18 buche e uno a 9 buche:</strong></p>",
+    "<p><strong>Golf con percorso a 18 buche:</strong></p>",
+    "<p><strong>Golf con percorso a 9 buche:</strong></p>"
+  ],
+  "activityName": "Golf",
+  "backLabel": "← Tutte le attività",
+  "backUrl": "/it/attivita/",
+  "bookingLabel": "Prenota"
+}

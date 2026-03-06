@@ -1,0 +1,42 @@
+{
+  "key": "/activites/visiter-cannes-et-iles-de-lerins/",
+  "lang": "fr",
+  "slug": "visiter-cannes-et-iles-de-lerins",
+  "route": "/activites/visiter-cannes-et-iles-de-lerins",
+  "title": "Visiter Cannes, la croisette, les plages, et les iles de Lérins | Mas du chanoine",
+  "description": "à Cannes, voir la très réputée Croisette et ses palaces, boutiques de luxe et plages de sable fin, contrastant avec le vieux port et au quartier du Suquet et les iles de Lérins",
+  "alternates": {
+    "fr": "/activites/visiter-cannes-et-iles-de-lerins/",
+    "en": "/en/activites/cannes-and-lerins-islands/",
+    "it": "/it/activites/cannes-e-isole-lerins/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Activités",
+      "href": "/activites-cote-azur/"
+    },
+    {
+      "label": "Cannes et les iles de Lérins"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/cannes.jpg",
+    "alt": "Cannes, Ile Saint-Honorat"
+  },
+  "paragraphs": [
+    "<p>La très célèbre ville de Cannes est connue du monde entier pour son Festival du Film qui se déroule depuis 70 ans au printemps. Durant une semaine, la ville vit au rythme du cinéma, des projections de films et des très nombreuses soirées réunissant des artistes, des célébrités et des people du monde entier. Sur le «&nbsp;Chemin des Etoiles&nbsp;», plus de 300 artistes ont laissé l'empreinte de leur main gravée dans le sol.</p>",
+    "<p>Sur la très réputée Croisette, vous serez éblouis par les palaces, les boutiques de luxe, les magnifiques bâtiments Art Déco d'un côté et les plages de sable fin côté mer.</p>",
+    "<p>Le quartier historique du Suquet vous attend à côté du vieux port avec ses bâtiments anciens, ses ruelles pentues coupées par des escaliers. Du haut de la vieille ville, vous aurez une vue époustouflante sur les Iles et la Croisette.</p>",
+    "<p>Face à cette ville animée, vous pourrez trouver le calme et la nature à moins de 15 minutes de bateau sur les Iles de Lérins. En face de Cannes, deux îles préservées sont propices au repos, à la promenade et à la méditation.</p>",
+    "<p>L'île de Sainte Marguerite a su conserver son caractère sauvage. Elle est parcourue de nombreux chemins à l'ombre des pins et des eucalyptus&nbsp;; vous pourrez également faire un petit plongeon dans la Mer Méditerranée. C'est une réserve naturelle, refuge de nombreux oiseaux lors des périodes de migration. Au Fort Royal, vous redécouvrez la légende du Masque de Fer.</p>",
+    "<p>Sa petite voisine, l'île de Saint-Honorat, est privée, propriété des moines cisterciens. Elle a été fondée par Saint Honorat, au 5ème siècle. Vous pourrez y visiter le monastère fortifié, la Chapelle de la Trinité (l'île en compte 7 au total) ainsi qu'un four à boulet de l'époque de Napoléon. Les moines y produisent un célèbre vin ainsi que des liqueurs et de l'huile d'olive. Profitez de cette journée pour déjeuner au restaurant de La Tonnelle, dans un cadre enchanteur, les pieds dans le sable…</p>"
+  ],
+  "activityName": "Cannes et les iles de Lérins",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}

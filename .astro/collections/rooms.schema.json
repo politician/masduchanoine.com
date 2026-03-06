@@ -1,0 +1,200 @@
+{
+  "$ref": "#/definitions/rooms",
+  "definitions": {
+    "rooms": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string",
+          "enum": [
+            "fr",
+            "en",
+            "it"
+          ]
+        },
+        "slug": {
+          "type": "string"
+        },
+        "route": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "alternates": {
+          "type": "object",
+          "properties": {
+            "fr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "it": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "default": {}
+        },
+        "breadcrumb": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "href": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "image": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "src": {
+                  "type": "string"
+                },
+                "alt": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "src",
+                "alt"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "roomName": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tagline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "heroImage": {
+          "type": "string"
+        },
+        "amenities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        },
+        "amenitiesTitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amenitiesSummary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "gallery": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "src": {
+                "type": "string"
+              },
+              "alt": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "src",
+              "alt"
+            ],
+            "additionalProperties": false
+          },
+          "default": []
+        },
+        "galleryTitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bookingLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "otherRoomsTitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "otherRoomsLabel": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "otherRoomsUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "lang",
+        "slug",
+        "route",
+        "title",
+        "description",
+        "roomName",
+        "heroImage"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,41 @@
+{
+  "key": "/activites/antibes-et-cap-dantibes/",
+  "lang": "fr",
+  "slug": "antibes-et-cap-dantibes",
+  "route": "/activites/antibes-et-cap-dantibes",
+  "title": "Antibes et le Cap d'Antibes plage et excursions | Mas du chanoine",
+  "description": "A mi-chemin entre Nice et Cannes, la station balnéaire d'Antibes Juan les Pins dispose de longues plages de sable fin où vous pourrez pratiquer tous les sports nautiques.",
+  "alternates": {
+    "fr": "/activites/antibes-et-cap-dantibes/",
+    "en": "/en/activites/antibes-and-cap-dantibes/",
+    "it": "/it/activites/antibes-e-cap-dantibes/"
+  },
+  "breadcrumb": [
+    {
+      "label": "Accueil",
+      "href": "/"
+    },
+    {
+      "label": "Activités",
+      "href": "/activites-cote-azur/"
+    },
+    {
+      "label": "Antibes et Cap d'Antibes"
+    }
+  ],
+  "image": {
+    "src": "/media/activites/antibes.jpg",
+    "alt": "Cap d'Antibes"
+  },
+  "paragraphs": [
+    "<p>A mi-chemin entre Nice et Cannes, la station balnéaire d'Antibes Juan les Pins dispose de longues plages de sable fin où vous pourrez pratiquer tous les sports nautiques.</p>",
+    "<p>Commencez votre journée par la visite de la vieille ville. Chaque matin, le Cours Masséna accueille un marché de produits locaux. Juste à côté se trouve le Port Vauban dans lequel vous pourrez admirer voiliers, yachts et les plus luxueux navires du monde accostés au Quai des Milliardaires.</p>",
+    "<p>Une partie de la vieille ville est piétonne et vous y trouverez de nombreuses boutiques en journée et les terrasses des bars et restaurants avec des orchestres en soirée. L'animation y est omniprésente.</p>",
+    "<p>Côté Art, le Musée Picasso occupe le Château Grimaldi, magnifique bâtisse médiévale. L'artiste y a installé son atelier pendant 6 mois et il a laissé au musée toutes les œuvres qu'il y a produites&nbsp;: peintures, mais également des céramiques réalisées avec les artisans de la ville de Vallauris.</p>",
+    "<p>En début d'après-midi, partez à la découverte du Cap d'Antibes. Vous pourrez faire une randonnée le long du Sentier du Littoral de «&nbsp;Tirepoil&nbsp;» jusqu'au Phare&nbsp;: il longe une succession de petites criques où vous pourrez vous reposer. Vous pourrez apercevoir la Villa Eilenroc ainsi que d'immenses propriétés aux jardins luxuriants. C'est également dans la baie de La Garoupe que vous pourrez choisir de vous baigner ou bien de passer une journée de détente sur une plage privée.</p>"
+  ],
+  "activityName": "Antibes et Cap d'Antibes",
+  "backLabel": null,
+  "backUrl": null,
+  "bookingLabel": null
+}
