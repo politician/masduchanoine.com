@@ -54,7 +54,7 @@ src/
 │   ├── evenements-cote-azur/    # Blog événements (10 articles)
 │   ├── avis-des-hotes.astro     # Avis des hôtes
 │   ├── acces.astro              # Accès & carte
-│   ├── contact.astro            # Contact
+│   ├── contactez-nous/          # Contact
 │   └── 404.astro                # Page d'erreur
 └── styles/
     └── global.css    # Styles globaux + Tailwind

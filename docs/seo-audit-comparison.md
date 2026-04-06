@@ -184,8 +184,7 @@
 
 ### Écarts identifiés
 
-1. Le sitemap Astro est propre mais contient la page `/contact/` qui n'existe pas sur WordPress.
-2. WordPress inclut les versions en/it dans le même sitemap — non applicable pour Astro (site fr uniquement).
+1. WordPress inclut les versions en/it dans le même sitemap — non applicable pour Astro (site fr uniquement).
 
 ---
 
@@ -241,5 +240,5 @@
 | 6 | Ajouter schema Article sur les pages événements | Moyenne | À faire |
 | 7 | Ajouter des images OG spécifiques par page | Moyenne | À faire |
 | 8 | Optimiser les images (WebP, width/height systématiques) | Haute | Partiel |
-| 9 | Exclure `/contact/` du sitemap ou supprimer la page dupliquée | Basse | À faire |
+| 9 | Exclure `/contact/` du sitemap ou supprimer la page dupliquée | Basse | Fait |
 | 10 | Ajouter schema LodgingReservation ou Room pour les chambres | Basse | À faire |

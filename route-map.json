@@ -227,10 +227,5 @@
       "reason": "Blog article mentioned in sidebar but not in main listing; can be added later if needed"
     }
   ],
-  "newPages": [
-    {
-      "newRoute": "/contact",
-      "reason": "New dedicated contact page - improves UX and conversion"
-    }
-  ]
+  "newPages": []
 }

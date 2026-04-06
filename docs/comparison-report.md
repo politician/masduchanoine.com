@@ -140,9 +140,8 @@ Toutes les images ont été téléchargées dans `/public/media/evenements/`.
 
 ### Écarts mineurs observés (non bloquants)
 
-1. **Page `contact.astro`** : page supplémentaire locale non présente sur WordPress (WordPress n'a que `/contactez-nous/`). Non bloquant.
-2. **Page `politique-de-confidentialite/`** : page présente des deux côtés. Conforme.
-3. **Page `404.astro`** : page locale personnalisée, pas d'équivalent WordPress testable.
+1. **Page `politique-de-confidentialite/`** : page présente des deux côtés. Conforme.
+2. **Page `404.astro`** : page locale personnalisée, pas d'équivalent WordPress testable.
 
 ---
 
