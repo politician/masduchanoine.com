@@ -13,7 +13,7 @@
 | 2 | `<meta name="robots" content="index, follow, max-image-preview:large">` sur toutes les pages | `Head.astro` |
 | 3 | Schema JSON-LD `WebSite` + `Organization` automatique sur toutes les pages | `Head.astro` |
 | 4 | Schema JSON-LD `BreadcrumbList` automatique sur les pages intérieures | `Head.astro` |
-| 5 | Page `/contact/` marquée `noindex` + canonical vers `/contactez-nous/` | `contact.astro` |
+| 5 | Supprimer la page dupliquée `/contact/` au profit de `/contactez-nous/` uniquement | `src/pages/contact.astro` |
 
 ---
 
